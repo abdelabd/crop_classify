@@ -225,7 +225,7 @@ int main() {
     int size = 48;
     double mean[2] = {24, 24};
     double cov[2][2] = {{20, 5}, {5, 20}};
-    double noise_stddev = 0.05;
+    double noise_stddev = 0.00;
     int kernel_size = 5;  // You can adjust this value
     double sigma = 1.0;
     double threshold = 0.01;

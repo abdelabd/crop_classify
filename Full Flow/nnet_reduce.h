@@ -20,9 +20,9 @@ void reduce(
     static const ap_ufixed<8,0> threshold = 0.6;
 
     ReduceLoopRow:
-    for(int my = 0; my < 3; my++){
+    for(int my = 0; my < 6; my++){
       ReduceLoopCol:
-      for(int mx = 0; mx < 8; mx++){
+      for(int mx = 0; mx < 16; mx++){
         #pragma HLS PIPELINE
 
         data_T in_data = data.read();
