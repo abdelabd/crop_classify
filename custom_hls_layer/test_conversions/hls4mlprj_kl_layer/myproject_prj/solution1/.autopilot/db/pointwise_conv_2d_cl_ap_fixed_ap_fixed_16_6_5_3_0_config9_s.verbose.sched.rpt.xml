@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s'" level="0">
-<item name = "Date">Thu Oct 10 10:37:02 2024
+<item name = "Date">Thu Oct 10 12:48:44 2024
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">myproject_prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">117, 118, 114, 114, loop rewind(delay=0 initiation interval(s))</column>
+<column name="">115, 116, 114, 114, loop rewind(delay=0 initiation interval(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- PartitionLoop">117, 117, 6, 2, 1, 57, yes</column>
+<column name="- PartitionLoop">115, 115, 4, 2, 1, 57, yes</column>
 </table>
 </item>
 </section>

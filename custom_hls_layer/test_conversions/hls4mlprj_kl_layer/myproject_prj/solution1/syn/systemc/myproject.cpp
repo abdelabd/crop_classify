@@ -12,31 +12,29 @@ using namespace std;
 
 namespace ap_rtl {
 
-const sc_lv<16> myproject::ap_const_lv16_0 = "0000000000000000";
 const sc_logic myproject::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic myproject::ap_const_logic_0 = sc_dt::Log_0;
-const bool myproject::ap_const_boolean_1 = true;
 
 myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    myproject_entry120_U0 = new myproject_entry120("myproject_entry120_U0");
-    myproject_entry120_U0->ap_clk(ap_clk);
-    myproject_entry120_U0->ap_rst(ap_rst);
-    myproject_entry120_U0->ap_start(myproject_entry120_U0_ap_start);
-    myproject_entry120_U0->start_full_n(myproject_entry120_U0_start_full_n);
-    myproject_entry120_U0->ap_done(myproject_entry120_U0_ap_done);
-    myproject_entry120_U0->ap_continue(myproject_entry120_U0_ap_continue);
-    myproject_entry120_U0->ap_idle(myproject_entry120_U0_ap_idle);
-    myproject_entry120_U0->ap_ready(myproject_entry120_U0_ap_ready);
-    myproject_entry120_U0->start_out(myproject_entry120_U0_start_out);
-    myproject_entry120_U0->start_write(myproject_entry120_U0_start_write);
-    myproject_entry120_U0->input_5_V(input_5_V);
-    myproject_entry120_U0->input_5_V_ap_vld(input_5_V_ap_vld);
-    myproject_entry120_U0->input_5_V_out_din(myproject_entry120_U0_input_5_V_out_din);
-    myproject_entry120_U0->input_5_V_out_full_n(input_5_V_c_full_n);
-    myproject_entry120_U0->input_5_V_out_write(myproject_entry120_U0_input_5_V_out_write);
-    myproject_entry120_U0->input_5_V_out1_din(myproject_entry120_U0_input_5_V_out1_din);
-    myproject_entry120_U0->input_5_V_out1_full_n(input_5_V_c7_full_n);
-    myproject_entry120_U0->input_5_V_out1_write(myproject_entry120_U0_input_5_V_out1_write);
+    myproject_entry181_U0 = new myproject_entry181("myproject_entry181_U0");
+    myproject_entry181_U0->ap_clk(ap_clk);
+    myproject_entry181_U0->ap_rst(ap_rst);
+    myproject_entry181_U0->ap_start(myproject_entry181_U0_ap_start);
+    myproject_entry181_U0->start_full_n(myproject_entry181_U0_start_full_n);
+    myproject_entry181_U0->ap_done(myproject_entry181_U0_ap_done);
+    myproject_entry181_U0->ap_continue(myproject_entry181_U0_ap_continue);
+    myproject_entry181_U0->ap_idle(myproject_entry181_U0_ap_idle);
+    myproject_entry181_U0->ap_ready(myproject_entry181_U0_ap_ready);
+    myproject_entry181_U0->start_out(myproject_entry181_U0_start_out);
+    myproject_entry181_U0->start_write(myproject_entry181_U0_start_write);
+    myproject_entry181_U0->input_1_V(input_1_V);
+    myproject_entry181_U0->input_1_V_ap_vld(input_1_V_ap_vld);
+    myproject_entry181_U0->input_1_V_out_din(myproject_entry181_U0_input_1_V_out_din);
+    myproject_entry181_U0->input_1_V_out_full_n(input_1_V_c_full_n);
+    myproject_entry181_U0->input_1_V_out_write(myproject_entry181_U0_input_1_V_out_write);
+    myproject_entry181_U0->input_1_V_out1_din(myproject_entry181_U0_input_1_V_out1_din);
+    myproject_entry181_U0->input_1_V_out1_full_n(input_1_V_c1_full_n);
+    myproject_entry181_U0->input_1_V_out1_write(myproject_entry181_U0_input_1_V_out1_write);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0 = new pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s("pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0");
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_clk(ap_clk);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_rst(ap_rst);
@@ -45,28 +43,9 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_continue(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_idle(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_ready(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_ready);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->data_V_dout(input_5_V_c_dout);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->data_V_empty_n(input_5_V_c_empty_n);
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->data_V_dout(input_1_V_c_dout);
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->data_V_empty_n(input_1_V_c_empty_n);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->data_V_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_data_V_read);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_0(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_0);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_1(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_1);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_2(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_2);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_3(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_3);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_4(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_4);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_5(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_5);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_6(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_6);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_7(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_7);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_8(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_8);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_9(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_9);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_10(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_10);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_11(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_11);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_12(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_12);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_13(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_13);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_14(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_14);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_15(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_15);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_16(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_16);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_17(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_17);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0->ap_return_18(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_18);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0 = new pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s("pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0");
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_clk(ap_clk);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_rst(ap_rst);
@@ -75,516 +54,31 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_continue(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_idle(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_ready(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_ready);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->data_V_dout(input_5_V_c7_dout);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->data_V_empty_n(input_5_V_c7_empty_n);
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->data_V_dout(input_1_V_c1_dout);
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->data_V_empty_n(input_1_V_c1_empty_n);
     pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->data_V_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_data_V_read);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_0(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_0);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_1(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_1);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_2(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_2);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_3(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_3);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_4(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_4);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_5(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_5);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_6(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_6);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_7(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_7);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_8(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_8);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_9(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_9);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_10(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_10);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_11(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_11);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_12(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_12);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_13(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_13);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_14(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_14);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_15(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_15);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_16(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_16);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_17(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_17);
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0->ap_return_18(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_18);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0 = new klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s("klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0");
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_clk(ap_clk);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_rst(ap_rst);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_start(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_done(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_continue(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_idle(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_idle);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->ap_ready(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_0_V_read(layer9_out_0_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_1_V_read(layer9_out_1_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_2_V_read(layer9_out_2_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_3_V_read(layer9_out_3_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_4_V_read(layer9_out_4_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_5_V_read(layer9_out_5_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_6_V_read(layer9_out_6_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_7_V_read(layer9_out_7_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_8_V_read(layer9_out_8_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_9_V_read(layer9_out_9_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_10_V_read(layer9_out_10_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_11_V_read(layer9_out_11_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_12_V_read(layer9_out_12_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_13_V_read(layer9_out_13_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_14_V_read(layer9_out_14_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_15_V_read(layer9_out_15_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_16_V_read(layer9_out_16_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_17_V_read(layer9_out_17_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->mean_18_V_read(layer9_out_18_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_0_V_read(layer10_out_0_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_1_V_read(layer10_out_1_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_2_V_read(layer10_out_2_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_3_V_read(layer10_out_3_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_4_V_read(layer10_out_4_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_5_V_read(layer10_out_5_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_6_V_read(layer10_out_6_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_7_V_read(layer10_out_7_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_8_V_read(layer10_out_8_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_9_V_read(layer10_out_9_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_10_V_read(layer10_out_10_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_11_V_read(layer10_out_11_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_12_V_read(layer10_out_12_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_13_V_read(layer10_out_13_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_14_V_read(layer10_out_14_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_15_V_read(layer10_out_15_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_16_V_read(layer10_out_16_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_17_V_read(layer10_out_17_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->log_var_18_V_read(layer10_out_18_V_dout);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->res_V(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V);
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0->res_V_ap_vld(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V_ap_vld);
-    input_5_V_c_U = new fifo_w912_d2_A("input_5_V_c_U");
-    input_5_V_c_U->clk(ap_clk);
-    input_5_V_c_U->reset(ap_rst);
-    input_5_V_c_U->if_read_ce(ap_var_for_const0);
-    input_5_V_c_U->if_write_ce(ap_var_for_const0);
-    input_5_V_c_U->if_din(myproject_entry120_U0_input_5_V_out_din);
-    input_5_V_c_U->if_full_n(input_5_V_c_full_n);
-    input_5_V_c_U->if_write(myproject_entry120_U0_input_5_V_out_write);
-    input_5_V_c_U->if_dout(input_5_V_c_dout);
-    input_5_V_c_U->if_empty_n(input_5_V_c_empty_n);
-    input_5_V_c_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_data_V_read);
-    input_5_V_c7_U = new fifo_w912_d2_A("input_5_V_c7_U");
-    input_5_V_c7_U->clk(ap_clk);
-    input_5_V_c7_U->reset(ap_rst);
-    input_5_V_c7_U->if_read_ce(ap_var_for_const0);
-    input_5_V_c7_U->if_write_ce(ap_var_for_const0);
-    input_5_V_c7_U->if_din(myproject_entry120_U0_input_5_V_out1_din);
-    input_5_V_c7_U->if_full_n(input_5_V_c7_full_n);
-    input_5_V_c7_U->if_write(myproject_entry120_U0_input_5_V_out1_write);
-    input_5_V_c7_U->if_dout(input_5_V_c7_dout);
-    input_5_V_c7_U->if_empty_n(input_5_V_c7_empty_n);
-    input_5_V_c7_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_data_V_read);
-    layer9_out_0_V_U = new fifo_w16_d2_A("layer9_out_0_V_U");
-    layer9_out_0_V_U->clk(ap_clk);
-    layer9_out_0_V_U->reset(ap_rst);
-    layer9_out_0_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_0_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_0_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_0);
-    layer9_out_0_V_U->if_full_n(layer9_out_0_V_full_n);
-    layer9_out_0_V_U->if_write(ap_channel_done_layer9_out_0_V);
-    layer9_out_0_V_U->if_dout(layer9_out_0_V_dout);
-    layer9_out_0_V_U->if_empty_n(layer9_out_0_V_empty_n);
-    layer9_out_0_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_1_V_U = new fifo_w16_d2_A("layer9_out_1_V_U");
-    layer9_out_1_V_U->clk(ap_clk);
-    layer9_out_1_V_U->reset(ap_rst);
-    layer9_out_1_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_1_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_1_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_1);
-    layer9_out_1_V_U->if_full_n(layer9_out_1_V_full_n);
-    layer9_out_1_V_U->if_write(ap_channel_done_layer9_out_1_V);
-    layer9_out_1_V_U->if_dout(layer9_out_1_V_dout);
-    layer9_out_1_V_U->if_empty_n(layer9_out_1_V_empty_n);
-    layer9_out_1_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_2_V_U = new fifo_w16_d2_A("layer9_out_2_V_U");
-    layer9_out_2_V_U->clk(ap_clk);
-    layer9_out_2_V_U->reset(ap_rst);
-    layer9_out_2_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_2_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_2_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_2);
-    layer9_out_2_V_U->if_full_n(layer9_out_2_V_full_n);
-    layer9_out_2_V_U->if_write(ap_channel_done_layer9_out_2_V);
-    layer9_out_2_V_U->if_dout(layer9_out_2_V_dout);
-    layer9_out_2_V_U->if_empty_n(layer9_out_2_V_empty_n);
-    layer9_out_2_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_3_V_U = new fifo_w16_d2_A("layer9_out_3_V_U");
-    layer9_out_3_V_U->clk(ap_clk);
-    layer9_out_3_V_U->reset(ap_rst);
-    layer9_out_3_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_3_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_3_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_3);
-    layer9_out_3_V_U->if_full_n(layer9_out_3_V_full_n);
-    layer9_out_3_V_U->if_write(ap_channel_done_layer9_out_3_V);
-    layer9_out_3_V_U->if_dout(layer9_out_3_V_dout);
-    layer9_out_3_V_U->if_empty_n(layer9_out_3_V_empty_n);
-    layer9_out_3_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_4_V_U = new fifo_w16_d2_A("layer9_out_4_V_U");
-    layer9_out_4_V_U->clk(ap_clk);
-    layer9_out_4_V_U->reset(ap_rst);
-    layer9_out_4_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_4_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_4_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_4);
-    layer9_out_4_V_U->if_full_n(layer9_out_4_V_full_n);
-    layer9_out_4_V_U->if_write(ap_channel_done_layer9_out_4_V);
-    layer9_out_4_V_U->if_dout(layer9_out_4_V_dout);
-    layer9_out_4_V_U->if_empty_n(layer9_out_4_V_empty_n);
-    layer9_out_4_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_5_V_U = new fifo_w16_d2_A("layer9_out_5_V_U");
-    layer9_out_5_V_U->clk(ap_clk);
-    layer9_out_5_V_U->reset(ap_rst);
-    layer9_out_5_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_5_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_5_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_5);
-    layer9_out_5_V_U->if_full_n(layer9_out_5_V_full_n);
-    layer9_out_5_V_U->if_write(ap_channel_done_layer9_out_5_V);
-    layer9_out_5_V_U->if_dout(layer9_out_5_V_dout);
-    layer9_out_5_V_U->if_empty_n(layer9_out_5_V_empty_n);
-    layer9_out_5_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_6_V_U = new fifo_w16_d2_A("layer9_out_6_V_U");
-    layer9_out_6_V_U->clk(ap_clk);
-    layer9_out_6_V_U->reset(ap_rst);
-    layer9_out_6_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_6_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_6_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_6);
-    layer9_out_6_V_U->if_full_n(layer9_out_6_V_full_n);
-    layer9_out_6_V_U->if_write(ap_channel_done_layer9_out_6_V);
-    layer9_out_6_V_U->if_dout(layer9_out_6_V_dout);
-    layer9_out_6_V_U->if_empty_n(layer9_out_6_V_empty_n);
-    layer9_out_6_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_7_V_U = new fifo_w16_d2_A("layer9_out_7_V_U");
-    layer9_out_7_V_U->clk(ap_clk);
-    layer9_out_7_V_U->reset(ap_rst);
-    layer9_out_7_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_7_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_7_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_7);
-    layer9_out_7_V_U->if_full_n(layer9_out_7_V_full_n);
-    layer9_out_7_V_U->if_write(ap_channel_done_layer9_out_7_V);
-    layer9_out_7_V_U->if_dout(layer9_out_7_V_dout);
-    layer9_out_7_V_U->if_empty_n(layer9_out_7_V_empty_n);
-    layer9_out_7_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_8_V_U = new fifo_w16_d2_A("layer9_out_8_V_U");
-    layer9_out_8_V_U->clk(ap_clk);
-    layer9_out_8_V_U->reset(ap_rst);
-    layer9_out_8_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_8_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_8_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_8);
-    layer9_out_8_V_U->if_full_n(layer9_out_8_V_full_n);
-    layer9_out_8_V_U->if_write(ap_channel_done_layer9_out_8_V);
-    layer9_out_8_V_U->if_dout(layer9_out_8_V_dout);
-    layer9_out_8_V_U->if_empty_n(layer9_out_8_V_empty_n);
-    layer9_out_8_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_9_V_U = new fifo_w16_d2_A("layer9_out_9_V_U");
-    layer9_out_9_V_U->clk(ap_clk);
-    layer9_out_9_V_U->reset(ap_rst);
-    layer9_out_9_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_9_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_9_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_9);
-    layer9_out_9_V_U->if_full_n(layer9_out_9_V_full_n);
-    layer9_out_9_V_U->if_write(ap_channel_done_layer9_out_9_V);
-    layer9_out_9_V_U->if_dout(layer9_out_9_V_dout);
-    layer9_out_9_V_U->if_empty_n(layer9_out_9_V_empty_n);
-    layer9_out_9_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_10_V_U = new fifo_w16_d2_A("layer9_out_10_V_U");
-    layer9_out_10_V_U->clk(ap_clk);
-    layer9_out_10_V_U->reset(ap_rst);
-    layer9_out_10_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_10_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_10_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_10);
-    layer9_out_10_V_U->if_full_n(layer9_out_10_V_full_n);
-    layer9_out_10_V_U->if_write(ap_channel_done_layer9_out_10_V);
-    layer9_out_10_V_U->if_dout(layer9_out_10_V_dout);
-    layer9_out_10_V_U->if_empty_n(layer9_out_10_V_empty_n);
-    layer9_out_10_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_11_V_U = new fifo_w16_d2_A("layer9_out_11_V_U");
-    layer9_out_11_V_U->clk(ap_clk);
-    layer9_out_11_V_U->reset(ap_rst);
-    layer9_out_11_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_11_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_11_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_11);
-    layer9_out_11_V_U->if_full_n(layer9_out_11_V_full_n);
-    layer9_out_11_V_U->if_write(ap_channel_done_layer9_out_11_V);
-    layer9_out_11_V_U->if_dout(layer9_out_11_V_dout);
-    layer9_out_11_V_U->if_empty_n(layer9_out_11_V_empty_n);
-    layer9_out_11_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_12_V_U = new fifo_w16_d2_A("layer9_out_12_V_U");
-    layer9_out_12_V_U->clk(ap_clk);
-    layer9_out_12_V_U->reset(ap_rst);
-    layer9_out_12_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_12_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_12_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_12);
-    layer9_out_12_V_U->if_full_n(layer9_out_12_V_full_n);
-    layer9_out_12_V_U->if_write(ap_channel_done_layer9_out_12_V);
-    layer9_out_12_V_U->if_dout(layer9_out_12_V_dout);
-    layer9_out_12_V_U->if_empty_n(layer9_out_12_V_empty_n);
-    layer9_out_12_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_13_V_U = new fifo_w16_d2_A("layer9_out_13_V_U");
-    layer9_out_13_V_U->clk(ap_clk);
-    layer9_out_13_V_U->reset(ap_rst);
-    layer9_out_13_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_13_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_13_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_13);
-    layer9_out_13_V_U->if_full_n(layer9_out_13_V_full_n);
-    layer9_out_13_V_U->if_write(ap_channel_done_layer9_out_13_V);
-    layer9_out_13_V_U->if_dout(layer9_out_13_V_dout);
-    layer9_out_13_V_U->if_empty_n(layer9_out_13_V_empty_n);
-    layer9_out_13_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_14_V_U = new fifo_w16_d2_A("layer9_out_14_V_U");
-    layer9_out_14_V_U->clk(ap_clk);
-    layer9_out_14_V_U->reset(ap_rst);
-    layer9_out_14_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_14_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_14_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_14);
-    layer9_out_14_V_U->if_full_n(layer9_out_14_V_full_n);
-    layer9_out_14_V_U->if_write(ap_channel_done_layer9_out_14_V);
-    layer9_out_14_V_U->if_dout(layer9_out_14_V_dout);
-    layer9_out_14_V_U->if_empty_n(layer9_out_14_V_empty_n);
-    layer9_out_14_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_15_V_U = new fifo_w16_d2_A("layer9_out_15_V_U");
-    layer9_out_15_V_U->clk(ap_clk);
-    layer9_out_15_V_U->reset(ap_rst);
-    layer9_out_15_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_15_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_15_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_15);
-    layer9_out_15_V_U->if_full_n(layer9_out_15_V_full_n);
-    layer9_out_15_V_U->if_write(ap_channel_done_layer9_out_15_V);
-    layer9_out_15_V_U->if_dout(layer9_out_15_V_dout);
-    layer9_out_15_V_U->if_empty_n(layer9_out_15_V_empty_n);
-    layer9_out_15_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_16_V_U = new fifo_w16_d2_A("layer9_out_16_V_U");
-    layer9_out_16_V_U->clk(ap_clk);
-    layer9_out_16_V_U->reset(ap_rst);
-    layer9_out_16_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_16_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_16_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_16);
-    layer9_out_16_V_U->if_full_n(layer9_out_16_V_full_n);
-    layer9_out_16_V_U->if_write(ap_channel_done_layer9_out_16_V);
-    layer9_out_16_V_U->if_dout(layer9_out_16_V_dout);
-    layer9_out_16_V_U->if_empty_n(layer9_out_16_V_empty_n);
-    layer9_out_16_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_17_V_U = new fifo_w16_d2_A("layer9_out_17_V_U");
-    layer9_out_17_V_U->clk(ap_clk);
-    layer9_out_17_V_U->reset(ap_rst);
-    layer9_out_17_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_17_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_17_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_17);
-    layer9_out_17_V_U->if_full_n(layer9_out_17_V_full_n);
-    layer9_out_17_V_U->if_write(ap_channel_done_layer9_out_17_V);
-    layer9_out_17_V_U->if_dout(layer9_out_17_V_dout);
-    layer9_out_17_V_U->if_empty_n(layer9_out_17_V_empty_n);
-    layer9_out_17_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer9_out_18_V_U = new fifo_w16_d2_A("layer9_out_18_V_U");
-    layer9_out_18_V_U->clk(ap_clk);
-    layer9_out_18_V_U->reset(ap_rst);
-    layer9_out_18_V_U->if_read_ce(ap_var_for_const0);
-    layer9_out_18_V_U->if_write_ce(ap_var_for_const0);
-    layer9_out_18_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_18);
-    layer9_out_18_V_U->if_full_n(layer9_out_18_V_full_n);
-    layer9_out_18_V_U->if_write(ap_channel_done_layer9_out_18_V);
-    layer9_out_18_V_U->if_dout(layer9_out_18_V_dout);
-    layer9_out_18_V_U->if_empty_n(layer9_out_18_V_empty_n);
-    layer9_out_18_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_0_V_U = new fifo_w16_d2_A("layer10_out_0_V_U");
-    layer10_out_0_V_U->clk(ap_clk);
-    layer10_out_0_V_U->reset(ap_rst);
-    layer10_out_0_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_0_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_0_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_0);
-    layer10_out_0_V_U->if_full_n(layer10_out_0_V_full_n);
-    layer10_out_0_V_U->if_write(ap_channel_done_layer10_out_0_V);
-    layer10_out_0_V_U->if_dout(layer10_out_0_V_dout);
-    layer10_out_0_V_U->if_empty_n(layer10_out_0_V_empty_n);
-    layer10_out_0_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_1_V_U = new fifo_w16_d2_A("layer10_out_1_V_U");
-    layer10_out_1_V_U->clk(ap_clk);
-    layer10_out_1_V_U->reset(ap_rst);
-    layer10_out_1_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_1_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_1_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_1);
-    layer10_out_1_V_U->if_full_n(layer10_out_1_V_full_n);
-    layer10_out_1_V_U->if_write(ap_channel_done_layer10_out_1_V);
-    layer10_out_1_V_U->if_dout(layer10_out_1_V_dout);
-    layer10_out_1_V_U->if_empty_n(layer10_out_1_V_empty_n);
-    layer10_out_1_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_2_V_U = new fifo_w16_d2_A("layer10_out_2_V_U");
-    layer10_out_2_V_U->clk(ap_clk);
-    layer10_out_2_V_U->reset(ap_rst);
-    layer10_out_2_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_2_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_2_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_2);
-    layer10_out_2_V_U->if_full_n(layer10_out_2_V_full_n);
-    layer10_out_2_V_U->if_write(ap_channel_done_layer10_out_2_V);
-    layer10_out_2_V_U->if_dout(layer10_out_2_V_dout);
-    layer10_out_2_V_U->if_empty_n(layer10_out_2_V_empty_n);
-    layer10_out_2_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_3_V_U = new fifo_w16_d2_A("layer10_out_3_V_U");
-    layer10_out_3_V_U->clk(ap_clk);
-    layer10_out_3_V_U->reset(ap_rst);
-    layer10_out_3_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_3_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_3_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_3);
-    layer10_out_3_V_U->if_full_n(layer10_out_3_V_full_n);
-    layer10_out_3_V_U->if_write(ap_channel_done_layer10_out_3_V);
-    layer10_out_3_V_U->if_dout(layer10_out_3_V_dout);
-    layer10_out_3_V_U->if_empty_n(layer10_out_3_V_empty_n);
-    layer10_out_3_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_4_V_U = new fifo_w16_d2_A("layer10_out_4_V_U");
-    layer10_out_4_V_U->clk(ap_clk);
-    layer10_out_4_V_U->reset(ap_rst);
-    layer10_out_4_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_4_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_4_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_4);
-    layer10_out_4_V_U->if_full_n(layer10_out_4_V_full_n);
-    layer10_out_4_V_U->if_write(ap_channel_done_layer10_out_4_V);
-    layer10_out_4_V_U->if_dout(layer10_out_4_V_dout);
-    layer10_out_4_V_U->if_empty_n(layer10_out_4_V_empty_n);
-    layer10_out_4_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_5_V_U = new fifo_w16_d2_A("layer10_out_5_V_U");
-    layer10_out_5_V_U->clk(ap_clk);
-    layer10_out_5_V_U->reset(ap_rst);
-    layer10_out_5_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_5_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_5_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_5);
-    layer10_out_5_V_U->if_full_n(layer10_out_5_V_full_n);
-    layer10_out_5_V_U->if_write(ap_channel_done_layer10_out_5_V);
-    layer10_out_5_V_U->if_dout(layer10_out_5_V_dout);
-    layer10_out_5_V_U->if_empty_n(layer10_out_5_V_empty_n);
-    layer10_out_5_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_6_V_U = new fifo_w16_d2_A("layer10_out_6_V_U");
-    layer10_out_6_V_U->clk(ap_clk);
-    layer10_out_6_V_U->reset(ap_rst);
-    layer10_out_6_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_6_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_6_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_6);
-    layer10_out_6_V_U->if_full_n(layer10_out_6_V_full_n);
-    layer10_out_6_V_U->if_write(ap_channel_done_layer10_out_6_V);
-    layer10_out_6_V_U->if_dout(layer10_out_6_V_dout);
-    layer10_out_6_V_U->if_empty_n(layer10_out_6_V_empty_n);
-    layer10_out_6_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_7_V_U = new fifo_w16_d2_A("layer10_out_7_V_U");
-    layer10_out_7_V_U->clk(ap_clk);
-    layer10_out_7_V_U->reset(ap_rst);
-    layer10_out_7_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_7_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_7_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_7);
-    layer10_out_7_V_U->if_full_n(layer10_out_7_V_full_n);
-    layer10_out_7_V_U->if_write(ap_channel_done_layer10_out_7_V);
-    layer10_out_7_V_U->if_dout(layer10_out_7_V_dout);
-    layer10_out_7_V_U->if_empty_n(layer10_out_7_V_empty_n);
-    layer10_out_7_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_8_V_U = new fifo_w16_d2_A("layer10_out_8_V_U");
-    layer10_out_8_V_U->clk(ap_clk);
-    layer10_out_8_V_U->reset(ap_rst);
-    layer10_out_8_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_8_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_8_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_8);
-    layer10_out_8_V_U->if_full_n(layer10_out_8_V_full_n);
-    layer10_out_8_V_U->if_write(ap_channel_done_layer10_out_8_V);
-    layer10_out_8_V_U->if_dout(layer10_out_8_V_dout);
-    layer10_out_8_V_U->if_empty_n(layer10_out_8_V_empty_n);
-    layer10_out_8_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_9_V_U = new fifo_w16_d2_A("layer10_out_9_V_U");
-    layer10_out_9_V_U->clk(ap_clk);
-    layer10_out_9_V_U->reset(ap_rst);
-    layer10_out_9_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_9_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_9_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_9);
-    layer10_out_9_V_U->if_full_n(layer10_out_9_V_full_n);
-    layer10_out_9_V_U->if_write(ap_channel_done_layer10_out_9_V);
-    layer10_out_9_V_U->if_dout(layer10_out_9_V_dout);
-    layer10_out_9_V_U->if_empty_n(layer10_out_9_V_empty_n);
-    layer10_out_9_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_10_V_U = new fifo_w16_d2_A("layer10_out_10_V_U");
-    layer10_out_10_V_U->clk(ap_clk);
-    layer10_out_10_V_U->reset(ap_rst);
-    layer10_out_10_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_10_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_10_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_10);
-    layer10_out_10_V_U->if_full_n(layer10_out_10_V_full_n);
-    layer10_out_10_V_U->if_write(ap_channel_done_layer10_out_10_V);
-    layer10_out_10_V_U->if_dout(layer10_out_10_V_dout);
-    layer10_out_10_V_U->if_empty_n(layer10_out_10_V_empty_n);
-    layer10_out_10_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_11_V_U = new fifo_w16_d2_A("layer10_out_11_V_U");
-    layer10_out_11_V_U->clk(ap_clk);
-    layer10_out_11_V_U->reset(ap_rst);
-    layer10_out_11_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_11_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_11_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_11);
-    layer10_out_11_V_U->if_full_n(layer10_out_11_V_full_n);
-    layer10_out_11_V_U->if_write(ap_channel_done_layer10_out_11_V);
-    layer10_out_11_V_U->if_dout(layer10_out_11_V_dout);
-    layer10_out_11_V_U->if_empty_n(layer10_out_11_V_empty_n);
-    layer10_out_11_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_12_V_U = new fifo_w16_d2_A("layer10_out_12_V_U");
-    layer10_out_12_V_U->clk(ap_clk);
-    layer10_out_12_V_U->reset(ap_rst);
-    layer10_out_12_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_12_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_12_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_12);
-    layer10_out_12_V_U->if_full_n(layer10_out_12_V_full_n);
-    layer10_out_12_V_U->if_write(ap_channel_done_layer10_out_12_V);
-    layer10_out_12_V_U->if_dout(layer10_out_12_V_dout);
-    layer10_out_12_V_U->if_empty_n(layer10_out_12_V_empty_n);
-    layer10_out_12_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_13_V_U = new fifo_w16_d2_A("layer10_out_13_V_U");
-    layer10_out_13_V_U->clk(ap_clk);
-    layer10_out_13_V_U->reset(ap_rst);
-    layer10_out_13_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_13_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_13_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_13);
-    layer10_out_13_V_U->if_full_n(layer10_out_13_V_full_n);
-    layer10_out_13_V_U->if_write(ap_channel_done_layer10_out_13_V);
-    layer10_out_13_V_U->if_dout(layer10_out_13_V_dout);
-    layer10_out_13_V_U->if_empty_n(layer10_out_13_V_empty_n);
-    layer10_out_13_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_14_V_U = new fifo_w16_d2_A("layer10_out_14_V_U");
-    layer10_out_14_V_U->clk(ap_clk);
-    layer10_out_14_V_U->reset(ap_rst);
-    layer10_out_14_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_14_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_14_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_14);
-    layer10_out_14_V_U->if_full_n(layer10_out_14_V_full_n);
-    layer10_out_14_V_U->if_write(ap_channel_done_layer10_out_14_V);
-    layer10_out_14_V_U->if_dout(layer10_out_14_V_dout);
-    layer10_out_14_V_U->if_empty_n(layer10_out_14_V_empty_n);
-    layer10_out_14_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_15_V_U = new fifo_w16_d2_A("layer10_out_15_V_U");
-    layer10_out_15_V_U->clk(ap_clk);
-    layer10_out_15_V_U->reset(ap_rst);
-    layer10_out_15_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_15_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_15_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_15);
-    layer10_out_15_V_U->if_full_n(layer10_out_15_V_full_n);
-    layer10_out_15_V_U->if_write(ap_channel_done_layer10_out_15_V);
-    layer10_out_15_V_U->if_dout(layer10_out_15_V_dout);
-    layer10_out_15_V_U->if_empty_n(layer10_out_15_V_empty_n);
-    layer10_out_15_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_16_V_U = new fifo_w16_d2_A("layer10_out_16_V_U");
-    layer10_out_16_V_U->clk(ap_clk);
-    layer10_out_16_V_U->reset(ap_rst);
-    layer10_out_16_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_16_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_16_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_16);
-    layer10_out_16_V_U->if_full_n(layer10_out_16_V_full_n);
-    layer10_out_16_V_U->if_write(ap_channel_done_layer10_out_16_V);
-    layer10_out_16_V_U->if_dout(layer10_out_16_V_dout);
-    layer10_out_16_V_U->if_empty_n(layer10_out_16_V_empty_n);
-    layer10_out_16_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_17_V_U = new fifo_w16_d2_A("layer10_out_17_V_U");
-    layer10_out_17_V_U->clk(ap_clk);
-    layer10_out_17_V_U->reset(ap_rst);
-    layer10_out_17_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_17_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_17_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_17);
-    layer10_out_17_V_U->if_full_n(layer10_out_17_V_full_n);
-    layer10_out_17_V_U->if_write(ap_channel_done_layer10_out_17_V);
-    layer10_out_17_V_U->if_dout(layer10_out_17_V_dout);
-    layer10_out_17_V_U->if_empty_n(layer10_out_17_V_empty_n);
-    layer10_out_17_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
-    layer10_out_18_V_U = new fifo_w16_d2_A("layer10_out_18_V_U");
-    layer10_out_18_V_U->clk(ap_clk);
-    layer10_out_18_V_U->reset(ap_rst);
-    layer10_out_18_V_U->if_read_ce(ap_var_for_const0);
-    layer10_out_18_V_U->if_write_ce(ap_var_for_const0);
-    layer10_out_18_V_U->if_din(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_18);
-    layer10_out_18_V_U->if_full_n(layer10_out_18_V_full_n);
-    layer10_out_18_V_U->if_write(ap_channel_done_layer10_out_18_V);
-    layer10_out_18_V_U->if_dout(layer10_out_18_V_dout);
-    layer10_out_18_V_U->if_empty_n(layer10_out_18_V_empty_n);
-    layer10_out_18_V_U->if_read(klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready);
+    input_1_V_c_U = new fifo_w912_d2_A("input_1_V_c_U");
+    input_1_V_c_U->clk(ap_clk);
+    input_1_V_c_U->reset(ap_rst);
+    input_1_V_c_U->if_read_ce(ap_var_for_const0);
+    input_1_V_c_U->if_write_ce(ap_var_for_const0);
+    input_1_V_c_U->if_din(myproject_entry181_U0_input_1_V_out_din);
+    input_1_V_c_U->if_full_n(input_1_V_c_full_n);
+    input_1_V_c_U->if_write(myproject_entry181_U0_input_1_V_out_write);
+    input_1_V_c_U->if_dout(input_1_V_c_dout);
+    input_1_V_c_U->if_empty_n(input_1_V_c_empty_n);
+    input_1_V_c_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_data_V_read);
+    input_1_V_c1_U = new fifo_w912_d2_A("input_1_V_c1_U");
+    input_1_V_c1_U->clk(ap_clk);
+    input_1_V_c1_U->reset(ap_rst);
+    input_1_V_c1_U->if_read_ce(ap_var_for_const0);
+    input_1_V_c1_U->if_write_ce(ap_var_for_const0);
+    input_1_V_c1_U->if_din(myproject_entry181_U0_input_1_V_out1_din);
+    input_1_V_c1_U->if_full_n(input_1_V_c1_full_n);
+    input_1_V_c1_U->if_write(myproject_entry181_U0_input_1_V_out1_write);
+    input_1_V_c1_U->if_dout(input_1_V_c1_dout);
+    input_1_V_c1_U->if_empty_n(input_1_V_c1_empty_n);
+    input_1_V_c1_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_data_V_read);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U = new start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0("start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U");
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->clk(ap_clk);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->reset(ap_rst);
@@ -592,7 +86,7 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_write_ce(ap_var_for_const0);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_din(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_din);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_full_n(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_full_n);
-    start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_write(myproject_entry120_U0_start_write);
+    start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_write(myproject_entry181_U0_start_write);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_dout(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_dout);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_empty_n(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_empty_n);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_ready);
@@ -603,496 +97,43 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_write_ce(ap_var_for_const0);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_din(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_din);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_full_n(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_full_n);
-    start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_write(myproject_entry120_U0_start_write);
+    start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_write(myproject_entry181_U0_start_write);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_dout(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_dout);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_empty_n(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_empty_n);
     start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U->if_read(pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_ready);
 
-    SC_METHOD(thread_ap_clk_no_reset_);
-    dont_initialize();
-    sensitive << ( ap_clk.pos() );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_0_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_0_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_10_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_10_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_11_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_11_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_12_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_12_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_13_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_13_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_14_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_14_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_15_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_15_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_16_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_16_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_17_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_17_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_18_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_18_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_1_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_1_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_2_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_2_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_3_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_3_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_4_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_4_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_5_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_5_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_6_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_6_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_7_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_7_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_8_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_8_V );
-
-    SC_METHOD(thread_ap_channel_done_layer10_out_9_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_9_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_0_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_0_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_10_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_10_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_11_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_11_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_12_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_12_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_13_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_13_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_14_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_14_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_15_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_15_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_16_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_16_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_17_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_17_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_18_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_18_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_1_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_1_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_2_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_2_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_3_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_3_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_4_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_4_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_5_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_5_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_6_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_6_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_7_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_7_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_8_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_8_V );
-
-    SC_METHOD(thread_ap_channel_done_layer9_out_9_V);
-    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_9_V );
-
     SC_METHOD(thread_ap_done);
-    sensitive << ( klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done );
+    sensitive << ( ap_sync_done );
 
     SC_METHOD(thread_ap_idle);
-    sensitive << ( myproject_entry120_U0_ap_idle );
+    sensitive << ( myproject_entry181_U0_ap_idle );
     sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle );
     sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle );
-    sensitive << ( klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_idle );
-    sensitive << ( layer9_out_0_V_empty_n );
-    sensitive << ( layer9_out_1_V_empty_n );
-    sensitive << ( layer9_out_2_V_empty_n );
-    sensitive << ( layer9_out_3_V_empty_n );
-    sensitive << ( layer9_out_4_V_empty_n );
-    sensitive << ( layer9_out_5_V_empty_n );
-    sensitive << ( layer9_out_6_V_empty_n );
-    sensitive << ( layer9_out_7_V_empty_n );
-    sensitive << ( layer9_out_8_V_empty_n );
-    sensitive << ( layer9_out_9_V_empty_n );
-    sensitive << ( layer9_out_10_V_empty_n );
-    sensitive << ( layer9_out_11_V_empty_n );
-    sensitive << ( layer9_out_12_V_empty_n );
-    sensitive << ( layer9_out_13_V_empty_n );
-    sensitive << ( layer9_out_14_V_empty_n );
-    sensitive << ( layer9_out_15_V_empty_n );
-    sensitive << ( layer9_out_16_V_empty_n );
-    sensitive << ( layer9_out_17_V_empty_n );
-    sensitive << ( layer9_out_18_V_empty_n );
-    sensitive << ( layer10_out_0_V_empty_n );
-    sensitive << ( layer10_out_1_V_empty_n );
-    sensitive << ( layer10_out_2_V_empty_n );
-    sensitive << ( layer10_out_3_V_empty_n );
-    sensitive << ( layer10_out_4_V_empty_n );
-    sensitive << ( layer10_out_5_V_empty_n );
-    sensitive << ( layer10_out_6_V_empty_n );
-    sensitive << ( layer10_out_7_V_empty_n );
-    sensitive << ( layer10_out_8_V_empty_n );
-    sensitive << ( layer10_out_9_V_empty_n );
-    sensitive << ( layer10_out_10_V_empty_n );
-    sensitive << ( layer10_out_11_V_empty_n );
-    sensitive << ( layer10_out_12_V_empty_n );
-    sensitive << ( layer10_out_13_V_empty_n );
-    sensitive << ( layer10_out_14_V_empty_n );
-    sensitive << ( layer10_out_15_V_empty_n );
-    sensitive << ( layer10_out_16_V_empty_n );
-    sensitive << ( layer10_out_17_V_empty_n );
-    sensitive << ( layer10_out_18_V_empty_n );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( myproject_entry120_U0_ap_ready );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_0_V);
-    sensitive << ( ap_channel_done_layer10_out_0_V );
-    sensitive << ( layer10_out_0_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_0_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_10_V);
-    sensitive << ( ap_channel_done_layer10_out_10_V );
-    sensitive << ( layer10_out_10_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_10_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_11_V);
-    sensitive << ( ap_channel_done_layer10_out_11_V );
-    sensitive << ( layer10_out_11_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_11_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_12_V);
-    sensitive << ( ap_channel_done_layer10_out_12_V );
-    sensitive << ( layer10_out_12_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_12_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_13_V);
-    sensitive << ( ap_channel_done_layer10_out_13_V );
-    sensitive << ( layer10_out_13_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_13_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_14_V);
-    sensitive << ( ap_channel_done_layer10_out_14_V );
-    sensitive << ( layer10_out_14_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_14_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_15_V);
-    sensitive << ( ap_channel_done_layer10_out_15_V );
-    sensitive << ( layer10_out_15_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_15_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_16_V);
-    sensitive << ( ap_channel_done_layer10_out_16_V );
-    sensitive << ( layer10_out_16_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_16_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_17_V);
-    sensitive << ( ap_channel_done_layer10_out_17_V );
-    sensitive << ( layer10_out_17_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_17_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_18_V);
-    sensitive << ( ap_channel_done_layer10_out_18_V );
-    sensitive << ( layer10_out_18_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_18_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_1_V);
-    sensitive << ( ap_channel_done_layer10_out_1_V );
-    sensitive << ( layer10_out_1_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_1_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_2_V);
-    sensitive << ( ap_channel_done_layer10_out_2_V );
-    sensitive << ( layer10_out_2_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_2_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_3_V);
-    sensitive << ( ap_channel_done_layer10_out_3_V );
-    sensitive << ( layer10_out_3_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_3_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_4_V);
-    sensitive << ( ap_channel_done_layer10_out_4_V );
-    sensitive << ( layer10_out_4_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_4_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_5_V);
-    sensitive << ( ap_channel_done_layer10_out_5_V );
-    sensitive << ( layer10_out_5_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_5_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_6_V);
-    sensitive << ( ap_channel_done_layer10_out_6_V );
-    sensitive << ( layer10_out_6_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_6_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_7_V);
-    sensitive << ( ap_channel_done_layer10_out_7_V );
-    sensitive << ( layer10_out_7_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_7_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_8_V);
-    sensitive << ( ap_channel_done_layer10_out_8_V );
-    sensitive << ( layer10_out_8_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_8_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer10_out_9_V);
-    sensitive << ( ap_channel_done_layer10_out_9_V );
-    sensitive << ( layer10_out_9_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer10_out_9_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_0_V);
-    sensitive << ( ap_channel_done_layer9_out_0_V );
-    sensitive << ( layer9_out_0_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_0_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_10_V);
-    sensitive << ( ap_channel_done_layer9_out_10_V );
-    sensitive << ( layer9_out_10_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_10_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_11_V);
-    sensitive << ( ap_channel_done_layer9_out_11_V );
-    sensitive << ( layer9_out_11_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_11_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_12_V);
-    sensitive << ( ap_channel_done_layer9_out_12_V );
-    sensitive << ( layer9_out_12_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_12_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_13_V);
-    sensitive << ( ap_channel_done_layer9_out_13_V );
-    sensitive << ( layer9_out_13_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_13_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_14_V);
-    sensitive << ( ap_channel_done_layer9_out_14_V );
-    sensitive << ( layer9_out_14_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_14_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_15_V);
-    sensitive << ( ap_channel_done_layer9_out_15_V );
-    sensitive << ( layer9_out_15_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_15_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_16_V);
-    sensitive << ( ap_channel_done_layer9_out_16_V );
-    sensitive << ( layer9_out_16_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_16_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_17_V);
-    sensitive << ( ap_channel_done_layer9_out_17_V );
-    sensitive << ( layer9_out_17_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_17_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_18_V);
-    sensitive << ( ap_channel_done_layer9_out_18_V );
-    sensitive << ( layer9_out_18_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_18_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_1_V);
-    sensitive << ( ap_channel_done_layer9_out_1_V );
-    sensitive << ( layer9_out_1_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_1_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_2_V);
-    sensitive << ( ap_channel_done_layer9_out_2_V );
-    sensitive << ( layer9_out_2_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_2_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_3_V);
-    sensitive << ( ap_channel_done_layer9_out_3_V );
-    sensitive << ( layer9_out_3_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_3_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_4_V);
-    sensitive << ( ap_channel_done_layer9_out_4_V );
-    sensitive << ( layer9_out_4_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_4_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_5_V);
-    sensitive << ( ap_channel_done_layer9_out_5_V );
-    sensitive << ( layer9_out_5_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_5_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_6_V);
-    sensitive << ( ap_channel_done_layer9_out_6_V );
-    sensitive << ( layer9_out_6_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_6_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_7_V);
-    sensitive << ( ap_channel_done_layer9_out_7_V );
-    sensitive << ( layer9_out_7_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_7_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_8_V);
-    sensitive << ( ap_channel_done_layer9_out_8_V );
-    sensitive << ( layer9_out_8_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_8_V );
-
-    SC_METHOD(thread_ap_sync_channel_write_layer9_out_9_V);
-    sensitive << ( ap_channel_done_layer9_out_9_V );
-    sensitive << ( layer9_out_9_V_full_n );
-    sensitive << ( ap_sync_reg_channel_write_layer9_out_9_V );
+    sensitive << ( myproject_entry181_U0_ap_ready );
 
     SC_METHOD(thread_ap_sync_continue);
+    sensitive << ( ap_sync_done );
 
     SC_METHOD(thread_ap_sync_done);
-    sensitive << ( klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done );
+    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done );
+    sensitive << ( pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done );
 
     SC_METHOD(thread_ap_sync_ready);
-    sensitive << ( myproject_entry120_U0_ap_ready );
+    sensitive << ( myproject_entry181_U0_ap_ready );
 
-    SC_METHOD(thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue);
+    SC_METHOD(thread_myproject_entry181_U0_ap_continue);
 
-    SC_METHOD(thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start);
-    sensitive << ( layer9_out_0_V_empty_n );
-    sensitive << ( layer9_out_1_V_empty_n );
-    sensitive << ( layer9_out_2_V_empty_n );
-    sensitive << ( layer9_out_3_V_empty_n );
-    sensitive << ( layer9_out_4_V_empty_n );
-    sensitive << ( layer9_out_5_V_empty_n );
-    sensitive << ( layer9_out_6_V_empty_n );
-    sensitive << ( layer9_out_7_V_empty_n );
-    sensitive << ( layer9_out_8_V_empty_n );
-    sensitive << ( layer9_out_9_V_empty_n );
-    sensitive << ( layer9_out_10_V_empty_n );
-    sensitive << ( layer9_out_11_V_empty_n );
-    sensitive << ( layer9_out_12_V_empty_n );
-    sensitive << ( layer9_out_13_V_empty_n );
-    sensitive << ( layer9_out_14_V_empty_n );
-    sensitive << ( layer9_out_15_V_empty_n );
-    sensitive << ( layer9_out_16_V_empty_n );
-    sensitive << ( layer9_out_17_V_empty_n );
-    sensitive << ( layer9_out_18_V_empty_n );
-    sensitive << ( layer10_out_0_V_empty_n );
-    sensitive << ( layer10_out_1_V_empty_n );
-    sensitive << ( layer10_out_2_V_empty_n );
-    sensitive << ( layer10_out_3_V_empty_n );
-    sensitive << ( layer10_out_4_V_empty_n );
-    sensitive << ( layer10_out_5_V_empty_n );
-    sensitive << ( layer10_out_6_V_empty_n );
-    sensitive << ( layer10_out_7_V_empty_n );
-    sensitive << ( layer10_out_8_V_empty_n );
-    sensitive << ( layer10_out_9_V_empty_n );
-    sensitive << ( layer10_out_10_V_empty_n );
-    sensitive << ( layer10_out_11_V_empty_n );
-    sensitive << ( layer10_out_12_V_empty_n );
-    sensitive << ( layer10_out_13_V_empty_n );
-    sensitive << ( layer10_out_14_V_empty_n );
-    sensitive << ( layer10_out_15_V_empty_n );
-    sensitive << ( layer10_out_16_V_empty_n );
-    sensitive << ( layer10_out_17_V_empty_n );
-    sensitive << ( layer10_out_18_V_empty_n );
-
-    SC_METHOD(thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_full_n);
-
-    SC_METHOD(thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_write);
-
-    SC_METHOD(thread_layer6_out_0_V);
-    sensitive << ( klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V );
-
-    SC_METHOD(thread_layer6_out_0_V_ap_vld);
-    sensitive << ( klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V_ap_vld );
-
-    SC_METHOD(thread_myproject_entry120_U0_ap_continue);
-
-    SC_METHOD(thread_myproject_entry120_U0_ap_start);
+    SC_METHOD(thread_myproject_entry181_U0_ap_start);
     sensitive << ( ap_start );
 
-    SC_METHOD(thread_myproject_entry120_U0_start_full_n);
+    SC_METHOD(thread_myproject_entry181_U0_start_full_n);
     sensitive << ( start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_full_n );
     sensitive << ( start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_full_n );
 
     SC_METHOD(thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue);
-    sensitive << ( ap_sync_channel_write_layer10_out_18_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_17_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_16_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_15_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_14_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_13_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_12_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_11_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_10_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_9_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_8_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_7_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_6_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_5_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_4_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_3_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_2_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_1_V );
-    sensitive << ( ap_sync_channel_write_layer10_out_0_V );
+    sensitive << ( ap_sync_done );
 
     SC_METHOD(thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_start);
     sensitive << ( start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_empty_n );
@@ -1102,25 +143,7 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_start_write);
 
     SC_METHOD(thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue);
-    sensitive << ( ap_sync_channel_write_layer9_out_18_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_17_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_16_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_15_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_14_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_13_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_12_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_11_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_10_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_9_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_8_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_7_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_6_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_5_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_4_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_3_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_2_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_1_V );
-    sensitive << ( ap_sync_channel_write_layer9_out_0_V );
+    sensitive << ( ap_sync_done );
 
     SC_METHOD(thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_start);
     sensitive << ( start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_empty_n );
@@ -1138,44 +161,6 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_THREAD(thread_ap_var_for_const0);
 
-    ap_sync_reg_channel_write_layer9_out_18_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_17_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_16_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_15_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_14_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_13_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_12_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_11_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_10_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_9_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_8_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_7_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_6_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_5_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_4_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_3_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_2_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_1_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer9_out_0_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_18_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_17_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_16_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_15_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_14_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_13_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_12_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_11_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_10_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_9_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_8_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_7_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_6_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_5_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_4_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_3_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_2_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_1_V = SC_LOGIC_0;
-    ap_sync_reg_channel_write_layer10_out_0_V = SC_LOGIC_0;
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "myproject_sc_trace_" << apTFileNum ++;
@@ -1184,322 +169,48 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     mVcdFile->set_time_unit(1, SC_PS);
     if (1) {
 #ifdef __HLS_TRACE_LEVEL_PORT__
-    sc_trace(mVcdFile, input_5_V, "(port)input_5_V");
+    sc_trace(mVcdFile, input_1_V, "(port)input_1_V");
     sc_trace(mVcdFile, layer6_out_0_V, "(port)layer6_out_0_V");
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
-    sc_trace(mVcdFile, input_5_V_ap_vld, "(port)input_5_V_ap_vld");
+    sc_trace(mVcdFile, input_1_V_ap_vld, "(port)input_1_V_ap_vld");
     sc_trace(mVcdFile, ap_start, "(port)ap_start");
-    sc_trace(mVcdFile, layer6_out_0_V_ap_vld, "(port)layer6_out_0_V_ap_vld");
     sc_trace(mVcdFile, ap_done, "(port)ap_done");
     sc_trace(mVcdFile, ap_ready, "(port)ap_ready");
     sc_trace(mVcdFile, ap_idle, "(port)ap_idle");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, myproject_entry120_U0_ap_start, "myproject_entry120_U0_ap_start");
-    sc_trace(mVcdFile, myproject_entry120_U0_start_full_n, "myproject_entry120_U0_start_full_n");
-    sc_trace(mVcdFile, myproject_entry120_U0_ap_done, "myproject_entry120_U0_ap_done");
-    sc_trace(mVcdFile, myproject_entry120_U0_ap_continue, "myproject_entry120_U0_ap_continue");
-    sc_trace(mVcdFile, myproject_entry120_U0_ap_idle, "myproject_entry120_U0_ap_idle");
-    sc_trace(mVcdFile, myproject_entry120_U0_ap_ready, "myproject_entry120_U0_ap_ready");
-    sc_trace(mVcdFile, myproject_entry120_U0_start_out, "myproject_entry120_U0_start_out");
-    sc_trace(mVcdFile, myproject_entry120_U0_start_write, "myproject_entry120_U0_start_write");
-    sc_trace(mVcdFile, myproject_entry120_U0_input_5_V_out_din, "myproject_entry120_U0_input_5_V_out_din");
-    sc_trace(mVcdFile, myproject_entry120_U0_input_5_V_out_write, "myproject_entry120_U0_input_5_V_out_write");
-    sc_trace(mVcdFile, myproject_entry120_U0_input_5_V_out1_din, "myproject_entry120_U0_input_5_V_out1_din");
-    sc_trace(mVcdFile, myproject_entry120_U0_input_5_V_out1_write, "myproject_entry120_U0_input_5_V_out1_write");
+    sc_trace(mVcdFile, myproject_entry181_U0_ap_start, "myproject_entry181_U0_ap_start");
+    sc_trace(mVcdFile, myproject_entry181_U0_start_full_n, "myproject_entry181_U0_start_full_n");
+    sc_trace(mVcdFile, myproject_entry181_U0_ap_done, "myproject_entry181_U0_ap_done");
+    sc_trace(mVcdFile, myproject_entry181_U0_ap_continue, "myproject_entry181_U0_ap_continue");
+    sc_trace(mVcdFile, myproject_entry181_U0_ap_idle, "myproject_entry181_U0_ap_idle");
+    sc_trace(mVcdFile, myproject_entry181_U0_ap_ready, "myproject_entry181_U0_ap_ready");
+    sc_trace(mVcdFile, myproject_entry181_U0_start_out, "myproject_entry181_U0_start_out");
+    sc_trace(mVcdFile, myproject_entry181_U0_start_write, "myproject_entry181_U0_start_write");
+    sc_trace(mVcdFile, myproject_entry181_U0_input_1_V_out_din, "myproject_entry181_U0_input_1_V_out_din");
+    sc_trace(mVcdFile, myproject_entry181_U0_input_1_V_out_write, "myproject_entry181_U0_input_1_V_out_write");
+    sc_trace(mVcdFile, myproject_entry181_U0_input_1_V_out1_din, "myproject_entry181_U0_input_1_V_out1_din");
+    sc_trace(mVcdFile, myproject_entry181_U0_input_1_V_out1_write, "myproject_entry181_U0_input_1_V_out1_write");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_start, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_start");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_ready, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_ready");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_data_V_read, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_data_V_read");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_0, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_0");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_1, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_1");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_2, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_2");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_3, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_3");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_4, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_4");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_5, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_5");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_6, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_6");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_7, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_7");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_8, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_8");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_9, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_9");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_10, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_10");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_11, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_11");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_12, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_12");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_13, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_13");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_14, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_14");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_15, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_15");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_16, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_16");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_17, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_17");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_18, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_return_18");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_18_V, "ap_channel_done_layer9_out_18_V");
-    sc_trace(mVcdFile, layer9_out_18_V_full_n, "layer9_out_18_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_18_V, "ap_sync_reg_channel_write_layer9_out_18_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_18_V, "ap_sync_channel_write_layer9_out_18_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_17_V, "ap_channel_done_layer9_out_17_V");
-    sc_trace(mVcdFile, layer9_out_17_V_full_n, "layer9_out_17_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_17_V, "ap_sync_reg_channel_write_layer9_out_17_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_17_V, "ap_sync_channel_write_layer9_out_17_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_16_V, "ap_channel_done_layer9_out_16_V");
-    sc_trace(mVcdFile, layer9_out_16_V_full_n, "layer9_out_16_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_16_V, "ap_sync_reg_channel_write_layer9_out_16_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_16_V, "ap_sync_channel_write_layer9_out_16_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_15_V, "ap_channel_done_layer9_out_15_V");
-    sc_trace(mVcdFile, layer9_out_15_V_full_n, "layer9_out_15_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_15_V, "ap_sync_reg_channel_write_layer9_out_15_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_15_V, "ap_sync_channel_write_layer9_out_15_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_14_V, "ap_channel_done_layer9_out_14_V");
-    sc_trace(mVcdFile, layer9_out_14_V_full_n, "layer9_out_14_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_14_V, "ap_sync_reg_channel_write_layer9_out_14_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_14_V, "ap_sync_channel_write_layer9_out_14_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_13_V, "ap_channel_done_layer9_out_13_V");
-    sc_trace(mVcdFile, layer9_out_13_V_full_n, "layer9_out_13_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_13_V, "ap_sync_reg_channel_write_layer9_out_13_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_13_V, "ap_sync_channel_write_layer9_out_13_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_12_V, "ap_channel_done_layer9_out_12_V");
-    sc_trace(mVcdFile, layer9_out_12_V_full_n, "layer9_out_12_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_12_V, "ap_sync_reg_channel_write_layer9_out_12_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_12_V, "ap_sync_channel_write_layer9_out_12_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_11_V, "ap_channel_done_layer9_out_11_V");
-    sc_trace(mVcdFile, layer9_out_11_V_full_n, "layer9_out_11_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_11_V, "ap_sync_reg_channel_write_layer9_out_11_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_11_V, "ap_sync_channel_write_layer9_out_11_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_10_V, "ap_channel_done_layer9_out_10_V");
-    sc_trace(mVcdFile, layer9_out_10_V_full_n, "layer9_out_10_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_10_V, "ap_sync_reg_channel_write_layer9_out_10_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_10_V, "ap_sync_channel_write_layer9_out_10_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_9_V, "ap_channel_done_layer9_out_9_V");
-    sc_trace(mVcdFile, layer9_out_9_V_full_n, "layer9_out_9_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_9_V, "ap_sync_reg_channel_write_layer9_out_9_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_9_V, "ap_sync_channel_write_layer9_out_9_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_8_V, "ap_channel_done_layer9_out_8_V");
-    sc_trace(mVcdFile, layer9_out_8_V_full_n, "layer9_out_8_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_8_V, "ap_sync_reg_channel_write_layer9_out_8_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_8_V, "ap_sync_channel_write_layer9_out_8_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_7_V, "ap_channel_done_layer9_out_7_V");
-    sc_trace(mVcdFile, layer9_out_7_V_full_n, "layer9_out_7_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_7_V, "ap_sync_reg_channel_write_layer9_out_7_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_7_V, "ap_sync_channel_write_layer9_out_7_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_6_V, "ap_channel_done_layer9_out_6_V");
-    sc_trace(mVcdFile, layer9_out_6_V_full_n, "layer9_out_6_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_6_V, "ap_sync_reg_channel_write_layer9_out_6_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_6_V, "ap_sync_channel_write_layer9_out_6_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_5_V, "ap_channel_done_layer9_out_5_V");
-    sc_trace(mVcdFile, layer9_out_5_V_full_n, "layer9_out_5_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_5_V, "ap_sync_reg_channel_write_layer9_out_5_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_5_V, "ap_sync_channel_write_layer9_out_5_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_4_V, "ap_channel_done_layer9_out_4_V");
-    sc_trace(mVcdFile, layer9_out_4_V_full_n, "layer9_out_4_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_4_V, "ap_sync_reg_channel_write_layer9_out_4_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_4_V, "ap_sync_channel_write_layer9_out_4_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_3_V, "ap_channel_done_layer9_out_3_V");
-    sc_trace(mVcdFile, layer9_out_3_V_full_n, "layer9_out_3_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_3_V, "ap_sync_reg_channel_write_layer9_out_3_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_3_V, "ap_sync_channel_write_layer9_out_3_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_2_V, "ap_channel_done_layer9_out_2_V");
-    sc_trace(mVcdFile, layer9_out_2_V_full_n, "layer9_out_2_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_2_V, "ap_sync_reg_channel_write_layer9_out_2_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_2_V, "ap_sync_channel_write_layer9_out_2_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_1_V, "ap_channel_done_layer9_out_1_V");
-    sc_trace(mVcdFile, layer9_out_1_V_full_n, "layer9_out_1_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_1_V, "ap_sync_reg_channel_write_layer9_out_1_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_1_V, "ap_sync_channel_write_layer9_out_1_V");
-    sc_trace(mVcdFile, ap_channel_done_layer9_out_0_V, "ap_channel_done_layer9_out_0_V");
-    sc_trace(mVcdFile, layer9_out_0_V_full_n, "layer9_out_0_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer9_out_0_V, "ap_sync_reg_channel_write_layer9_out_0_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer9_out_0_V, "ap_sync_channel_write_layer9_out_0_V");
+    sc_trace(mVcdFile, ap_sync_continue, "ap_sync_continue");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_start, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_start");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_ready, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_ready");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_data_V_read, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_data_V_read");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_0, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_0");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_1, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_1");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_2, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_2");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_3, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_3");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_4, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_4");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_5, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_5");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_6, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_6");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_7, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_7");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_8, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_8");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_9, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_9");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_10, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_10");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_11, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_11");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_12, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_12");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_13, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_13");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_14, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_14");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_15, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_15");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_16, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_16");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_17, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_17");
-    sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_18, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_return_18");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_18_V, "ap_channel_done_layer10_out_18_V");
-    sc_trace(mVcdFile, layer10_out_18_V_full_n, "layer10_out_18_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_18_V, "ap_sync_reg_channel_write_layer10_out_18_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_18_V, "ap_sync_channel_write_layer10_out_18_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_17_V, "ap_channel_done_layer10_out_17_V");
-    sc_trace(mVcdFile, layer10_out_17_V_full_n, "layer10_out_17_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_17_V, "ap_sync_reg_channel_write_layer10_out_17_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_17_V, "ap_sync_channel_write_layer10_out_17_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_16_V, "ap_channel_done_layer10_out_16_V");
-    sc_trace(mVcdFile, layer10_out_16_V_full_n, "layer10_out_16_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_16_V, "ap_sync_reg_channel_write_layer10_out_16_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_16_V, "ap_sync_channel_write_layer10_out_16_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_15_V, "ap_channel_done_layer10_out_15_V");
-    sc_trace(mVcdFile, layer10_out_15_V_full_n, "layer10_out_15_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_15_V, "ap_sync_reg_channel_write_layer10_out_15_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_15_V, "ap_sync_channel_write_layer10_out_15_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_14_V, "ap_channel_done_layer10_out_14_V");
-    sc_trace(mVcdFile, layer10_out_14_V_full_n, "layer10_out_14_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_14_V, "ap_sync_reg_channel_write_layer10_out_14_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_14_V, "ap_sync_channel_write_layer10_out_14_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_13_V, "ap_channel_done_layer10_out_13_V");
-    sc_trace(mVcdFile, layer10_out_13_V_full_n, "layer10_out_13_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_13_V, "ap_sync_reg_channel_write_layer10_out_13_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_13_V, "ap_sync_channel_write_layer10_out_13_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_12_V, "ap_channel_done_layer10_out_12_V");
-    sc_trace(mVcdFile, layer10_out_12_V_full_n, "layer10_out_12_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_12_V, "ap_sync_reg_channel_write_layer10_out_12_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_12_V, "ap_sync_channel_write_layer10_out_12_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_11_V, "ap_channel_done_layer10_out_11_V");
-    sc_trace(mVcdFile, layer10_out_11_V_full_n, "layer10_out_11_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_11_V, "ap_sync_reg_channel_write_layer10_out_11_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_11_V, "ap_sync_channel_write_layer10_out_11_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_10_V, "ap_channel_done_layer10_out_10_V");
-    sc_trace(mVcdFile, layer10_out_10_V_full_n, "layer10_out_10_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_10_V, "ap_sync_reg_channel_write_layer10_out_10_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_10_V, "ap_sync_channel_write_layer10_out_10_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_9_V, "ap_channel_done_layer10_out_9_V");
-    sc_trace(mVcdFile, layer10_out_9_V_full_n, "layer10_out_9_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_9_V, "ap_sync_reg_channel_write_layer10_out_9_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_9_V, "ap_sync_channel_write_layer10_out_9_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_8_V, "ap_channel_done_layer10_out_8_V");
-    sc_trace(mVcdFile, layer10_out_8_V_full_n, "layer10_out_8_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_8_V, "ap_sync_reg_channel_write_layer10_out_8_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_8_V, "ap_sync_channel_write_layer10_out_8_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_7_V, "ap_channel_done_layer10_out_7_V");
-    sc_trace(mVcdFile, layer10_out_7_V_full_n, "layer10_out_7_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_7_V, "ap_sync_reg_channel_write_layer10_out_7_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_7_V, "ap_sync_channel_write_layer10_out_7_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_6_V, "ap_channel_done_layer10_out_6_V");
-    sc_trace(mVcdFile, layer10_out_6_V_full_n, "layer10_out_6_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_6_V, "ap_sync_reg_channel_write_layer10_out_6_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_6_V, "ap_sync_channel_write_layer10_out_6_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_5_V, "ap_channel_done_layer10_out_5_V");
-    sc_trace(mVcdFile, layer10_out_5_V_full_n, "layer10_out_5_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_5_V, "ap_sync_reg_channel_write_layer10_out_5_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_5_V, "ap_sync_channel_write_layer10_out_5_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_4_V, "ap_channel_done_layer10_out_4_V");
-    sc_trace(mVcdFile, layer10_out_4_V_full_n, "layer10_out_4_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_4_V, "ap_sync_reg_channel_write_layer10_out_4_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_4_V, "ap_sync_channel_write_layer10_out_4_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_3_V, "ap_channel_done_layer10_out_3_V");
-    sc_trace(mVcdFile, layer10_out_3_V_full_n, "layer10_out_3_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_3_V, "ap_sync_reg_channel_write_layer10_out_3_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_3_V, "ap_sync_channel_write_layer10_out_3_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_2_V, "ap_channel_done_layer10_out_2_V");
-    sc_trace(mVcdFile, layer10_out_2_V_full_n, "layer10_out_2_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_2_V, "ap_sync_reg_channel_write_layer10_out_2_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_2_V, "ap_sync_channel_write_layer10_out_2_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_1_V, "ap_channel_done_layer10_out_1_V");
-    sc_trace(mVcdFile, layer10_out_1_V_full_n, "layer10_out_1_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_1_V, "ap_sync_reg_channel_write_layer10_out_1_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_1_V, "ap_sync_channel_write_layer10_out_1_V");
-    sc_trace(mVcdFile, ap_channel_done_layer10_out_0_V, "ap_channel_done_layer10_out_0_V");
-    sc_trace(mVcdFile, layer10_out_0_V_full_n, "layer10_out_0_V_full_n");
-    sc_trace(mVcdFile, ap_sync_reg_channel_write_layer10_out_0_V, "ap_sync_reg_channel_write_layer10_out_0_V");
-    sc_trace(mVcdFile, ap_sync_channel_write_layer10_out_0_V, "ap_sync_channel_write_layer10_out_0_V");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_idle, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_idle");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_ready");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V_ap_vld, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V_ap_vld");
-    sc_trace(mVcdFile, ap_sync_continue, "ap_sync_continue");
-    sc_trace(mVcdFile, input_5_V_c_full_n, "input_5_V_c_full_n");
-    sc_trace(mVcdFile, input_5_V_c_dout, "input_5_V_c_dout");
-    sc_trace(mVcdFile, input_5_V_c_empty_n, "input_5_V_c_empty_n");
-    sc_trace(mVcdFile, input_5_V_c7_full_n, "input_5_V_c7_full_n");
-    sc_trace(mVcdFile, input_5_V_c7_dout, "input_5_V_c7_dout");
-    sc_trace(mVcdFile, input_5_V_c7_empty_n, "input_5_V_c7_empty_n");
-    sc_trace(mVcdFile, layer9_out_0_V_dout, "layer9_out_0_V_dout");
-    sc_trace(mVcdFile, layer9_out_0_V_empty_n, "layer9_out_0_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_1_V_dout, "layer9_out_1_V_dout");
-    sc_trace(mVcdFile, layer9_out_1_V_empty_n, "layer9_out_1_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_2_V_dout, "layer9_out_2_V_dout");
-    sc_trace(mVcdFile, layer9_out_2_V_empty_n, "layer9_out_2_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_3_V_dout, "layer9_out_3_V_dout");
-    sc_trace(mVcdFile, layer9_out_3_V_empty_n, "layer9_out_3_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_4_V_dout, "layer9_out_4_V_dout");
-    sc_trace(mVcdFile, layer9_out_4_V_empty_n, "layer9_out_4_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_5_V_dout, "layer9_out_5_V_dout");
-    sc_trace(mVcdFile, layer9_out_5_V_empty_n, "layer9_out_5_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_6_V_dout, "layer9_out_6_V_dout");
-    sc_trace(mVcdFile, layer9_out_6_V_empty_n, "layer9_out_6_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_7_V_dout, "layer9_out_7_V_dout");
-    sc_trace(mVcdFile, layer9_out_7_V_empty_n, "layer9_out_7_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_8_V_dout, "layer9_out_8_V_dout");
-    sc_trace(mVcdFile, layer9_out_8_V_empty_n, "layer9_out_8_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_9_V_dout, "layer9_out_9_V_dout");
-    sc_trace(mVcdFile, layer9_out_9_V_empty_n, "layer9_out_9_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_10_V_dout, "layer9_out_10_V_dout");
-    sc_trace(mVcdFile, layer9_out_10_V_empty_n, "layer9_out_10_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_11_V_dout, "layer9_out_11_V_dout");
-    sc_trace(mVcdFile, layer9_out_11_V_empty_n, "layer9_out_11_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_12_V_dout, "layer9_out_12_V_dout");
-    sc_trace(mVcdFile, layer9_out_12_V_empty_n, "layer9_out_12_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_13_V_dout, "layer9_out_13_V_dout");
-    sc_trace(mVcdFile, layer9_out_13_V_empty_n, "layer9_out_13_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_14_V_dout, "layer9_out_14_V_dout");
-    sc_trace(mVcdFile, layer9_out_14_V_empty_n, "layer9_out_14_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_15_V_dout, "layer9_out_15_V_dout");
-    sc_trace(mVcdFile, layer9_out_15_V_empty_n, "layer9_out_15_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_16_V_dout, "layer9_out_16_V_dout");
-    sc_trace(mVcdFile, layer9_out_16_V_empty_n, "layer9_out_16_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_17_V_dout, "layer9_out_17_V_dout");
-    sc_trace(mVcdFile, layer9_out_17_V_empty_n, "layer9_out_17_V_empty_n");
-    sc_trace(mVcdFile, layer9_out_18_V_dout, "layer9_out_18_V_dout");
-    sc_trace(mVcdFile, layer9_out_18_V_empty_n, "layer9_out_18_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_0_V_dout, "layer10_out_0_V_dout");
-    sc_trace(mVcdFile, layer10_out_0_V_empty_n, "layer10_out_0_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_1_V_dout, "layer10_out_1_V_dout");
-    sc_trace(mVcdFile, layer10_out_1_V_empty_n, "layer10_out_1_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_2_V_dout, "layer10_out_2_V_dout");
-    sc_trace(mVcdFile, layer10_out_2_V_empty_n, "layer10_out_2_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_3_V_dout, "layer10_out_3_V_dout");
-    sc_trace(mVcdFile, layer10_out_3_V_empty_n, "layer10_out_3_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_4_V_dout, "layer10_out_4_V_dout");
-    sc_trace(mVcdFile, layer10_out_4_V_empty_n, "layer10_out_4_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_5_V_dout, "layer10_out_5_V_dout");
-    sc_trace(mVcdFile, layer10_out_5_V_empty_n, "layer10_out_5_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_6_V_dout, "layer10_out_6_V_dout");
-    sc_trace(mVcdFile, layer10_out_6_V_empty_n, "layer10_out_6_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_7_V_dout, "layer10_out_7_V_dout");
-    sc_trace(mVcdFile, layer10_out_7_V_empty_n, "layer10_out_7_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_8_V_dout, "layer10_out_8_V_dout");
-    sc_trace(mVcdFile, layer10_out_8_V_empty_n, "layer10_out_8_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_9_V_dout, "layer10_out_9_V_dout");
-    sc_trace(mVcdFile, layer10_out_9_V_empty_n, "layer10_out_9_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_10_V_dout, "layer10_out_10_V_dout");
-    sc_trace(mVcdFile, layer10_out_10_V_empty_n, "layer10_out_10_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_11_V_dout, "layer10_out_11_V_dout");
-    sc_trace(mVcdFile, layer10_out_11_V_empty_n, "layer10_out_11_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_12_V_dout, "layer10_out_12_V_dout");
-    sc_trace(mVcdFile, layer10_out_12_V_empty_n, "layer10_out_12_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_13_V_dout, "layer10_out_13_V_dout");
-    sc_trace(mVcdFile, layer10_out_13_V_empty_n, "layer10_out_13_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_14_V_dout, "layer10_out_14_V_dout");
-    sc_trace(mVcdFile, layer10_out_14_V_empty_n, "layer10_out_14_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_15_V_dout, "layer10_out_15_V_dout");
-    sc_trace(mVcdFile, layer10_out_15_V_empty_n, "layer10_out_15_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_16_V_dout, "layer10_out_16_V_dout");
-    sc_trace(mVcdFile, layer10_out_16_V_empty_n, "layer10_out_16_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_17_V_dout, "layer10_out_17_V_dout");
-    sc_trace(mVcdFile, layer10_out_17_V_empty_n, "layer10_out_17_V_empty_n");
-    sc_trace(mVcdFile, layer10_out_18_V_dout, "layer10_out_18_V_dout");
-    sc_trace(mVcdFile, layer10_out_18_V_empty_n, "layer10_out_18_V_empty_n");
+    sc_trace(mVcdFile, input_1_V_c_full_n, "input_1_V_c_full_n");
+    sc_trace(mVcdFile, input_1_V_c_dout, "input_1_V_c_dout");
+    sc_trace(mVcdFile, input_1_V_c_empty_n, "input_1_V_c_empty_n");
+    sc_trace(mVcdFile, input_1_V_c1_full_n, "input_1_V_c1_full_n");
+    sc_trace(mVcdFile, input_1_V_c1_dout, "input_1_V_c1_dout");
+    sc_trace(mVcdFile, input_1_V_c1_empty_n, "input_1_V_c1_empty_n");
     sc_trace(mVcdFile, ap_sync_done, "ap_sync_done");
     sc_trace(mVcdFile, ap_sync_ready, "ap_sync_ready");
     sc_trace(mVcdFile, start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_din, "start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_din");
@@ -1514,8 +225,6 @@ myproject::myproject(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_start_write, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_start_write");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_start_full_n, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_start_full_n");
     sc_trace(mVcdFile, pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_start_write, "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_start_write");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_full_n, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_full_n");
-    sc_trace(mVcdFile, klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_write, "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_write");
 #endif
 
     }
@@ -1531,50 +240,11 @@ myproject::~myproject() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete myproject_entry120_U0;
+    delete myproject_entry181_U0;
     delete pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0;
     delete pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0;
-    delete klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0;
-    delete input_5_V_c_U;
-    delete input_5_V_c7_U;
-    delete layer9_out_0_V_U;
-    delete layer9_out_1_V_U;
-    delete layer9_out_2_V_U;
-    delete layer9_out_3_V_U;
-    delete layer9_out_4_V_U;
-    delete layer9_out_5_V_U;
-    delete layer9_out_6_V_U;
-    delete layer9_out_7_V_U;
-    delete layer9_out_8_V_U;
-    delete layer9_out_9_V_U;
-    delete layer9_out_10_V_U;
-    delete layer9_out_11_V_U;
-    delete layer9_out_12_V_U;
-    delete layer9_out_13_V_U;
-    delete layer9_out_14_V_U;
-    delete layer9_out_15_V_U;
-    delete layer9_out_16_V_U;
-    delete layer9_out_17_V_U;
-    delete layer9_out_18_V_U;
-    delete layer10_out_0_V_U;
-    delete layer10_out_1_V_U;
-    delete layer10_out_2_V_U;
-    delete layer10_out_3_V_U;
-    delete layer10_out_4_V_U;
-    delete layer10_out_5_V_U;
-    delete layer10_out_6_V_U;
-    delete layer10_out_7_V_U;
-    delete layer10_out_8_V_U;
-    delete layer10_out_9_V_U;
-    delete layer10_out_10_V_U;
-    delete layer10_out_11_V_U;
-    delete layer10_out_12_V_U;
-    delete layer10_out_13_V_U;
-    delete layer10_out_14_V_U;
-    delete layer10_out_15_V_U;
-    delete layer10_out_16_V_U;
-    delete layer10_out_17_V_U;
-    delete layer10_out_18_V_U;
+    delete input_1_V_c_U;
+    delete input_1_V_c1_U;
     delete start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U;
     delete start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U;
 }
@@ -1583,869 +253,44 @@ void myproject::thread_ap_var_for_const0() {
     ap_var_for_const0 = ap_const_logic_1;
 }
 
-void myproject::thread_ap_clk_no_reset_() {
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_0_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_0_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_0_V = ap_sync_channel_write_layer10_out_0_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_10_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_10_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_10_V = ap_sync_channel_write_layer10_out_10_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_11_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_11_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_11_V = ap_sync_channel_write_layer10_out_11_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_12_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_12_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_12_V = ap_sync_channel_write_layer10_out_12_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_13_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_13_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_13_V = ap_sync_channel_write_layer10_out_13_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_14_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_14_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_14_V = ap_sync_channel_write_layer10_out_14_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_15_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_15_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_15_V = ap_sync_channel_write_layer10_out_15_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_16_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_16_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_16_V = ap_sync_channel_write_layer10_out_16_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_17_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_17_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_17_V = ap_sync_channel_write_layer10_out_17_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_18_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_18_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_18_V = ap_sync_channel_write_layer10_out_18_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_1_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_1_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_1_V = ap_sync_channel_write_layer10_out_1_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_2_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_2_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_2_V = ap_sync_channel_write_layer10_out_2_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_3_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_3_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_3_V = ap_sync_channel_write_layer10_out_3_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_4_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_4_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_4_V = ap_sync_channel_write_layer10_out_4_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_5_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_5_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_5_V = ap_sync_channel_write_layer10_out_5_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_6_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_6_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_6_V = ap_sync_channel_write_layer10_out_6_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_7_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_7_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_7_V = ap_sync_channel_write_layer10_out_7_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_8_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_8_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_8_V = ap_sync_channel_write_layer10_out_8_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer10_out_9_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer10_out_9_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer10_out_9_V = ap_sync_channel_write_layer10_out_9_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_0_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_0_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_0_V = ap_sync_channel_write_layer9_out_0_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_10_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_10_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_10_V = ap_sync_channel_write_layer9_out_10_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_11_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_11_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_11_V = ap_sync_channel_write_layer9_out_11_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_12_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_12_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_12_V = ap_sync_channel_write_layer9_out_12_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_13_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_13_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_13_V = ap_sync_channel_write_layer9_out_13_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_14_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_14_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_14_V = ap_sync_channel_write_layer9_out_14_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_15_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_15_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_15_V = ap_sync_channel_write_layer9_out_15_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_16_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_16_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_16_V = ap_sync_channel_write_layer9_out_16_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_17_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_17_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_17_V = ap_sync_channel_write_layer9_out_17_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_18_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_18_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_18_V = ap_sync_channel_write_layer9_out_18_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_1_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_1_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_1_V = ap_sync_channel_write_layer9_out_1_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_2_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_2_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_2_V = ap_sync_channel_write_layer9_out_2_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_3_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_3_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_3_V = ap_sync_channel_write_layer9_out_3_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_4_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_4_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_4_V = ap_sync_channel_write_layer9_out_4_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_5_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_5_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_5_V = ap_sync_channel_write_layer9_out_5_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_6_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_6_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_6_V = ap_sync_channel_write_layer9_out_6_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_7_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_7_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_7_V = ap_sync_channel_write_layer9_out_7_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_8_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_8_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_8_V = ap_sync_channel_write_layer9_out_8_V.read();
-        }
-    }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        ap_sync_reg_channel_write_layer9_out_9_V = ap_const_logic_0;
-    } else {
-        if (esl_seteq<1,1,1>(ap_const_logic_1, (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & 
-             pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue.read()))) {
-            ap_sync_reg_channel_write_layer9_out_9_V = ap_const_logic_0;
-        } else {
-            ap_sync_reg_channel_write_layer9_out_9_V = ap_sync_channel_write_layer9_out_9_V.read();
-        }
-    }
-}
-
-void myproject::thread_ap_channel_done_layer10_out_0_V() {
-    ap_channel_done_layer10_out_0_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_0_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_10_V() {
-    ap_channel_done_layer10_out_10_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_10_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_11_V() {
-    ap_channel_done_layer10_out_11_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_11_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_12_V() {
-    ap_channel_done_layer10_out_12_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_12_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_13_V() {
-    ap_channel_done_layer10_out_13_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_13_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_14_V() {
-    ap_channel_done_layer10_out_14_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_14_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_15_V() {
-    ap_channel_done_layer10_out_15_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_15_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_16_V() {
-    ap_channel_done_layer10_out_16_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_16_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_17_V() {
-    ap_channel_done_layer10_out_17_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_17_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_18_V() {
-    ap_channel_done_layer10_out_18_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_18_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_1_V() {
-    ap_channel_done_layer10_out_1_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_1_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_2_V() {
-    ap_channel_done_layer10_out_2_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_2_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_3_V() {
-    ap_channel_done_layer10_out_3_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_3_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_4_V() {
-    ap_channel_done_layer10_out_4_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_4_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_5_V() {
-    ap_channel_done_layer10_out_5_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_5_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_6_V() {
-    ap_channel_done_layer10_out_6_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_6_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_7_V() {
-    ap_channel_done_layer10_out_7_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_7_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_8_V() {
-    ap_channel_done_layer10_out_8_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_8_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer10_out_9_V() {
-    ap_channel_done_layer10_out_9_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read() & (ap_sync_reg_channel_write_layer10_out_9_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_0_V() {
-    ap_channel_done_layer9_out_0_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_0_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_10_V() {
-    ap_channel_done_layer9_out_10_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_10_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_11_V() {
-    ap_channel_done_layer9_out_11_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_11_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_12_V() {
-    ap_channel_done_layer9_out_12_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_12_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_13_V() {
-    ap_channel_done_layer9_out_13_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_13_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_14_V() {
-    ap_channel_done_layer9_out_14_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_14_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_15_V() {
-    ap_channel_done_layer9_out_15_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_15_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_16_V() {
-    ap_channel_done_layer9_out_16_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_16_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_17_V() {
-    ap_channel_done_layer9_out_17_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_17_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_18_V() {
-    ap_channel_done_layer9_out_18_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_18_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_1_V() {
-    ap_channel_done_layer9_out_1_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_1_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_2_V() {
-    ap_channel_done_layer9_out_2_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_2_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_3_V() {
-    ap_channel_done_layer9_out_3_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_3_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_4_V() {
-    ap_channel_done_layer9_out_4_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_4_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_5_V() {
-    ap_channel_done_layer9_out_5_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_5_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_6_V() {
-    ap_channel_done_layer9_out_6_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_6_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_7_V() {
-    ap_channel_done_layer9_out_7_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_7_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_8_V() {
-    ap_channel_done_layer9_out_8_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_8_V.read() ^ 
-  ap_const_logic_1));
-}
-
-void myproject::thread_ap_channel_done_layer9_out_9_V() {
-    ap_channel_done_layer9_out_9_V = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & (ap_sync_reg_channel_write_layer9_out_9_V.read() ^ 
-  ap_const_logic_1));
-}
-
 void myproject::thread_ap_done() {
-    ap_done = klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done.read();
+    ap_done = ap_sync_done.read();
 }
 
 void myproject::thread_ap_idle() {
-    ap_idle = (myproject_entry120_U0_ap_idle.read() & pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle.read() & pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle.read() & klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_idle.read() & (layer9_out_0_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_1_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_2_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_3_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_4_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_5_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_6_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_7_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_8_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_9_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_10_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_11_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_12_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_13_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_14_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_15_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_16_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_17_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer9_out_18_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_0_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_1_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_2_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_3_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_4_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_5_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_6_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_7_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_8_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_9_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_10_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_11_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_12_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_13_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_14_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_15_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_16_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_17_V_empty_n.read() ^ 
-  ap_const_logic_1) & (layer10_out_18_V_empty_n.read() ^ 
-  ap_const_logic_1));
+    ap_idle = (myproject_entry181_U0_ap_idle.read() & pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_idle.read() & pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_idle.read());
 }
 
 void myproject::thread_ap_ready() {
-    ap_ready = myproject_entry120_U0_ap_ready.read();
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_0_V() {
-    ap_sync_channel_write_layer10_out_0_V = ((ap_channel_done_layer10_out_0_V.read() & 
-  layer10_out_0_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_0_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_10_V() {
-    ap_sync_channel_write_layer10_out_10_V = ((ap_channel_done_layer10_out_10_V.read() & 
-  layer10_out_10_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_10_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_11_V() {
-    ap_sync_channel_write_layer10_out_11_V = ((ap_channel_done_layer10_out_11_V.read() & 
-  layer10_out_11_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_11_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_12_V() {
-    ap_sync_channel_write_layer10_out_12_V = ((ap_channel_done_layer10_out_12_V.read() & 
-  layer10_out_12_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_12_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_13_V() {
-    ap_sync_channel_write_layer10_out_13_V = ((ap_channel_done_layer10_out_13_V.read() & 
-  layer10_out_13_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_13_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_14_V() {
-    ap_sync_channel_write_layer10_out_14_V = ((ap_channel_done_layer10_out_14_V.read() & 
-  layer10_out_14_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_14_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_15_V() {
-    ap_sync_channel_write_layer10_out_15_V = ((ap_channel_done_layer10_out_15_V.read() & 
-  layer10_out_15_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_15_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_16_V() {
-    ap_sync_channel_write_layer10_out_16_V = ((ap_channel_done_layer10_out_16_V.read() & 
-  layer10_out_16_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_16_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_17_V() {
-    ap_sync_channel_write_layer10_out_17_V = ((ap_channel_done_layer10_out_17_V.read() & 
-  layer10_out_17_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_17_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_18_V() {
-    ap_sync_channel_write_layer10_out_18_V = ((ap_channel_done_layer10_out_18_V.read() & 
-  layer10_out_18_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_18_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_1_V() {
-    ap_sync_channel_write_layer10_out_1_V = ((ap_channel_done_layer10_out_1_V.read() & 
-  layer10_out_1_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_1_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_2_V() {
-    ap_sync_channel_write_layer10_out_2_V = ((ap_channel_done_layer10_out_2_V.read() & 
-  layer10_out_2_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_2_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_3_V() {
-    ap_sync_channel_write_layer10_out_3_V = ((ap_channel_done_layer10_out_3_V.read() & 
-  layer10_out_3_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_3_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_4_V() {
-    ap_sync_channel_write_layer10_out_4_V = ((ap_channel_done_layer10_out_4_V.read() & 
-  layer10_out_4_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_4_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_5_V() {
-    ap_sync_channel_write_layer10_out_5_V = ((ap_channel_done_layer10_out_5_V.read() & 
-  layer10_out_5_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_5_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_6_V() {
-    ap_sync_channel_write_layer10_out_6_V = ((ap_channel_done_layer10_out_6_V.read() & 
-  layer10_out_6_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_6_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_7_V() {
-    ap_sync_channel_write_layer10_out_7_V = ((ap_channel_done_layer10_out_7_V.read() & 
-  layer10_out_7_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_7_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_8_V() {
-    ap_sync_channel_write_layer10_out_8_V = ((ap_channel_done_layer10_out_8_V.read() & 
-  layer10_out_8_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_8_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer10_out_9_V() {
-    ap_sync_channel_write_layer10_out_9_V = ((ap_channel_done_layer10_out_9_V.read() & 
-  layer10_out_9_V_full_n.read()) | ap_sync_reg_channel_write_layer10_out_9_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_0_V() {
-    ap_sync_channel_write_layer9_out_0_V = ((ap_channel_done_layer9_out_0_V.read() & 
-  layer9_out_0_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_0_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_10_V() {
-    ap_sync_channel_write_layer9_out_10_V = ((ap_channel_done_layer9_out_10_V.read() & 
-  layer9_out_10_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_10_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_11_V() {
-    ap_sync_channel_write_layer9_out_11_V = ((ap_channel_done_layer9_out_11_V.read() & 
-  layer9_out_11_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_11_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_12_V() {
-    ap_sync_channel_write_layer9_out_12_V = ((ap_channel_done_layer9_out_12_V.read() & 
-  layer9_out_12_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_12_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_13_V() {
-    ap_sync_channel_write_layer9_out_13_V = ((ap_channel_done_layer9_out_13_V.read() & 
-  layer9_out_13_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_13_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_14_V() {
-    ap_sync_channel_write_layer9_out_14_V = ((ap_channel_done_layer9_out_14_V.read() & 
-  layer9_out_14_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_14_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_15_V() {
-    ap_sync_channel_write_layer9_out_15_V = ((ap_channel_done_layer9_out_15_V.read() & 
-  layer9_out_15_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_15_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_16_V() {
-    ap_sync_channel_write_layer9_out_16_V = ((ap_channel_done_layer9_out_16_V.read() & 
-  layer9_out_16_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_16_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_17_V() {
-    ap_sync_channel_write_layer9_out_17_V = ((ap_channel_done_layer9_out_17_V.read() & 
-  layer9_out_17_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_17_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_18_V() {
-    ap_sync_channel_write_layer9_out_18_V = ((ap_channel_done_layer9_out_18_V.read() & 
-  layer9_out_18_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_18_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_1_V() {
-    ap_sync_channel_write_layer9_out_1_V = ((ap_channel_done_layer9_out_1_V.read() & 
-  layer9_out_1_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_1_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_2_V() {
-    ap_sync_channel_write_layer9_out_2_V = ((ap_channel_done_layer9_out_2_V.read() & 
-  layer9_out_2_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_2_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_3_V() {
-    ap_sync_channel_write_layer9_out_3_V = ((ap_channel_done_layer9_out_3_V.read() & 
-  layer9_out_3_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_3_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_4_V() {
-    ap_sync_channel_write_layer9_out_4_V = ((ap_channel_done_layer9_out_4_V.read() & 
-  layer9_out_4_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_4_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_5_V() {
-    ap_sync_channel_write_layer9_out_5_V = ((ap_channel_done_layer9_out_5_V.read() & 
-  layer9_out_5_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_5_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_6_V() {
-    ap_sync_channel_write_layer9_out_6_V = ((ap_channel_done_layer9_out_6_V.read() & 
-  layer9_out_6_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_6_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_7_V() {
-    ap_sync_channel_write_layer9_out_7_V = ((ap_channel_done_layer9_out_7_V.read() & 
-  layer9_out_7_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_7_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_8_V() {
-    ap_sync_channel_write_layer9_out_8_V = ((ap_channel_done_layer9_out_8_V.read() & 
-  layer9_out_8_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_8_V.read());
-}
-
-void myproject::thread_ap_sync_channel_write_layer9_out_9_V() {
-    ap_sync_channel_write_layer9_out_9_V = ((ap_channel_done_layer9_out_9_V.read() & 
-  layer9_out_9_V_full_n.read()) | ap_sync_reg_channel_write_layer9_out_9_V.read());
+    ap_ready = myproject_entry181_U0_ap_ready.read();
 }
 
 void myproject::thread_ap_sync_continue() {
-    ap_sync_continue = ap_const_logic_1;
+    ap_sync_continue = ap_sync_done.read();
 }
 
 void myproject::thread_ap_sync_done() {
-    ap_sync_done = klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_done.read();
+    ap_sync_done = (pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_done.read() & pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_done.read());
 }
 
 void myproject::thread_ap_sync_ready() {
-    ap_sync_ready = myproject_entry120_U0_ap_ready.read();
+    ap_sync_ready = myproject_entry181_U0_ap_ready.read();
 }
 
-void myproject::thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue() {
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_continue = ap_const_logic_1;
+void myproject::thread_myproject_entry181_U0_ap_continue() {
+    myproject_entry181_U0_ap_continue = ap_const_logic_1;
 }
 
-void myproject::thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start() {
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_ap_start = (layer9_out_0_V_empty_n.read() & layer9_out_1_V_empty_n.read() & layer9_out_2_V_empty_n.read() & layer9_out_3_V_empty_n.read() & layer9_out_4_V_empty_n.read() & layer9_out_5_V_empty_n.read() & layer9_out_6_V_empty_n.read() & layer9_out_7_V_empty_n.read() & layer9_out_8_V_empty_n.read() & layer9_out_9_V_empty_n.read() & layer9_out_10_V_empty_n.read() & layer9_out_11_V_empty_n.read() & layer9_out_12_V_empty_n.read() & layer9_out_13_V_empty_n.read() & layer9_out_14_V_empty_n.read() & layer9_out_15_V_empty_n.read() & layer9_out_16_V_empty_n.read() & layer9_out_17_V_empty_n.read() & layer9_out_18_V_empty_n.read() & layer10_out_0_V_empty_n.read() & layer10_out_1_V_empty_n.read() & layer10_out_2_V_empty_n.read() & layer10_out_3_V_empty_n.read() & layer10_out_4_V_empty_n.read() & layer10_out_5_V_empty_n.read() & layer10_out_6_V_empty_n.read() & layer10_out_7_V_empty_n.read() & layer10_out_8_V_empty_n.read() & layer10_out_9_V_empty_n.read() & layer10_out_10_V_empty_n.read() & layer10_out_11_V_empty_n.read() & layer10_out_12_V_empty_n.read() & layer10_out_13_V_empty_n.read() & layer10_out_14_V_empty_n.read() & layer10_out_15_V_empty_n.read() & layer10_out_16_V_empty_n.read() & layer10_out_17_V_empty_n.read() & layer10_out_18_V_empty_n.read());
+void myproject::thread_myproject_entry181_U0_ap_start() {
+    myproject_entry181_U0_ap_start = ap_start.read();
 }
 
-void myproject::thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_full_n() {
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_full_n = ap_const_logic_1;
-}
-
-void myproject::thread_klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_write() {
-    klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_start_write = ap_const_logic_0;
-}
-
-void myproject::thread_layer6_out_0_V() {
-    layer6_out_0_V = klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V.read();
-}
-
-void myproject::thread_layer6_out_0_V_ap_vld() {
-    layer6_out_0_V_ap_vld = klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_res_V_ap_vld.read();
-}
-
-void myproject::thread_myproject_entry120_U0_ap_continue() {
-    myproject_entry120_U0_ap_continue = ap_const_logic_1;
-}
-
-void myproject::thread_myproject_entry120_U0_ap_start() {
-    myproject_entry120_U0_ap_start = ap_start.read();
-}
-
-void myproject::thread_myproject_entry120_U0_start_full_n() {
-    myproject_entry120_U0_start_full_n = (start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_full_n.read() & start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_full_n.read());
+void myproject::thread_myproject_entry181_U0_start_full_n() {
+    myproject_entry181_U0_start_full_n = (start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_full_n.read() & start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_full_n.read());
 }
 
 void myproject::thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue() {
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue = (ap_sync_channel_write_layer10_out_18_V.read() & ap_sync_channel_write_layer10_out_17_V.read() & ap_sync_channel_write_layer10_out_16_V.read() & ap_sync_channel_write_layer10_out_15_V.read() & ap_sync_channel_write_layer10_out_14_V.read() & ap_sync_channel_write_layer10_out_13_V.read() & ap_sync_channel_write_layer10_out_12_V.read() & ap_sync_channel_write_layer10_out_11_V.read() & ap_sync_channel_write_layer10_out_10_V.read() & ap_sync_channel_write_layer10_out_9_V.read() & ap_sync_channel_write_layer10_out_8_V.read() & ap_sync_channel_write_layer10_out_7_V.read() & ap_sync_channel_write_layer10_out_6_V.read() & ap_sync_channel_write_layer10_out_5_V.read() & ap_sync_channel_write_layer10_out_4_V.read() & ap_sync_channel_write_layer10_out_3_V.read() & ap_sync_channel_write_layer10_out_2_V.read() & ap_sync_channel_write_layer10_out_1_V.read() & ap_sync_channel_write_layer10_out_0_V.read());
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_continue = ap_sync_done.read();
 }
 
 void myproject::thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_ap_start() {
@@ -2461,7 +306,7 @@ void myproject::thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config1
 }
 
 void myproject::thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue() {
-    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue = (ap_sync_channel_write_layer9_out_18_V.read() & ap_sync_channel_write_layer9_out_17_V.read() & ap_sync_channel_write_layer9_out_16_V.read() & ap_sync_channel_write_layer9_out_15_V.read() & ap_sync_channel_write_layer9_out_14_V.read() & ap_sync_channel_write_layer9_out_13_V.read() & ap_sync_channel_write_layer9_out_12_V.read() & ap_sync_channel_write_layer9_out_11_V.read() & ap_sync_channel_write_layer9_out_10_V.read() & ap_sync_channel_write_layer9_out_9_V.read() & ap_sync_channel_write_layer9_out_8_V.read() & ap_sync_channel_write_layer9_out_7_V.read() & ap_sync_channel_write_layer9_out_6_V.read() & ap_sync_channel_write_layer9_out_5_V.read() & ap_sync_channel_write_layer9_out_4_V.read() & ap_sync_channel_write_layer9_out_3_V.read() & ap_sync_channel_write_layer9_out_2_V.read() & ap_sync_channel_write_layer9_out_1_V.read() & ap_sync_channel_write_layer9_out_0_V.read());
+    pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_continue = ap_sync_done.read();
 }
 
 void myproject::thread_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_ap_start() {
@@ -2496,13 +341,12 @@ void myproject::thread_hdltv_gen() {
     while (1) {
         wait();
         const char* mComma = ap_cycleNo == 0 ? " " : ", " ;
-        mHdltvinHandle << mComma << "{"  <<  " \"input_5_V\" :  \"" << input_5_V.read() << "\" ";
-        mHdltvoutHandle << mComma << "{"  <<  " \"layer6_out_0_V\" :  \"" << layer6_out_0_V.read() << "\" ";
+        mHdltvinHandle << mComma << "{"  <<  " \"input_1_V\" :  \"" << input_1_V.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"layer6_out_0_V\" :  \"" << layer6_out_0_V.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ap_rst\" :  \"" << ap_rst.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"input_5_V_ap_vld\" :  \"" << input_5_V_ap_vld.read() << "\" ";
+        mHdltvinHandle << " , " <<  " \"input_1_V_ap_vld\" :  \"" << input_1_V_ap_vld.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ap_start\" :  \"" << ap_start.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"layer6_out_0_V_ap_vld\" :  \"" << layer6_out_0_V_ap_vld.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"ap_done\" :  \"" << ap_done.read() << "\" ";
+        mHdltvoutHandle << mComma << "{"  <<  " \"ap_done\" :  \"" << ap_done.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"ap_ready\" :  \"" << ap_ready.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"ap_idle\" :  \"" << ap_idle.read() << "\" ";
         mHdltvinHandle << "}" << std::endl;

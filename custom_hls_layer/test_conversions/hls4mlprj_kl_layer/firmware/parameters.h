@@ -7,7 +7,6 @@
 #include "nnet_utils/nnet_code_gen.h"
 #include "nnet_utils/nnet_helpers.h"
 // hls-fpga-machine-learning insert includes
-#include "nnet_utils/kl_layer.h"
 #include "nnet_utils/nnet_conv2d.h"
 #include "nnet_utils/nnet_sepconv2d_stream.h"
 
@@ -19,7 +18,7 @@
 
 
 // hls-fpga-machine-learning insert layer-config
-// dense_8
+// dense
 struct config9_mult : nnet::dense_config {
     static const unsigned n_in = 1;
     static const unsigned n_out = 10;
@@ -75,7 +74,7 @@ struct config9 : nnet::conv2d_config {
 };
 const ap_uint<config9::filt_height * config9::filt_width> config9::pixels[] = {0};
 
-// dense_9
+// dense_1
 struct config10_mult : nnet::dense_config {
     static const unsigned n_in = 1;
     static const unsigned n_out = 10;
@@ -130,17 +129,6 @@ struct config10 : nnet::conv2d_config {
     using scale_index_width = nnet::scale_index_unscaled<K, S, W>;
 };
 const ap_uint<config10::filt_height * config10::filt_width> config10::pixels[] = {0};
-
-// kl_loss_4
-struct config6 : nnet::distance_config {
-    static const unsigned n_in = 19;
-    static const unsigned n_out = 1;
-    typedef model_default_t accum_t;
-    typedef kl_loss_4_sum_t sum_t;
-    typedef kl_loss_4_exp_table_t exp_table_t;
-    static const unsigned table_size = 1024;
-    static constexpr float exp_range = 8;
-};
 
 
 

@@ -5,14 +5,14 @@
 
 
 void myproject(
-    input_t input_5[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
+    input_t input_1[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
     result_t layer6_out[KL_LOSS_6]
 ) {
 
     // hls-fpga-machine-learning insert IO
-    #pragma HLS ARRAY_RESHAPE variable=input_5 complete dim=0
+    #pragma HLS ARRAY_RESHAPE variable=input_1 complete dim=0
     #pragma HLS ARRAY_PARTITION variable=layer6_out complete dim=0
-    #pragma HLS INTERFACE ap_vld port=input_5,layer6_out 
+    #pragma HLS INTERFACE ap_vld port=input_1,layer6_out 
     #pragma HLS DATAFLOW 
 
     // hls-fpga-machine-learning insert load weights
@@ -33,13 +33,11 @@ void myproject(
 
     layer9_t layer9_out[OUT_HEIGHT_9*OUT_WIDTH_9*N_FILT_9];
     #pragma HLS ARRAY_PARTITION variable=layer9_out complete dim=0
-    nnet::pointwise_conv_2d_cl<input_t, layer9_t, config9>(input_5, layer9_out, w9, b9); // dense_8
+    nnet::pointwise_conv_2d_cl<input_t, layer9_t, config9>(input_1, layer9_out, w9, b9); // dense
 
     layer10_t layer10_out[OUT_HEIGHT_10*OUT_WIDTH_10*N_FILT_10];
     #pragma HLS ARRAY_PARTITION variable=layer10_out complete dim=0
-    nnet::pointwise_conv_2d_cl<input_t, layer10_t, config10>(input_5, layer10_out, w10, b10); // dense_9
-
-    nnet::klloss<layer9_t, layer10_t, result_t, config6>(layer9_out, layer10_out, layer6_out); // kl_loss_4
+    nnet::pointwise_conv_2d_cl<input_t, layer10_t, config10>(input_1, layer10_out, w10, b10); // dense_1
 
 }
 

@@ -21,9 +21,9 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>120</Best-caseLatency>
-<Average-caseLatency>120</Average-caseLatency>
-<Worst-caseLatency>121</Worst-caseLatency>
+<Best-caseLatency>115</Best-caseLatency>
+<Average-caseLatency>115</Average-caseLatency>
+<Worst-caseLatency>116</Worst-caseLatency>
 <DataflowPipelineThroughput>114</DataflowPipelineThroughput>
 <Interval-min>114</Interval-min>
 <Interval-max>114</Interval-max>
@@ -32,10 +32,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>112</BRAM_18K>
-<DSP48E>39</DSP48E>
-<FF>11737</FF>
-<LUT>11603</LUT>
+<BRAM_18K>102</BRAM_18K>
+<FF>9331</FF>
+<LUT>5465</LUT>
+<DSP48E>0</DSP48E>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -49,8 +49,8 @@
 
 <InterfaceSummary>
 <RtlPorts>
-<name>input_5_V</name>
-<Object>input_5_V</Object>
+<name>input_1_V</name>
+<Object>input_1_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -61,8 +61,8 @@
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>
-<name>input_5_V_ap_vld</name>
-<Object>input_5_V</Object>
+<name>input_1_V_ap_vld</name>
+<Object>input_1_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -79,21 +79,9 @@
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
 <IOConfig></IOConfig>
-<Dir>out</Dir>
+<Dir>in</Dir>
 <Bits>16</Bits>
 <Attribute>data</Attribute>
-<CType>int</CType>
-</RtlPorts>
-<RtlPorts>
-<name>layer6_out_0_V_ap_vld</name>
-<Object>layer6_out_0_V</Object>
-<Type>pointer</Type>
-<Scope></Scope>
-<IOProtocol>ap_vld</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
 <CType>int</CType>
 </RtlPorts>
 <RtlPorts>

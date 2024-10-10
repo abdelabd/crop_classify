@@ -10,7 +10,7 @@
 
 // Prototype of top level function for C-synthesis
 void myproject(
-    input_t input_5[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
+    input_t input_1[N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1],
     result_t layer6_out[KL_LOSS_6]
 );
 

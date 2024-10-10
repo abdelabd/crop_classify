@@ -26,8 +26,8 @@ typedef ap_fixed<16,6> model_default_t;
 typedef ap_fixed<16,6> layer9_t;
 typedef ap_fixed<16,6> layer10_t;
 typedef ap_fixed<16,6> result_t;
-typedef ap_fixed<18,8,AP_RND,AP_SAT,0> kl_loss_4_sum_t;
-typedef ap_fixed<18,8,AP_RND,AP_SAT,0> kl_loss_4_exp_table_t;
+typedef ap_fixed<18,8,AP_RND,AP_SAT,0> kl_loss_sum_t;
+typedef ap_fixed<18,8,AP_RND,AP_SAT,0> kl_loss_exp_table_t;
 
 
 #endif

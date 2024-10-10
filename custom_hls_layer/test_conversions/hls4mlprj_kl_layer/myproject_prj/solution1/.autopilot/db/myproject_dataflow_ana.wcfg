@@ -37,21 +37,21 @@
          <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/myproject_entry120_U0_activity">
-            <obj_property name="label">myproject_entry120_U0_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/myproject_entry181_U0_activity">
+            <obj_property name="label">myproject_entry181_U0_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">myproject_entry120_U0_activity</obj_property>
-            <obj_property name="ObjectShortName">myproject_entry120_U0_activity</obj_property>
+            <obj_property name="ElementShortName">myproject_entry181_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">myproject_entry181_U0_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/myproject_entry120_U0_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/myproject_entry120_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/myproject_entry120_U0_activity.dataflowTxTooltipData</obj_property>
+            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/myproject_entry181_U0_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/myproject_entry181_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/myproject_entry181_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
          <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_activity">
             <obj_property name="label">pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_activity</obj_property>
@@ -85,22 +85,6 @@
             <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
             <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity">
-            <obj_property name="label">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity</obj_property>
-            <obj_property name="ObjectShortName">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="CustomSignalColor">turquoise</obj_property>
-            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity.dataflowTxTooltipData</obj_property>
-         </wvobject>
       </wvobject>
    </wvobject>
    <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject//AESL_inst_myproject_activity">
@@ -110,9 +94,9 @@
    <wvobject type="group" fp_name="AESL_inst_myproject_group">
       <obj_property name="label">AESL_inst_myproject</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/myproject_entry120_U0_activity">
-         <obj_property name="ElementShortName">myproject_entry120_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">myproject_entry120_U0_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/myproject_entry181_U0_activity">
+         <obj_property name="ElementShortName">myproject_entry181_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">myproject_entry181_U0_activity</obj_property>
       </wvobject>
       <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_activity">
          <obj_property name="ElementShortName">pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_activity</obj_property>
@@ -121,10 +105,6 @@
       <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_activity">
          <obj_property name="ElementShortName">pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_activity</obj_property>
          <obj_property name="ObjectShortName">pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_activity</obj_property>
-      </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity">
-         <obj_property name="ElementShortName">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity</obj_property>
-         <obj_property name="ObjectShortName">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_myproject_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -142,74 +122,74 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="myproject_entry120_U0_group">
-         <obj_property name="label">myproject_entry120_U0</obj_property>
+      <wvobject type="group" fp_name="myproject_entry181_U0_group">
+         <obj_property name="label">myproject_entry181_U0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="myproject_entry120_U0_Input_group">
+         <wvobject type="group" fp_name="myproject_entry181_U0_Input_group">
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>
-         <wvobject type="group" fp_name="myproject_entry120_U0_Handshake_group">
+         <wvobject type="group" fp_name="myproject_entry181_U0_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/ap_start">
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/real_start">
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/real_start">
                <obj_property name="ElementShortName">real_start</obj_property>
                <obj_property name="ObjectShortName">real_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/ap_done">
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/ap_continue">
+            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/ap_continue">
                <obj_property name="ElementShortName">ap_continue</obj_property>
                <obj_property name="ObjectShortName">ap_continue</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="myproject_entry120_U0_Output_group">
+         <wvobject type="group" fp_name="myproject_entry181_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="input_5_V_out_group">
-               <obj_property name="label">input_5_V_out(input_5_V_c_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="input_1_V_out_group">
+               <obj_property name="label">input_1_V_out(input_1_V_c_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out_blk_n">
-                  <obj_property name="ElementShortName">input_5_V_out_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out_blk_n">
+                  <obj_property name="ElementShortName">input_1_V_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out_din">
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out_din">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out_full_n">
-                  <obj_property name="ElementShortName">input_5_V_out_full_n</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out_full_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out_full_n">
+                  <obj_property name="ElementShortName">input_1_V_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out_full_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out_write">
-                  <obj_property name="ElementShortName">input_5_V_out_write</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out_write</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out_write">
+                  <obj_property name="ElementShortName">input_1_V_out_write</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out_write</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject type="group" fp_name="input_5_V_out1_group">
-               <obj_property name="label">input_5_V_out1(input_5_V_c7_U, FIFO)</obj_property>
+            <wvobject type="group" fp_name="input_1_V_out1_group">
+               <obj_property name="label">input_1_V_out1(input_1_V_c1_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out1_blk_n">
-                  <obj_property name="ElementShortName">input_5_V_out1_blk_n</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out1_blk_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out1_blk_n">
+                  <obj_property name="ElementShortName">input_1_V_out1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out1_blk_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out1_din">
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out1_din">
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out1_full_n">
-                  <obj_property name="ElementShortName">input_5_V_out1_full_n</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out1_full_n</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out1_full_n">
+                  <obj_property name="ElementShortName">input_1_V_out1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out1_full_n</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry120_U0/input_5_V_out1_write">
-                  <obj_property name="ElementShortName">input_5_V_out1_write</obj_property>
-                  <obj_property name="ObjectShortName">input_5_V_out1_write</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/myproject_entry181_U0/input_1_V_out1_write">
+                  <obj_property name="ElementShortName">input_1_V_out1_write</obj_property>
+                  <obj_property name="ObjectShortName">input_1_V_out1_write</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
@@ -221,7 +201,7 @@
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="data_V_group">
-               <obj_property name="label">data_V(input_5_V_c_U, FIFO)</obj_property>
+               <obj_property name="label">data_V(input_1_V_c_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0/data_V_blk_n">
                   <obj_property name="ElementShortName">data_V_blk_n</obj_property>
@@ -273,7 +253,7 @@
             <obj_property name="label">Input Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="group" fp_name="data_V_group">
-               <obj_property name="label">data_V(input_5_V_c7_U, FIFO)</obj_property>
+               <obj_property name="label">data_V(input_1_V_c1_U, FIFO)</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0/data_V_blk_n">
                   <obj_property name="ElementShortName">data_V_blk_n</obj_property>
@@ -314,56 +294,6 @@
             </wvobject>
          </wvobject>
          <wvobject type="group" fp_name="pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_Output_group">
-            <obj_property name="label">Output Channels</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-         </wvobject>
-      </wvobject>
-      <wvobject type="group" fp_name="klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_group">
-         <obj_property name="label">klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="group" fp_name="klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_Input_group">
-            <obj_property name="label">Input Channels</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="exp_table1_group">
-               <obj_property name="label">exp_table1(PIPO)</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/exp_table1_address0">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/exp_table1_q0">
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/exp_table1_ce0">
-                  <obj_property name="ElementShortName">exp_table1_ce0</obj_property>
-                  <obj_property name="ObjectShortName">exp_table1_ce0</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/ap_ready">
-                  <obj_property name="ElementShortName">ap_ready</obj_property>
-                  <obj_property name="ObjectShortName">ap_ready</obj_property>
-                  <obj_property name="label">ap_ready(t_read)</obj_property>
-                  <obj_property name="DisplayName">label</obj_property>
-               </wvobject>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_Handshake_group">
-            <obj_property name="label">Block-level handshake</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/ap_start">
-               <obj_property name="ElementShortName">ap_start</obj_property>
-               <obj_property name="ObjectShortName">ap_start</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/ap_ready">
-               <obj_property name="ElementShortName">ap_ready</obj_property>
-               <obj_property name="ObjectShortName">ap_ready</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/ap_done">
-               <obj_property name="ElementShortName">ap_done</obj_property>
-               <obj_property name="ObjectShortName">ap_done</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="/apatb_myproject_top/AESL_inst_myproject/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0/ap_continue">
-               <obj_property name="ElementShortName">ap_continue</obj_property>
-               <obj_property name="ObjectShortName">ap_continue</obj_property>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0_Output_group">
             <obj_property name="label">Output Channels</obj_property>
             <obj_property name="DisplayName">label</obj_property>
          </wvobject>

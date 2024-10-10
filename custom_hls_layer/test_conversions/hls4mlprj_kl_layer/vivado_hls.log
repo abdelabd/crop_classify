@@ -6,7 +6,7 @@
 
 source /tools/Xilinx/Vivado/2019.1/scripts/vivado_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'aelabd' on host 'DESKTOP-Q0UCNGC.' (Linux_x86_64 version 5.15.133.1-microsoft-standard-WSL2) on Thu Oct 10 10:36:38 PDT 2024
+INFO: [HLS 200-10] For user 'aelabd' on host 'DESKTOP-Q0UCNGC.' (Linux_x86_64 version 5.15.133.1-microsoft-standard-WSL2) on Thu Oct 10 12:48:30 PDT 2024
 INFO: [HLS 200-10] On os Ubuntu 24.04 LTS
 INFO: [HLS 200-10] In directory '/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer'
 Sourcing Tcl script 'build_prj.tcl'
@@ -27,8 +27,8 @@ INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II t
 INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
 WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:36:78
 WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1562 ; free virtual = 32031
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1562 ; free virtual = 32031
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1097 ; free virtual = 31631
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1097 ; free virtual = 31631
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [HLS 200-489] Unrolling loop 'PixelInitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:42) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
 INFO: [HLS 200-489] Unrolling loop 'PixelMultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:66) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
@@ -40,112 +40,77 @@ INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap
 INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:70).
 INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d.h:69).
 INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d.h:69).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1538 ; free virtual = 32011
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1086 ; free virtual = 31622
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
 INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:43) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:80) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 860.031 ; gain = 190.000 ; free physical = 1525 ; free virtual = 32000
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:37:46).
+WARNING: [SYNCHK 200-77] The top function 'myproject' (firmware/myproject.cpp:7) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1079 ; free virtual = 31616
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:53) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' for pipelining.
 INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:53) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' for pipelining.
-INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/kl_layer.h:56) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
-INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/kl_layer.h:64) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
-INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/kl_layer.h:75) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
 INFO: [HLS 200-489] Unrolling loop 'InitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:46) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
 INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:62) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
 INFO: [HLS 200-489] Unrolling loop 'ResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:96) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
 INFO: [HLS 200-489] Unrolling loop 'InitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:46) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
 INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:62) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
 INFO: [HLS 200-489] Unrolling loop 'ResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:96) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
-INFO: [XFORM 203-131] Reshaping array 'input_5.V' (firmware/myproject.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'input_1.V' (firmware/myproject.cpp:8) in dimension 1 completely.
 INFO: [XFORM 203-131] Reshaping array 'w10.V'  in dimension 1 completely.
 INFO: [XFORM 203-131] Reshaping array 'w9.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'layer6_out.V' (firmware/myproject.cpp:9) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'layer9_out.V' (firmware/myproject.cpp:34) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'layer10_out.V' (firmware/myproject.cpp:38) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer9_out'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer10_out'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'b9.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'b10.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'kl.V' (firmware/nnet_utils/kl_layer.h:51) in dimension 1 completely.
-INFO: [XFORM 203-101] Partitioning array 'mean_sq.V' (firmware/nnet_utils/kl_layer.h:53) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 2 completely.
 INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 2 completely.
 INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 2 completely.
 INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 2 completely.
-WARNING: [XFORM 203-104] Completely partitioning array 'layer9_out.V' (firmware/myproject.cpp:34) accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-WARNING: [XFORM 203-104] Completely partitioning array 'layer10_out.V' (firmware/myproject.cpp:38) accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'layer9_out'  accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'layer10_out'  accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
 INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
 INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:43) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
-INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:80) automatically.
-INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 4 process function(s): 
-	 'myproject.entry120'
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'myproject.entry181'
 	 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>'
-	 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>'
-	 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>'.
+	 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>'.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_code_gen.h:33:16) to (firmware/nnet_utils/nnet_code_gen.h:265:5) in function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer'... converting 115 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_code_gen.h:271:16) to (firmware/nnet_utils/nnet_code_gen.h:503:5) in function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer'... converting 115 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:38:1)...18 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:33)...56 expression(s) balanced.
 INFO: [XFORM 203-11] Balancing expressions in function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:271)...56 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 860.793 ; gain = 190.762 ; free physical = 1480 ; free virtual = 31957
-WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:13)
-WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:13)
-WARNING: [XFORM 203-631] Renaming function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' to 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>' (firmware/nnet_utils/kl_layer.h:38:1)
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 860.031 ; gain = 190.000 ; free physical = 1038 ; free virtual = 31576
+WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:64)
+WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:64)
 WARNING: [XFORM 203-631] Renaming function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer' to 'fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:33)
 WARNING: [XFORM 203-631] Renaming function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer' to 'fill_buffer.1' (firmware/nnet_utils/nnet_code_gen.h:275:5)
 INFO: [XFORM 203-531] Rewinding loop 'PartitionLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:36) in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>'.
 INFO: [XFORM 203-531] Rewinding loop 'PartitionLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:36) in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'PartitionLoop' in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>'.
 WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'PartitionLoop' in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>'.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 860.793 ; gain = 190.762 ; free physical = 1426 ; free virtual = 31903
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 860.031 ; gain = 190.000 ; free physical = 1006 ; free virtual = 31545
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'myproject' ...
-WARNING: [SYN 201-103] Legalizing function name 'myproject.entry120' to 'myproject_entry120'.
+WARNING: [SYN 201-103] Legalizing function name 'myproject.entry181' to 'myproject_entry181'.
 WARNING: [SYN 201-103] Legalizing function name 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>' to 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s'.
 WARNING: [SYN 201-103] Legalizing function name 'fill_buffer.1' to 'fill_buffer_1'.
 WARNING: [SYN 201-103] Legalizing function name 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>' to 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s'.
-WARNING: [SYN 201-103] Legalizing function name 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>' to 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'myproject_entry120' 
+INFO: [HLS 200-42] -- Implementing module 'myproject_entry181' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 23.55 seconds; current allocated memory: 221.671 MB.
+INFO: [HLS 200-111]  Elapsed time: 15 seconds; current allocated memory: 183.141 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 221.733 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 183.203 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fill_buffer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -153,29 +118,29 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'fill_buffer'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 222.714 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 184.189 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 223.972 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 185.443 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'PartitionLoop'.
 WARNING: [SCHED 204-68] The II Violation in module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' (Loop: PartitionLoop): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'store' operation ('data_buf_V_0_0_06281_i77_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i77' and 'load' operation ('data_buf_V_0_0_06281_i77_load') on local variable 'data_buf_V_0_0_06281_i77'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 6.
+   between 'store' operation ('data_buf_V_0_0_06281_i1_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i1' and 'load' operation ('data_buf_V_0_0_06281_i1_load') on local variable 'data_buf_V_0_0_06281_i1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 224.796 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 185.785 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 225.545 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 185.979 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fill_buffer_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -183,153 +148,84 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'fill_buffer.1'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 226.689 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 187.128 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 227.988 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 188.366 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'PartitionLoop'.
 WARNING: [SCHED 204-68] The II Violation in module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' (Loop: PartitionLoop): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'store' operation ('data_buf_V_0_0_06281_i77_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i77' and 'load' operation ('data_buf_V_0_0_06281_i77_load') on local variable 'data_buf_V_0_0_06281_i77'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 6.
+   between 'store' operation ('data_buf_V_0_0_06281_i1_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i1' and 'load' operation ('data_buf_V_0_0_06281_i1_load') on local variable 'data_buf_V_0_0_06281_i1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 228.679 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 188.703 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 229.407 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 230.967 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 232.673 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 188.894 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 233.031 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 189.145 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 234.052 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 189.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'myproject_entry120' 
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_entry181' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry120'.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 234.806 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry181'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 190.149 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fill_buffer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fill_buffer'.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 236.717 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 192.044 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10ns_26_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10s_26_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11ns_26_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11s_26_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_6ns_22_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_9ns_25_1_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 243.184 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 196.868 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fill_buffer_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fill_buffer_1'.
-INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 247.793 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 199.191 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10ns_26_1_1': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10s_26_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11s_26_1_1': 2 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_6ns_22_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_9ns_25_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 254.225 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_16s_26_1_1': 19 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_7ns_16s_23_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s'.
-INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 259.795 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 203.950 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_5_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_1_V' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer6_out_0_V' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'myproject/layer6_out_0_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
-INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 268.020 MB.
-INFO: [RTMG 210-279] Implementing memory 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1_rom' using block ROMs.
-INFO: [RTMG 210-285] Implementing FIFO 'input_5_V_c_U(fifo_w912_d2_A)' using Block RAMs.
-INFO: [RTMG 210-285] Implementing FIFO 'input_5_V_c7_U(fifo_w912_d2_A)' using Block RAMs.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_0_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_1_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_2_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_3_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_4_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_5_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_6_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_7_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_8_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_9_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_10_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_11_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_12_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_13_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_14_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_15_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_16_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_17_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_18_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_0_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_1_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_2_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_3_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_4_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_5_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_6_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_7_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_8_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_9_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_10_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_11_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_12_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_13_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_14_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_15_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_16_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_17_V_U(fifo_w16_d2_A)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_18_V_U(fifo_w16_d2_A)' using Shift Registers.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 204.786 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'input_1_V_c_U(fifo_w912_d2_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'input_1_V_c1_U(fifo_w912_d2_A)' using Block RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0)' using Shift Registers.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 988.031 ; gain = 318.000 ; free physical = 1347 ; free virtual = 31847
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 860.031 ; gain = 190.000 ; free physical = 990 ; free virtual = 31539
 INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
 INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
-***** C/RTL SYNTHESIS COMPLETED IN 0h0m30s *****
+***** C/RTL SYNTHESIS COMPLETED IN 0h0m16s *****
 ***** C/RTL SIMULATION *****
 INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
@@ -352,5 +248,5 @@ ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
     invoked from within
 "uplevel \#0 [list source $arg] "
 
-INFO: [HLS 200-112] Total elapsed time: 31.14 seconds; peak allocated memory: 268.020 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Thu Oct 10 10:37:09 2024...
+INFO: [HLS 200-112] Total elapsed time: 17.77 seconds; peak allocated memory: 204.786 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Oct 10 12:48:47 2024...

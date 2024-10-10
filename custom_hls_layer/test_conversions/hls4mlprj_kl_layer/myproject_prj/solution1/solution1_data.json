@@ -18,13 +18,13 @@
       "config_schedule -enable_dsp_full_reg=0"
     ]},
   "Args": {
-    "input_5": {
+    "input_1": {
       "index": "0",
       "type": {
         "kinds": ["array"],
         "dataType": "ap_fixed",
         "arraySizes": ["57"],
-        "interfaceRef": "input_5_V"
+        "interfaceRef": "input_1_V"
       }
     },
     "layer6_out": {
@@ -44,7 +44,7 @@
     "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "120",
+    "Latency": "115",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -62,21 +62,10 @@
   "Files": {
     "CSource": ["..\/..\/firmware\/myproject.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/fifo_w16_d2_A.vhd",
       "impl\/vhdl\/fifo_w912_d2_A.vhd",
       "impl\/vhdl\/fill_buffer.vhd",
       "impl\/vhdl\/fill_buffer_1.vhd",
-      "impl\/vhdl\/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.vhd",
-      "impl\/vhdl\/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1.vhd",
-      "impl\/vhdl\/myproject_entry120.vhd",
-      "impl\/vhdl\/myproject_mul_mul_7ns_16s_23_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_6ns_22_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_9ns_25_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_10ns_26_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_10s_26_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_11ns_26_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_11s_26_1_1.vhd",
-      "impl\/vhdl\/myproject_mul_mul_16s_16s_26_1_1.vhd",
+      "impl\/vhdl\/myproject_entry181.vhd",
       "impl\/vhdl\/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.vhd",
       "impl\/vhdl\/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.vhd",
       "impl\/vhdl\/start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0.vhd",
@@ -84,22 +73,10 @@
       "impl\/vhdl\/myproject.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/fifo_w16_d2_A.v",
       "impl\/verilog\/fifo_w912_d2_A.v",
       "impl\/verilog\/fill_buffer.v",
       "impl\/verilog\/fill_buffer_1.v",
-      "impl\/verilog\/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.v",
-      "impl\/verilog\/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1.v",
-      "impl\/verilog\/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1_rom.dat",
-      "impl\/verilog\/myproject_entry120.v",
-      "impl\/verilog\/myproject_mul_mul_7ns_16s_23_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_6ns_22_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_9ns_25_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_10ns_26_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_10s_26_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_11ns_26_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_11s_26_1_1.v",
-      "impl\/verilog\/myproject_mul_mul_16s_16s_26_1_1.v",
+      "impl\/verilog\/myproject_entry181.v",
       "impl\/verilog\/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.v",
       "impl\/verilog\/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.v",
       "impl\/verilog\/start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0.v",
@@ -141,7 +118,7 @@
       "bundle_name": "ap_rst",
       "bundle_role": "default"
     },
-    "input_5_V": {
+    "input_1_V": {
       "type": "data",
       "dir": "in",
       "width": "912",
@@ -150,12 +127,12 @@
           "Width": "16",
           "Bits": "912"
         }},
-      "bundle_name": "input_5_V",
+      "bundle_name": "input_1_V",
       "bundle_role": "default"
     },
     "layer6_out_0_V": {
       "type": "data",
-      "dir": "out",
+      "dir": "in",
       "width": "16",
       "ctype": {"DATA": {
           "Type": "real fixed signed 10",
@@ -166,21 +143,17 @@
     }
   },
   "RtlPorts": {
-    "input_5_V": {
+    "input_1_V": {
       "dir": "in",
       "width": "912"
     },
-    "input_5_V_ap_vld": {
+    "input_1_V_ap_vld": {
       "dir": "in",
       "width": "1"
     },
     "layer6_out_0_V": {
-      "dir": "out",
+      "dir": "in",
       "width": "16"
-    },
-    "layer6_out_0_V_ap_vld": {
-      "dir": "out",
-      "width": "1"
     },
     "ap_clk": {
       "dir": "in",
@@ -216,7 +189,7 @@
           "InstanceName": "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0",
           "Instances": [{
               "ModuleName": "fill_buffer",
-              "InstanceName": "grp_fill_buffer_fu_259"
+              "InstanceName": "grp_fill_buffer_fu_121"
             }]
         },
         {
@@ -224,21 +197,17 @@
           "InstanceName": "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0",
           "Instances": [{
               "ModuleName": "fill_buffer_1",
-              "InstanceName": "grp_fill_buffer_1_fu_255"
+              "InstanceName": "grp_fill_buffer_1_fu_121"
             }]
         },
         {
-          "ModuleName": "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s",
-          "InstanceName": "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_U0"
-        },
-        {
-          "ModuleName": "myproject_entry120",
-          "InstanceName": "myproject_entry120_U0"
+          "ModuleName": "myproject_entry181",
+          "InstanceName": "myproject_entry181_U0"
         }
       ]
     },
     "Info": {
-      "myproject_entry120": {
+      "myproject_entry181": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -273,13 +242,6 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "1",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "myproject": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -289,7 +251,7 @@
       }
     },
     "Metrics": {
-      "myproject_entry120": {
+      "myproject_entry181": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -335,9 +297,9 @@
       },
       "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s": {
         "Latency": {
-          "LatencyBest": "117",
-          "LatencyAvg": "117",
-          "LatencyWorst": "118",
+          "LatencyBest": "115",
+          "LatencyAvg": "115",
+          "LatencyWorst": "116",
           "PipelineII": "114",
           "PipelineDepth": "",
           "PipelineType": "loop rewind(delay=0 initiation interval(s))"
@@ -350,15 +312,15 @@
         "Loops": [{
             "Name": "PartitionLoop",
             "TripCount": "57",
-            "Latency": "117",
+            "Latency": "115",
             "PipelineII": "2",
-            "PipelineDepth": "6"
+            "PipelineDepth": "4"
           }],
         "Area": {
-          "DSP48E": "9",
-          "FF": "4508",
-          "LUT": "2550",
+          "FF": "3742",
+          "LUT": "1809",
           "BRAM_18K": "0",
+          "DSP48E": "0",
           "URAM": "0"
         }
       },
@@ -386,9 +348,9 @@
       },
       "pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s": {
         "Latency": {
-          "LatencyBest": "117",
-          "LatencyAvg": "117",
-          "LatencyWorst": "118",
+          "LatencyBest": "115",
+          "LatencyAvg": "115",
+          "LatencyWorst": "116",
           "PipelineII": "114",
           "PipelineDepth": "",
           "PipelineType": "loop rewind(delay=0 initiation interval(s))"
@@ -401,45 +363,23 @@
         "Loops": [{
             "Name": "PartitionLoop",
             "TripCount": "57",
-            "Latency": "117",
+            "Latency": "115",
             "PipelineII": "2",
-            "PipelineDepth": "6"
+            "PipelineDepth": "4"
           }],
         "Area": {
-          "DSP48E": "10",
-          "FF": "4494",
-          "LUT": "2525",
+          "FF": "3742",
+          "LUT": "1809",
           "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
-      "klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s": {
-        "Latency": {
-          "LatencyBest": "2",
-          "LatencyAvg": "2",
-          "LatencyWorst": "2",
-          "PipelineII": "1",
-          "PipelineDepth": "3",
-          "PipelineType": "function"
-        },
-        "Timing": {
-          "Target": "5.00",
-          "Uncertainty": "0.62",
-          "Estimate": "3.858"
-        },
-        "Area": {
-          "BRAM_18K": "10",
-          "DSP48E": "20",
-          "FF": "660",
-          "LUT": "3119",
+          "DSP48E": "0",
           "URAM": "0"
         }
       },
       "myproject": {
         "Latency": {
-          "LatencyBest": "120",
-          "LatencyAvg": "120",
-          "LatencyWorst": "121",
+          "LatencyBest": "115",
+          "LatencyAvg": "115",
+          "LatencyWorst": "116",
           "PipelineII": "114",
           "PipelineDepth": "",
           "PipelineType": "dataflow"
@@ -450,10 +390,10 @@
           "Estimate": "4.263"
         },
         "Area": {
-          "BRAM_18K": "112",
-          "DSP48E": "39",
-          "FF": "11737",
-          "LUT": "11603",
+          "BRAM_18K": "102",
+          "FF": "9331",
+          "LUT": "5465",
+          "DSP48E": "0",
           "URAM": "0"
         }
       }
@@ -469,7 +409,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-10-10 10:37:08 PDT",
+    "Time": "2024-10-10 12:48:46 PDT",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }
