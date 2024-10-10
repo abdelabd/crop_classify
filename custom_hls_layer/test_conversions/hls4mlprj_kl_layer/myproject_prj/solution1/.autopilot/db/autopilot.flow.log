@@ -1,0 +1,1316 @@
+INFO-FLOW: Workspace /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1 opened at Thu Oct 10 10:36:38 PDT 2024
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 80 
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+Execute     set_part xcvu9p-flga2577-2-e 
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data single -quiet 
+Command       ap_part_info done; 0.51 sec.
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2577:-2-e 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xcvu9p-flga2577-2-e 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2577-2-e'
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.66 sec.
+Execute     config_schedule -enable_dsp_full_reg=false 
+Execute     create_clock -period 5 -name default 
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     set_clock_uncertainty 12.5% default 
+Execute       get_clock_period -default -name=default 
+Execute       config_clock -quiet -name default -uncertainty 0.625 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'firmware/myproject.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling firmware/myproject.cpp as C++
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+Execute         is_encrypted firmware/myproject.cpp 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "firmware/myproject.cpp"   -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp" 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E firmware/myproject.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp
+Command         clang done; 1.32 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 0.84 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc" -hls  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp"  -o "/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/useless.bc
+Command         clang done; 1.78 sec.
+INFO-FLOW: Done: GCC PP time: 3.9 seconds per iteration
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 0.88 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 0.88 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.diag.yml /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.out.log 2> /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.err.log 
+Command         ap_eval done; 0.68 sec.
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: firmware/myproject.cpp:36:78
+Execute         send_msg_by_id WARNING @200-471@%s%s 1 firmware/myproject.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file firmware/myproject.cpp
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp std=c++0x 
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.out.log 2> /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.err.log 
+Command           ap_eval done; 1.54 sec.
+Execute           ap_eval exec -ignorestderr /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.out.log 2> /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.err.log 
+Command           ap_eval done; 0.7 sec.
+Command         tidy_31 done; 2.27 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.8 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp std=c++0x 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 1.58 sec.
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp"  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "/tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.bc" 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vivado/2019.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.pragma.2.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot -I /tools/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.bc
+Command         clang done; 1.8 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.g.bc -hls-opt -except-internalize myproject -L/tools/Xilinx/Vivado/2019.1/lnx64/lib -lhlsm -lhlsmc++ -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g 
+Command         llvm-ld done; 0.63 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1562 ; free virtual = 32031
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1562 ; free virtual = 32031
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.pp.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/tools/Xilinx/Vivado/2019.1/lnx64/lib -lfloatconversion -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.0 
+Command           llvm-ld done; 0.63 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top myproject -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.0.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-489] Unrolling loop 'PixelInitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:42) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'PixelMultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:66) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'PixelResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:92) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'PixelInitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:42) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'PixelMultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:66) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'PixelResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:92) in function 'void nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>(FORWARD_REFERENCE*, FORWARD_REFERENCE*, FORWARD_REFERENCE::weight_t*, FORWARD_REFERENCE::bias_t*)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:70).
+INFO: [XFORM 203-603] Inlining function 'nnet::product::mult<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::product' into 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:70).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d.h:69).
+INFO: [XFORM 203-603] Inlining function 'nnet::conv_2d_resource_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d.h:69).
+Command           transform done; 0.4 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 796.031 ; gain = 126.000 ; free physical = 1538 ; free virtual = 32011
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.1.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:43) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:80) automatically.
+Command           transform done; 0.2 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 860.031 ; gain = 190.000 ; free physical = 1525 ; free virtual = 32000
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.g.1.bc to /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.1.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:37:46).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:53) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'ReuseLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:53) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (firmware/nnet_utils/kl_layer.h:56) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (firmware/nnet_utils/kl_layer.h:64) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (firmware/nnet_utils/kl_layer.h:75) in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' completely with a factor of 19.
+INFO: [HLS 200-489] Unrolling loop 'InitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:46) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:62) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'ResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:96) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'InitAccumLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:46) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'MultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:62) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'ResultLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:96) in function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' completely with a factor of 10.
+INFO: [XFORM 203-131] Reshaping array 'input_5.V' (firmware/myproject.cpp:8) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w10.V'  in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'w9.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer6_out.V' (firmware/myproject.cpp:9) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer9_out.V' (firmware/myproject.cpp:34) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'layer10_out.V' (firmware/myproject.cpp:38) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b9.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'b10.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kl.V' (firmware/nnet_utils/kl_layer.h:51) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'mean_sq.V' (firmware/nnet_utils/kl_layer.h:53) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'data_buf.V' (firmware/nnet_utils/nnet_conv2d_resource.h:26) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'acc.V' (firmware/nnet_utils/nnet_conv2d_resource.h:32) in dimension 2 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'layer9_out.V' (firmware/myproject.cpp:34) accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'layer10_out.V' (firmware/myproject.cpp:38) accessed through non-constant indices on dimension 1, which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::cast<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10_mult>' into 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:98->firmware/nnet_utils/nnet_conv2d.h:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:43) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 8, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 2, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 16, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> >::operator()' into 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' (firmware/nnet_utils/nnet_common.h:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'nnet::reduce<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 19, nnet::Op_add<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> > >' into 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:80) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 4 process function(s): 
+	 'myproject.entry120'
+	 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>'
+	 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>'
+	 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>'.
+Command           transform done; 6.23 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_code_gen.h:33:16) to (firmware/nnet_utils/nnet_code_gen.h:265:5) in function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer'... converting 115 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (firmware/nnet_utils/nnet_code_gen.h:271:16) to (firmware/nnet_utils/nnet_code_gen.h:503:5) in function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer'... converting 115 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' (firmware/nnet_utils/kl_layer.h:38:1)...18 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:33)...56 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:271)...56 expression(s) balanced.
+Command           transform done; 0.78 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 860.793 ; gain = 190.762 ; free physical = 1480 ; free virtual = 31957
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.2.bc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:13)
+WARNING: [XFORM 203-631] Renaming function 'nnet::pointwise_conv_2d_cl<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>' to 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>' (firmware/nnet_utils/nnet_conv2d_resource.h:8:13)
+WARNING: [XFORM 203-631] Renaming function 'nnet::klloss<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config6>' to 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>' (firmware/nnet_utils/kl_layer.h:38:1)
+WARNING: [XFORM 203-631] Renaming function 'nnet::fill_buffer_9<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config9>::fill_buffer' to 'fill_buffer' (firmware/nnet_utils/nnet_code_gen.h:33)
+WARNING: [XFORM 203-631] Renaming function 'nnet::fill_buffer_10<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, config10>::fill_buffer' to 'fill_buffer.1' (firmware/nnet_utils/nnet_code_gen.h:275:5)
+INFO: [XFORM 203-531] Rewinding loop 'PartitionLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:36) in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>'.
+INFO: [XFORM 203-531] Rewinding loop 'PartitionLoop' (firmware/nnet_utils/nnet_conv2d_resource.h:36) in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'PartitionLoop' in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>'.
+WARNING: [XFORM 203-561] Ignored multiple trip count directives for loop 'PartitionLoop' in function 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>'.
+Command           transform done; 1.15 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 860.793 ; gain = 190.762 ; free physical = 1426 ; free virtual = 31903
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 9.48 sec.
+Command       elaborate done; 22.65 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'myproject' ...
+Execute         ap_set_top_model myproject 
+WARNING: [SYN 201-103] Legalizing function name 'myproject.entry120' to 'myproject_entry120'.
+WARNING: [SYN 201-103] Legalizing function name 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>' to 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s'.
+WARNING: [SYN 201-103] Legalizing function name 'fill_buffer.1' to 'fill_buffer_1'.
+WARNING: [SYN 201-103] Legalizing function name 'pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>' to 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s'.
+WARNING: [SYN 201-103] Legalizing function name 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>' to 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s'.
+Execute         get_model_list myproject -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model myproject 
+Execute         preproc_iomode -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         preproc_iomode -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         preproc_iomode -model fill_buffer.1 
+Execute         preproc_iomode -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         preproc_iomode -model fill_buffer 
+Execute         preproc_iomode -model myproject.entry120 
+Execute         get_model_list myproject -filter all-wo-channel 
+INFO-FLOW: Model list for configure: myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject
+INFO-FLOW: Configuring Module : myproject.entry120 ...
+Execute         set_default_model myproject.entry120 
+Execute         apply_spec_resource_limit myproject.entry120 
+INFO-FLOW: Configuring Module : fill_buffer ...
+Execute         set_default_model fill_buffer 
+Execute         apply_spec_resource_limit fill_buffer 
+INFO-FLOW: Configuring Module : pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> ...
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         apply_spec_resource_limit pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+INFO-FLOW: Configuring Module : fill_buffer.1 ...
+Execute         set_default_model fill_buffer.1 
+Execute         apply_spec_resource_limit fill_buffer.1 
+INFO-FLOW: Configuring Module : pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> ...
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         apply_spec_resource_limit pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+INFO-FLOW: Configuring Module : klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> ...
+Execute         set_default_model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         apply_spec_resource_limit klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+INFO-FLOW: Configuring Module : myproject ...
+Execute         set_default_model myproject 
+Execute         apply_spec_resource_limit myproject 
+INFO-FLOW: Model list for preprocess: myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject
+INFO-FLOW: Preprocessing Module: myproject.entry120 ...
+Execute         set_default_model myproject.entry120 
+Execute         cdfg_preprocess -model myproject.entry120 
+Execute         rtl_gen_preprocess myproject.entry120 
+INFO-FLOW: Preprocessing Module: fill_buffer ...
+Execute         set_default_model fill_buffer 
+Execute         cdfg_preprocess -model fill_buffer 
+Execute         rtl_gen_preprocess fill_buffer 
+INFO-FLOW: Preprocessing Module: pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> ...
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         cdfg_preprocess -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         rtl_gen_preprocess pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+INFO-FLOW: Preprocessing Module: fill_buffer.1 ...
+Execute         set_default_model fill_buffer.1 
+Execute         cdfg_preprocess -model fill_buffer.1 
+Execute         rtl_gen_preprocess fill_buffer.1 
+INFO-FLOW: Preprocessing Module: pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> ...
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         cdfg_preprocess -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         rtl_gen_preprocess pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+INFO-FLOW: Preprocessing Module: klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> ...
+Execute         set_default_model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         cdfg_preprocess -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         rtl_gen_preprocess klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+INFO-FLOW: Preprocessing Module: myproject ...
+Execute         set_default_model myproject 
+Execute         cdfg_preprocess -model myproject 
+Execute         rtl_gen_preprocess myproject 
+INFO-FLOW: Model list for synthesis: myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_entry120' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model myproject.entry120 
+Execute         schedule -model myproject.entry120 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.55 seconds; current allocated memory: 221.671 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.sched.adb -f 
+INFO-FLOW: Finish scheduling myproject.entry120.
+Execute         set_default_model myproject.entry120 
+Execute         bind -model myproject.entry120 
+BIND OPTION: model=myproject.entry120
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 221.733 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.verbose.bind.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.bind.adb -f 
+INFO-FLOW: Finish binding myproject.entry120.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fill_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model fill_buffer 
+Execute         schedule -model fill_buffer 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fill_buffer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 222.714 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.sched.adb -f 
+INFO-FLOW: Finish scheduling fill_buffer.
+Execute         set_default_model fill_buffer 
+Execute         bind -model fill_buffer 
+BIND OPTION: model=fill_buffer
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 223.972 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.verbose.bind.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.bind.adb -f 
+INFO-FLOW: Finish binding fill_buffer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         schedule -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PartitionLoop'.
+WARNING: [SCHED 204-68] The II Violation in module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' (Loop: PartitionLoop): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('data_buf_V_0_0_06281_i77_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i77' and 'load' operation ('data_buf_V_0_0_06281_i77_load') on local variable 'data_buf_V_0_0_06281_i77'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 224.796 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.sched.adb -f 
+INFO-FLOW: Finish scheduling pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>.
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         bind -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+BIND OPTION: model=pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 225.545 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.verbose.bind.rpt 
+Command         syn_report done; 0.11 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.bind.adb -f 
+INFO-FLOW: Finish binding pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fill_buffer_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model fill_buffer.1 
+Execute         schedule -model fill_buffer.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fill_buffer.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 226.689 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.sched.adb -f 
+INFO-FLOW: Finish scheduling fill_buffer.1.
+Execute         set_default_model fill_buffer.1 
+Execute         bind -model fill_buffer.1 
+BIND OPTION: model=fill_buffer.1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 227.988 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.verbose.bind.rpt 
+Command         syn_report done; 0.14 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.bind.adb -f 
+INFO-FLOW: Finish binding fill_buffer.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         schedule -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PartitionLoop'.
+WARNING: [SCHED 204-68] The II Violation in module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' (Loop: PartitionLoop): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('data_buf_V_0_0_06281_i77_write_ln36', firmware/nnet_utils/nnet_conv2d_resource.h:36->firmware/nnet_utils/nnet_conv2d.h:69->firmware/myproject.cpp:8) of variable 'data_buf_V_0_0_i', firmware/nnet_utils/nnet_conv2d_resource.h:11->firmware/nnet_utils/nnet_conv2d.h:69 on local variable 'data_buf_V_0_0_06281_i77' and 'load' operation ('data_buf_V_0_0_06281_i77_load') on local variable 'data_buf_V_0_0_06281_i77'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 228.679 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.sched.adb -f 
+INFO-FLOW: Finish scheduling pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>.
+Execute         set_default_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         bind -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+BIND OPTION: model=pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 229.407 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.verbose.bind.rpt 
+Command         syn_report done; 0.14 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.bind.adb -f 
+INFO-FLOW: Finish binding pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         schedule -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 230.967 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.sched.adb -f 
+INFO-FLOW: Finish scheduling klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>.
+Execute         set_default_model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         bind -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+BIND OPTION: model=klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 232.673 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.verbose.bind.rpt 
+Command         syn_report done; 0.18 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.bind.adb -f 
+INFO-FLOW: Finish binding klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model myproject 
+Execute         schedule -model myproject 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 233.031 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.verbose.sched.rpt 
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.sched.adb -f 
+INFO-FLOW: Finish scheduling myproject.
+Execute         set_default_model myproject 
+Execute         bind -model myproject 
+BIND OPTION: model=myproject
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.44 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 234.052 MB.
+Execute         syn_report -verbosereport -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.verbose.bind.rpt 
+Command         syn_report done; 0.33 sec.
+Execute         db_write -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.bind.adb -f 
+INFO-FLOW: Finish binding myproject.
+Execute         get_model_list myproject -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess myproject.entry120 
+Execute         rtl_gen_preprocess fill_buffer 
+Execute         rtl_gen_preprocess pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> 
+Execute         rtl_gen_preprocess fill_buffer.1 
+Execute         rtl_gen_preprocess pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> 
+Execute         rtl_gen_preprocess klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> 
+Execute         rtl_gen_preprocess myproject 
+INFO-FLOW: Model list for RTL generation: myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_entry120' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model myproject.entry120 -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_entry120'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 234.806 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl myproject.entry120 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/myproject_entry120 -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl myproject.entry120 -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/myproject_entry120 
+Execute         gen_rtl myproject.entry120 -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/myproject_entry120 
+Execute         syn_report -csynth -model myproject.entry120 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/myproject_entry120_csynth.rpt 
+Execute         syn_report -rtlxml -model myproject.entry120 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/myproject_entry120_csynth.xml 
+Execute         syn_report -verbosereport -model myproject.entry120 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.verbose.rpt 
+Execute         db_write -model myproject.entry120 -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.adb 
+Execute         gen_tb_info myproject.entry120 -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fill_buffer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model fill_buffer -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fill_buffer'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 236.717 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl fill_buffer -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/fill_buffer -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl fill_buffer -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/fill_buffer 
+Execute         gen_rtl fill_buffer -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/fill_buffer 
+Execute         syn_report -csynth -model fill_buffer -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/fill_buffer_csynth.rpt 
+Execute         syn_report -rtlxml -model fill_buffer -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/fill_buffer_csynth.xml 
+Execute         syn_report -verbosereport -model fill_buffer -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.verbose.rpt 
+Command         syn_report done; 0.17 sec.
+Execute         db_write -model fill_buffer -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.adb 
+Command         db_write done; 0.11 sec.
+Execute         gen_tb_info fill_buffer -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10s_26_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11ns_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11s_26_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_6ns_22_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_9ns_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 243.184 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s 
+Execute         syn_report -csynth -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s_csynth.rpt 
+Execute         syn_report -rtlxml -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s_csynth.xml 
+Execute         syn_report -verbosereport -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.verbose.rpt 
+Command         syn_report done; 0.16 sec.
+Execute         db_write -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.adb 
+Execute         gen_tb_info pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fill_buffer_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model fill_buffer.1 -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fill_buffer_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 247.793 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl fill_buffer.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/fill_buffer_1 -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl fill_buffer.1 -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/fill_buffer_1 
+Execute         gen_rtl fill_buffer.1 -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/fill_buffer_1 
+Execute         syn_report -csynth -model fill_buffer.1 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/fill_buffer_1_csynth.rpt 
+Execute         syn_report -rtlxml -model fill_buffer.1 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/fill_buffer_1_csynth.xml 
+Execute         syn_report -verbosereport -model fill_buffer.1 -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.verbose.rpt 
+Command         syn_report done; 0.16 sec.
+Execute         db_write -model fill_buffer.1 -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.adb 
+Command         db_write done; 0.14 sec.
+Execute         gen_tb_info fill_buffer.1 -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10ns_26_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_10s_26_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_11s_26_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_6ns_22_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_9ns_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 254.225 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s 
+Execute         gen_rtl pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s 
+Execute         syn_report -csynth -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s_csynth.rpt 
+Execute         syn_report -rtlxml -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s_csynth.xml 
+Execute         syn_report -verbosereport -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.verbose.rpt 
+Command         syn_report done; 0.14 sec.
+Execute         db_write -model pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.adb 
+Command         db_write done; 0.11 sec.
+Execute         gen_tb_info pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_16s_16s_26_1_1': 19 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'myproject_mul_mul_7ns_16s_23_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 259.795 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s 
+Execute         gen_rtl klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s 
+Execute         syn_report -csynth -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_csynth.rpt 
+Execute         syn_report -rtlxml -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_csynth.xml 
+Execute         syn_report -verbosereport -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.verbose.rpt 
+Command         syn_report done; 0.25 sec.
+Execute         db_write -model klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.adb 
+Command         db_write done; 0.24 sec.
+Execute         gen_tb_info klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model myproject -vendor xilinx -mg_file /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/input_5_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject/layer6_out_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 268.020 MB.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         gen_rtl myproject -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/systemc/myproject -synmodules myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject 
+Execute         gen_rtl myproject -istop -style xilinx -f -lang vhdl -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/vhdl/myproject 
+Execute         gen_rtl myproject -istop -style xilinx -f -lang vlog -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/verilog/myproject 
+Execute         syn_report -csynth -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/myproject_csynth.rpt 
+Execute         syn_report -rtlxml -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/syn/report/myproject_csynth.xml 
+Execute         syn_report -verbosereport -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.verbose.rpt 
+Command         syn_report done; 0.36 sec.
+Execute         db_write -model myproject -f -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.adb 
+Command         db_write done; 0.21 sec.
+Execute         gen_tb_info myproject -p /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject 
+Execute         export_constraint_db -f -tool general -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.constraint.tcl 
+Execute         syn_report -designview -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.design.xml 
+Command         syn_report done; 0.31 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model myproject -o /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks myproject 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain myproject 
+INFO-FLOW: Model list for RTL component generation: myproject.entry120 fill_buffer pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config9> fill_buffer.1 pointwise_conv_2d_cl<ap_fixed,ap_fixed<16,6,5,3,0>,config10> klloss<ap_fixed,ap_fixed<16,6,5,3,0>,ap_fixed<16,6,5,3,0>,config6> myproject
+INFO-FLOW: Handling components in module [myproject_entry120] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+INFO-FLOW: Handling components in module [fill_buffer] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+INFO-FLOW: Handling components in module [pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+INFO-FLOW: Found component myproject_mul_mul_16s_10s_26_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_10s_26_1_1
+INFO-FLOW: Found component myproject_mul_mul_16s_11ns_26_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_11ns_26_1_1
+INFO-FLOW: Found component myproject_mul_mul_16s_9ns_25_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_9ns_25_1_1
+INFO-FLOW: Found component myproject_mul_mul_16s_11s_26_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_11s_26_1_1
+INFO-FLOW: Found component myproject_mul_mul_16s_10ns_26_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_10ns_26_1_1
+INFO-FLOW: Found component myproject_mul_mul_16s_6ns_22_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_6ns_22_1_1
+INFO-FLOW: Handling components in module [fill_buffer_1] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+INFO-FLOW: Handling components in module [pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+INFO-FLOW: Handling components in module [klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+INFO-FLOW: Found component myproject_mul_mul_16s_16s_26_1_1.
+INFO-FLOW: Append model myproject_mul_mul_16s_16s_26_1_1
+INFO-FLOW: Found component myproject_mul_mul_7ns_16s_23_1_1.
+INFO-FLOW: Append model myproject_mul_mul_7ns_16s_23_1_1
+INFO-FLOW: Found component klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1.
+INFO-FLOW: Append model klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1
+INFO-FLOW: Handling components in module [myproject] ... 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+INFO-FLOW: Found component fifo_w912_d2_A.
+INFO-FLOW: Append model fifo_w912_d2_A
+INFO-FLOW: Found component fifo_w912_d2_A.
+INFO-FLOW: Append model fifo_w912_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0.
+INFO-FLOW: Append model start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0
+INFO-FLOW: Found component start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0.
+INFO-FLOW: Append model start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0
+INFO-FLOW: Append model myproject_entry120
+INFO-FLOW: Append model fill_buffer
+INFO-FLOW: Append model pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s
+INFO-FLOW: Append model fill_buffer_1
+INFO-FLOW: Append model pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s
+INFO-FLOW: Append model klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s
+INFO-FLOW: Append model myproject
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: myproject_mul_mul_16s_10s_26_1_1 myproject_mul_mul_16s_11ns_26_1_1 myproject_mul_mul_16s_9ns_25_1_1 myproject_mul_mul_16s_11s_26_1_1 myproject_mul_mul_16s_10ns_26_1_1 myproject_mul_mul_16s_6ns_22_1_1 myproject_mul_mul_16s_16s_26_1_1 myproject_mul_mul_7ns_16s_23_1_1 klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1 fifo_w912_d2_A fifo_w912_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0 start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0 myproject_entry120 fill_buffer pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s fill_buffer_1 pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s myproject
+INFO-FLOW: To file: write model myproject_mul_mul_16s_10s_26_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_11ns_26_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_9ns_25_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_11s_26_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_10ns_26_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_6ns_22_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_16s_16s_26_1_1
+INFO-FLOW: To file: write model myproject_mul_mul_7ns_16s_23_1_1
+INFO-FLOW: To file: write model klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1
+INFO-FLOW: To file: write model fifo_w912_d2_A
+INFO-FLOW: To file: write model fifo_w912_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0
+INFO-FLOW: To file: write model start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0
+INFO-FLOW: To file: write model myproject_entry120
+INFO-FLOW: To file: write model fill_buffer
+INFO-FLOW: To file: write model pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s
+INFO-FLOW: To file: write model fill_buffer_1
+INFO-FLOW: To file: write model pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s
+INFO-FLOW: To file: write model klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s
+INFO-FLOW: To file: write model myproject
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s_exp_table1_rom' using block ROMs.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Command         ap_source done; 0.18 sec.
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'input_5_V_c_U(fifo_w912_d2_A)' using Block RAMs.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'input_5_V_c7_U(fifo_w912_d2_A)' using Block RAMs.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_0_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_1_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_2_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_3_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_4_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_5_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_6_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_7_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_8_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_9_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_10_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_11_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_12_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_13_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_14_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_15_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_16_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_17_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer9_out_18_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_0_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_1_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_2_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_3_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_4_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_5_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_6_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_7_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_8_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_9_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_10_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_11_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_12_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_13_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_14_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_15_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_16_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_17_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'layer10_out_18_V_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0_U(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_U0)' using Shift Registers.
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0_U(start_for_pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_U0)' using Shift Registers.
+Command         ap_source done; 0.39 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=myproject xml_exists=0
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute           ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.compgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.tcl 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.constraint.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=6
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=58 #gSsdmPorts=6
+Execute         source /tools/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.compgen.dataonly.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.constraint.tcl 
+Execute         sc_get_clocks myproject 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject_entry120.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config9_s.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/fill_buffer_1.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/pointwise_conv_2d_cl_ap_fixed_ap_fixed_16_6_5_3_0_config10_s.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/klloss_ap_fixed_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_s.tbgen.tcl 
+Execute         source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 988.031 ; gain = 318.000 ; free physical = 1347 ; free virtual = 31847
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject.
+Command       autosyn done; 7.41 sec.
+Command     csynth_design done; 30.06 sec.
+Execute     add_files -tb myproject_test.cpp -cflags -std=c++0x -DRTL_SIM 
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+Execute     cosim_design -trace_level all -setup 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /tools/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info -quiet 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.rtl_wrap.cfg.tcl 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute       is_encrypted /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_test.cpp 
+Execute       is_encrypted /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/firmware/myproject.cpp 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+Execute       source /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/.autopilot/db/myproject.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute       ap_part_info -name xcvu9p-flga2577-2-e -data info 
+ERROR: [COSIM 212-24] TB preprocess failed : In file included from /usr/include/features.h:394:0,
+                 from /tools/Xilinx/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:39,
+                 from /tools/Xilinx/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/x86_64-pc-linux-gnu/bits/c++config.h:495,
+                 from /tools/Xilinx/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/utility:68,
+                 from /tools/Xilinx/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/algorithm:60,
+                 from /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_test.cpp:1:
+/usr/include/features-time64.h:20:27: fatal error: bits/wordsize.h: No such file or directory
+ #include <bits/wordsize.h>
+                           ^
+compilation terminated.
+INFO-FLOW: TB processing: /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_test.cpp /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/./sim/autowrap/testbench/myproject_test.cpp_pre.cpp
+Execute       tidy_31 xilinx-tb-xfmat /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/./sim/autowrap/testbench/myproject_test.cpp_pre.cpp std=c++0x 
+INFO-FLOW: exec /tools/Xilinx/Vivado/2019.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors /home/aelabd/RHEED/crop_classify/custom_hls_layer/test_conversions/hls4mlprj_kl_layer/myproject_prj/solution1/./sim/autowrap/testbench/myproject_test.cpp_pre.cpp -- -std=c++0x -fhls -ferror-limit=0
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+Command     cosim_design done; error code: 2; 0.2 sec.
+Command   ap_source done; error code: 1; 30.95 sec.
+Execute   cleanup_all 

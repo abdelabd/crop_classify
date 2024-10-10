@@ -1,0 +1,22 @@
+Backend: Vivado
+ClockPeriod: 5
+ClockUncertainty: 12.5%
+HLSConfig:
+  Model:
+    ParallelizationFactor: 1
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Resource
+IOType: io_parallel
+InputData: null
+KerasModel: !keras_model 'hls4mlprj_kl_layer/keras_model.keras'
+OutputDir: hls4mlprj_kl_layer
+OutputPredictions: null
+Part: xcvu9p-flga2577-2-e
+ProjectName: myproject
+Stamp: Bab2e18b
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  WriteTar: false
+  WriteWeightsTxt: true
