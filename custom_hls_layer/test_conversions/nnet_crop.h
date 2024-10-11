@@ -10,16 +10,33 @@
 
 namespace nnet {
 
-template<typename T>
-void log_variable(const std::string& name, const T& value) {
-    std::ofstream outfile("~/RHEED/crop_classify/custom_hls_layer/test_conversions/variables.txt", std::ios::app); // Open file in append mode
+// template<typename T>
+// void log_variable(const std::string& name, const T& value) {
+//     std::ofstream outfile("/tmp/variables.txt", std::ios::app);
+//     std::cout << name << " = " << value << std::endl;
+// }
+
+// Overload for fixed-size arrays
+template<typename T, size_t N>
+void log_variable(const std::string& name, const T (&value)[N]) {
+    std::ofstream outfile("variables.txt", std::ios::app);
     if (outfile.is_open()) {
-        outfile << name << " = " << value << std::endl;
+        std::cout << "opened file" << std::endl;
+        outfile << name << " = [";
+        for (size_t i = 0; i < N; ++i) {
+            outfile << value[i];
+            if (i < N - 1) {
+                outfile << ", ";
+            }
+        }
+        outfile << "]" << std::endl;
         outfile.close();
     } else {
+        std::cout << "can't open file" << std::endl;
         // Handle error: unable to open file
     }
 }
+
 
 struct crop_config {
     // IO size
@@ -39,6 +56,26 @@ void crop(
     res_T cropped_images[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan]) {
     // #pragma HLS INLINE region Let's avoid pragmas for now
 
+    // Track destination pixels that are touched
+    ap_uint<12> touched_dest_pixels[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan];
+    for (unsigned jawn=0; jawn<CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan; jawn++) {
+        touched_dest_pixels[jawn] = 0;
+    }
+    ap_uint<12> touched_src_pixels[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan];
+    for (unsigned jawn=0; jawn<CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan; jawn++) {
+        touched_src_pixels[jawn] = 0;
+    }
+
+    std::cout << "in_height = " << CONFIG_T::in_height << std::endl;
+    std::cout << "in_width = " << CONFIG_T::in_width << std::endl;
+    std::cout << "n_chan = " << CONFIG_T::n_chan << std::endl;
+    std::cout << "n_crop_boxes = " << CONFIG_T::n_crop_boxes << std::endl;
+    std::cout << "crop_rows = " << CONFIG_T::crop_rows << std::endl;
+    std::cout << "crop_cols = " << CONFIG_T::crop_cols << std::endl;
+    std::cout << " " << CONFIG_T::crop_cols << std::endl;
+
+
+
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
         data2_T y1_normed = crop_coordinates_normed[box_idx*4+0];
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
@@ -48,19 +85,40 @@ void crop(
         unsigned x1 = x1_normed * CONFIG_T::in_width;
         unsigned y2 = y2_normed * CONFIG_T::in_height;
         unsigned x2 = x2_normed * CONFIG_T::in_width;
+
         
-        unsigned dest_row = 0;
-        for (unsigned src_row = x1; src_row < x2; src_row++) {
+        ap_uint<12> dest_row = 0;
+        for (ap_uint<12> src_row = x1; src_row < x2; src_row++) {
 
-            unsigned dest_col = 0;
-            for (unsigned src_col = y1; src_col < y2; src_col++) {
+            ap_uint<12> dest_chan = 0;
+            for (ap_uint<12> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
 
-                unsigned dest_chan = 0;
-                for (unsigned src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
+                ap_uint<12> dest_col = 0;
+                for (ap_uint<12> src_col = y1; src_col < y2; src_col++) {
+                
 
-                    unsigned src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
-                    unsigned dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
+                    ap_uint<12> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
+                    // nnet::log_variable("src_row", src_row);
+                    // nnet::log_variable("src_col", src_col);
+                    // nnet::log_variable("src_chan", src_chan);
+                    // nnet::log_variable("src_idx", src_idx);
+
+                    ap_uint<12> dest_idx_in_20_20 = dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
+                    ap_uint<12> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_idx_in_20_20;
+                    // nnet::log_variable("box_idx", box_idx);
+                    // nnet::log_variable("dest_row", dest_row);
+                    // nnet::log_variable("dest_col", dest_col);
+                    // nnet::log_variable("dest_chan", dest_chan);
+                    // nnet::log_variable("dest_idx_in_20_20", dest_idx_in_20_20);
+                    // nnet::log_variable("dest_idx", dest_idx);
+                    // std::cout << "" << std::endl;
+                    // std::cout << "" << std::endl;    
+                    // unsigned dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
                     cropped_images[dest_idx] = image[src_idx];
+
+                    touched_dest_pixels[dest_idx] = dest_idx;
+                    touched_src_pixels[dest_idx] = src_idx;
+                    
 
                     dest_chan += 1;
                 }
@@ -71,6 +129,10 @@ void crop(
             dest_row += 1;
         }
     }
+
+    // std::cout << "touched_dest_pixels: " << touched_dest_pixels << std::endl;
+    log_variable("touched_dest_pixels", touched_dest_pixels);
+    log_variable("touched_src_pixels", touched_src_pixels);
 }
 
 
