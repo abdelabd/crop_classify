@@ -10,28 +10,6 @@
 
 namespace nnet {
 
-// Overload for fixed-size arrays
-template<typename T, size_t N>
-void log_variable(const std::string& name, const T (&value)[N]) {
-    std::ofstream outfile("variables.txt", std::ios::app);
-    if (outfile.is_open()) {
-        std::cout << "opened file" << std::endl;
-        outfile << name << " = [";
-        for (size_t i = 0; i < N; ++i) {
-            outfile << value[i];
-            if (i < N - 1) {
-                outfile << ", ";
-            }
-        }
-        outfile << "]" << std::endl;
-        outfile.close();
-    } else {
-        std::cout << "can't open file" << std::endl;
-        // Handle error: unable to open file
-    }
-}
-
-
 struct crop_config {
     // IO size
     static const unsigned in_height = 48;
@@ -56,7 +34,7 @@ void crop(
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
         data2_T y2_normed = crop_coordinates_normed[box_idx*4+2];
         data2_T x2_normed = crop_coordinates_normed[box_idx*4+3];
-        ap_uint<14> y1 = y1_normed * CONFIG_T::in_height; #TODO: softcode index type/width
+        ap_uint<14> y1 = y1_normed * CONFIG_T::in_height; // TODO: softcode index type/width, can base it on image size (should do this on frontend)
         ap_uint<14> x1 = x1_normed * CONFIG_T::in_width;
         ap_uint<14> y2 = y2_normed * CONFIG_T::in_height;
         ap_uint<14> x2 = x2_normed * CONFIG_T::in_width;
