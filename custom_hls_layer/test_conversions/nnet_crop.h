@@ -5,17 +5,30 @@
 #include "nnet_common.h"
 #include <cmath>
 #include <cstdlib>
+#include <iostream>
+#include <fstream>
 
 namespace nnet {
+
+template<typename T>
+void log_variable(const std::string& name, const T& value) {
+    std::ofstream outfile("~/RHEED/crop_classify/custom_hls_layer/test_conversions/variables.txt", std::ios::app); // Open file in append mode
+    if (outfile.is_open()) {
+        outfile << name << " = " << value << std::endl;
+        outfile.close();
+    } else {
+        // Handle error: unable to open file
+    }
+}
 
 struct crop_config {
     // IO size
     static const unsigned in_height = 48;
     static const unsigned in_width = 128;
+    static const unsigned n_chan = 1;
     static const unsigned n_crop_boxes = 5;
     static const unsigned crop_rows = 20;
     static const unsigned crop_cols = 20;
-    static const unsigned n_chan = 1;
 };
 
 // Let's do everything in rolled-up form for now
@@ -45,6 +58,7 @@ void crop(
                     cropped_images[box_idx][dest_row][dest_col][chan] = image[src_row][src_col][chan];
                 }
                 dest_col += 1;
+                nnet::log_variable_bitxh("dest_col", dest_col);
             }
 
             dest_row += 1;
