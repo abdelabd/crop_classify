@@ -66,16 +66,6 @@ void crop(
         touched_src_pixels[jawn] = 0;
     }
 
-    std::cout << "in_height = " << CONFIG_T::in_height << std::endl;
-    std::cout << "in_width = " << CONFIG_T::in_width << std::endl;
-    std::cout << "n_chan = " << CONFIG_T::n_chan << std::endl;
-    std::cout << "n_crop_boxes = " << CONFIG_T::n_crop_boxes << std::endl;
-    std::cout << "crop_rows = " << CONFIG_T::crop_rows << std::endl;
-    std::cout << "crop_cols = " << CONFIG_T::crop_cols << std::endl;
-    std::cout << " " << CONFIG_T::crop_cols << std::endl;
-
-
-
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
         data2_T y1_normed = crop_coordinates_normed[box_idx*4+0];
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
