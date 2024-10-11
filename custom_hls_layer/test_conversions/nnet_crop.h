@@ -90,30 +90,17 @@ void crop(
         ap_uint<12> dest_row = 0;
         for (ap_uint<12> src_row = x1; src_row < x2; src_row++) {
 
-            ap_uint<12> dest_chan = 0;
-            for (ap_uint<12> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
+            ap_uint<12> dest_col = 0;
+            for (ap_uint<12> src_col = y1; src_col < y2; src_col++) {
 
-                ap_uint<12> dest_col = 0;
-                for (ap_uint<12> src_col = y1; src_col < y2; src_col++) {
+                ap_uint<12> dest_chan = 0;
+                for (ap_uint<12> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
                 
 
                     ap_uint<12> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
-                    // nnet::log_variable("src_row", src_row);
-                    // nnet::log_variable("src_col", src_col);
-                    // nnet::log_variable("src_chan", src_chan);
-                    // nnet::log_variable("src_idx", src_idx);
 
                     ap_uint<12> dest_idx_in_20_20 = dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
                     ap_uint<12> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_idx_in_20_20;
-                    // nnet::log_variable("box_idx", box_idx);
-                    // nnet::log_variable("dest_row", dest_row);
-                    // nnet::log_variable("dest_col", dest_col);
-                    // nnet::log_variable("dest_chan", dest_chan);
-                    // nnet::log_variable("dest_idx_in_20_20", dest_idx_in_20_20);
-                    // nnet::log_variable("dest_idx", dest_idx);
-                    // std::cout << "" << std::endl;
-                    // std::cout << "" << std::endl;    
-                    // unsigned dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
                     cropped_images[dest_idx] = image[src_idx];
 
                     touched_dest_pixels[dest_idx] = dest_idx;
