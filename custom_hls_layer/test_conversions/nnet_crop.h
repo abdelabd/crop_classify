@@ -10,12 +10,6 @@
 
 namespace nnet {
 
-// template<typename T>
-// void log_variable(const std::string& name, const T& value) {
-//     std::ofstream outfile("/tmp/variables.txt", std::ios::app);
-//     std::cout << name << " = " << value << std::endl;
-// }
-
 // Overload for fixed-size arrays
 template<typename T, size_t N>
 void log_variable(const std::string& name, const T (&value)[N]) {
