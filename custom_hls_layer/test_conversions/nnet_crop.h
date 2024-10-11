@@ -50,15 +50,15 @@ void crop(
         unsigned x2 = x2_normed * CONFIG_T::in_width;
         
         unsigned dest_row = 0;
-        for (unsigned src_row = x1; row < x2; src_row++) {
+        for (unsigned src_row = x1; src_row < x2; src_row++) {
 
             unsigned dest_col = 0;
-            for (unsigned src_col = y1; col < y2; src_col++) {
+            for (unsigned src_col = y1; src_col < y2; src_col++) {
                 for (unsigned chan = 0; chan < CONFIG_T::n_chan; chan++) {
                     cropped_images[box_idx][dest_row][dest_col][chan] = image[src_row][src_col][chan];
                 }
                 dest_col += 1;
-                nnet::log_variable_bitxh("dest_col", dest_col);
+                nnet::log_variable("dest_col", dest_col);
             }
 
             dest_row += 1;
