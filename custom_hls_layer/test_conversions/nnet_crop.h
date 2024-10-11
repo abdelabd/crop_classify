@@ -50,15 +50,6 @@ void crop(
     res_T cropped_images[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan]) {
     // #pragma HLS INLINE region Let's avoid pragmas for now
 
-    // Track destination pixels that are touched
-    ap_uint<12> touched_dest_pixels[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan];
-    for (unsigned jawn=0; jawn<CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan; jawn++) {
-        touched_dest_pixels[jawn] = 0;
-    }
-    ap_uint<12> touched_src_pixels[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan];
-    for (unsigned jawn=0; jawn<CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan; jawn++) {
-        touched_src_pixels[jawn] = 0;
-    }
 
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
         data2_T y1_normed = crop_coordinates_normed[box_idx*4+0];
@@ -86,9 +77,6 @@ void crop(
                     ap_uint<12> dest_idx_in_20_20 = dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
                     ap_uint<12> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_idx_in_20_20;
                     cropped_images[dest_idx] = image[src_idx];
-
-                    touched_dest_pixels[dest_idx] = dest_idx;
-                    touched_src_pixels[dest_idx] = src_idx;
                     
 
                     dest_chan += 1;
@@ -101,9 +89,6 @@ void crop(
         }
     }
 
-    // std::cout << "touched_dest_pixels: " << touched_dest_pixels << std::endl;
-    log_variable("touched_dest_pixels", touched_dest_pixels);
-    log_variable("touched_src_pixels", touched_src_pixels);
 }
 
 
