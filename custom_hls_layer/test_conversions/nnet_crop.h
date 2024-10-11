@@ -56,26 +56,26 @@ void crop(
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
         data2_T y2_normed = crop_coordinates_normed[box_idx*4+2];
         data2_T x2_normed = crop_coordinates_normed[box_idx*4+3];
-        unsigned y1 = y1_normed * CONFIG_T::in_height;
-        unsigned x1 = x1_normed * CONFIG_T::in_width;
-        unsigned y2 = y2_normed * CONFIG_T::in_height;
-        unsigned x2 = x2_normed * CONFIG_T::in_width;
+        ap_uint<14> y1 = y1_normed * CONFIG_T::in_height; #TODO: softcode index type/width
+        ap_uint<14> x1 = x1_normed * CONFIG_T::in_width;
+        ap_uint<14> y2 = y2_normed * CONFIG_T::in_height;
+        ap_uint<14> x2 = x2_normed * CONFIG_T::in_width;
 
         
-        ap_uint<12> dest_row = 0;
-        for (ap_uint<12> src_row = y1; src_row < y2; src_row++) {
+        ap_uint<14> dest_row = 0;
+        for (ap_uint<14> src_row = y1; src_row < y2; src_row++) {
 
-            ap_uint<12> dest_col = 0;
-            for (ap_uint<12> src_col = x1; src_col < x2; src_col++) {
+            ap_uint<14> dest_col = 0;
+            for (ap_uint<14> src_col = x1; src_col < x2; src_col++) {
 
-                ap_uint<12> dest_chan = 0;
-                for (ap_uint<12> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
+                ap_uint<14> dest_chan = 0;
+                for (ap_uint<14> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
                 
 
-                    ap_uint<12> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
+                    ap_uint<14> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
 
-                    ap_uint<12> dest_idx_in_20_20 = dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
-                    ap_uint<12> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_idx_in_20_20;
+                    ap_uint<14> dest_idx_in_20_20 = dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
+                    ap_uint<14> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_idx_in_20_20;
                     cropped_images[dest_idx] = image[src_idx];
                     
 
