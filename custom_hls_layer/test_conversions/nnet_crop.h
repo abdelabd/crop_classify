@@ -88,10 +88,10 @@ void crop(
 
         
         ap_uint<12> dest_row = 0;
-        for (ap_uint<12> src_row = x1; src_row < x2; src_row++) {
+        for (ap_uint<12> src_row = y1; src_row < y2; src_row++) {
 
             ap_uint<12> dest_col = 0;
-            for (ap_uint<12> src_col = y1; src_col < y2; src_col++) {
+            for (ap_uint<12> src_col = x1; src_col < x2; src_col++) {
 
                 ap_uint<12> dest_chan = 0;
                 for (ap_uint<12> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
