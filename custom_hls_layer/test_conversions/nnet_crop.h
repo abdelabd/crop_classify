@@ -30,6 +30,8 @@ void crop(
 
 
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+        #pragma HLS UNROLL
+
         data2_T y1_normed = crop_coordinates_normed[box_idx*4+0];
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
         data2_T y2_normed = crop_coordinates_normed[box_idx*4+2];
@@ -42,12 +44,16 @@ void crop(
         
         ap_uint<14> dest_row = 0;
         for (ap_uint<14> src_row = y1; src_row < y2; src_row++) {
+            // #pragma HLS UNROLL // TODO: Change to pipeline. If no pragma, then automatically pipelines
+            // TODO: iterate through dest_row, dest_idx, etc. because that is NON-VARIABLE loop bound. HLS can't unroll variable loop bound
 
             ap_uint<14> dest_col = 0;
             for (ap_uint<14> src_col = x1; src_col < x2; src_col++) {
+                #pragma HLS UNROLL // TODO: Change to pipeline
 
                 ap_uint<14> dest_chan = 0;
                 for (ap_uint<14> src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
+                    // #pragma HLS UNROLL // TODO: Try to remove this
                 
 
                     ap_uint<14> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
