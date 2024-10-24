@@ -35,25 +35,25 @@ void crop(
         data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
         data2_T y2_normed = crop_coordinates_normed[box_idx*4+2];
         data2_T x2_normed = crop_coordinates_normed[box_idx*4+3];
-        ap_uint<14> y1 = y1_normed * CONFIG_T::in_height; // TODO: softcode index type/width, can base it on image size (should do this on frontend)
-        ap_uint<14> x1 = x1_normed * CONFIG_T::in_width;
-        ap_uint<14> y2 = y2_normed * CONFIG_T::in_height;
-        ap_uint<14> x2 = x2_normed * CONFIG_T::in_width;
+        ap_uint<13> y1 = y1_normed * CONFIG_T::in_height; // TODO: softcode index type/width, can base it on image size (should do this on frontend)
+        ap_uint<13> x1 = x1_normed * CONFIG_T::in_width;
+        ap_uint<13> y2 = y2_normed * CONFIG_T::in_height;
+        ap_uint<13> x2 = x2_normed * CONFIG_T::in_width;
 
-        ap_uint<14> src_row = y1;
-        for (ap_uint<14> dest_row = 0; dest_row < CONFIG_T::crop_rows; dest_row++) {
+        ap_uint<13> src_row = y1;
+        for (ap_uint<13> dest_row = 0; dest_row < CONFIG_T::crop_rows; dest_row++) {
             // #pragma HLS UNROLL // TODO: Change to pipeline. If no pragma, then automatically pipelines
 
-            ap_uint<14> src_col = x1;
-            for (ap_uint<14> dest_col=0; dest_col < CONFIG_T::crop_cols; dest_col++ ){
+            ap_uint<13> src_col = x1;
+            for (ap_uint<13> dest_col=0; dest_col < CONFIG_T::crop_cols; dest_col++ ){
                 #pragma HLS UNROLL // TODO: Change to pipeline
 
-                ap_uint<14> src_chan = 0;
-                for (ap_uint<14> dest_chan = 0; dest_chan < CONFIG_T::n_chan; dest_chan++) {
+                ap_uint<13> src_chan = 0;
+                for (ap_uint<13> dest_chan = 0; dest_chan < CONFIG_T::n_chan; dest_chan++) {
                     // #pragma HLS UNROLL // TODO: Try to remove this
                 
-                    ap_uint<14> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
-                    ap_uint<14> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
+                    ap_uint<13> src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
+                    ap_uint<13> dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
                     cropped_images[dest_idx] = image[src_idx];
                     src_chan += 1;
                 }
