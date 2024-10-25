@@ -78,10 +78,10 @@ def plot_borders_norm(ax, crop_boxes_norm, image_size=(128, 48)):
     for j in range(num_blobs):
         cbn = crop_boxes_norm[j].copy()
         y1, x1, y2, x2 = cbn
-        y1 *= image_size[1]
-        x1 *= image_size[0]
-        y2 *= image_size[1]
-        x2 *= image_size[0]
+        y1 *= image_size[0]
+        x1 *= image_size[1]
+        y2 *= image_size[0]
+        x2 *= image_size[1]
 
         ax.plot([x1, x2], [y1, y1], color='blue') # top border
         ax.plot([x1, x1], [y1, y2], color='blue') # left border 
