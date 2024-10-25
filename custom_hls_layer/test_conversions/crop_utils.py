@@ -24,24 +24,25 @@ def generate_gaussian_blob(image_size, mean, cov, angle, noise_std=0.01):
 
     return blob
 
-def create_training_data(num_samples, image_size=(128, 48), num_blobs=5, noise_std=0.05, crop_box_size = 20):
+def create_training_data(num_samples, image_size=(48, 128), num_blobs=5, noise_std=0.05, crop_box_size = 20):
     """
     Create training data with Gaussian blobs and noise for the YOLO-style model.
     """
-    X = np.zeros((num_samples, image_size[1], image_size[0], 1), dtype=np.float32)
+    # image_size = (image_size[1], image_size[0])
+    X = np.zeros((num_samples, image_size[0], image_size[1], 1), dtype=np.float32)
     y = np.zeros((num_samples, num_blobs, 5), dtype=np.float32)
     crop_boxes_norm = np.zeros((num_samples, num_blobs, 4), dtype=np.float32)
 
     for i in range(num_samples):
-        image = np.zeros((image_size[1], image_size[0]), dtype=np.float32)
+        image = np.zeros((image_size[0], image_size[1]), dtype=np.float32)
         blob_params = []
 
         # Generate y-values within 20% of each other
-        base_y = np.random.uniform(0.4 * image_size[1], 0.6 * image_size[1])
+        base_y = np.random.uniform(0.4 * image_size[0], 0.6 * image_size[0])
         y_values = np.random.uniform(base_y * 0.8, base_y * 1.2, num_blobs)
 
         # Generate evenly spaced x-values with slight variation
-        x_values = np.linspace(0, image_size[0], num_blobs + 2)[1:-1]
+        x_values = np.linspace(0, image_size[1], num_blobs + 2)[1:-1]
         x_values += np.random.uniform(-5, 5, num_blobs)
 
         for j in range(num_blobs):
@@ -50,17 +51,17 @@ def create_training_data(num_samples, image_size=(128, 48), num_blobs=5, noise_s
             cov_x = np.random.uniform(2, 6)
             cov_y = np.random.uniform(1, 5)
             theta = np.random.uniform(-10, 10) * np.pi / 180  # Cap rotation at 10 degrees
-            blob = generate_gaussian_blob((image_size[0], image_size[1]), (mean_x, mean_y), (cov_x, cov_y), theta, noise_std)
+            blob = generate_gaussian_blob((image_size[1], image_size[0]), (mean_x, mean_y), (cov_x, cov_y), theta, noise_std)
             image += blob
 
             # Store parameters for the label
             blob_params.append((mean_x, mean_y, cov_x, cov_y, theta))
 
             # Normalized crop box coordinates
-            crop_boxes_norm[i, j, 0] = (y_values[j] - crop_box_size//2)/image_size[1] # top border
-            crop_boxes_norm[i, j, 1] = (x_values[j] - crop_box_size//2)/image_size[0] # leftmost border
-            crop_boxes_norm[i, j, 2] = (y_values[j] + crop_box_size//2)/image_size[1] # bottom border
-            crop_boxes_norm[i, j, 3] = (x_values[j] + crop_box_size//2)/image_size[0] # rightmost border
+            crop_boxes_norm[i, j, 0] = (y_values[j] - crop_box_size//2)/image_size[0] # top border
+            crop_boxes_norm[i, j, 1] = (x_values[j] - crop_box_size//2)/image_size[1] # leftmost border
+            crop_boxes_norm[i, j, 2] = (y_values[j] + crop_box_size//2)/image_size[0] # bottom border
+            crop_boxes_norm[i, j, 3] = (x_values[j] + crop_box_size//2)/image_size[1] # rightmost border
             
 
         # Convert parameters to labels
