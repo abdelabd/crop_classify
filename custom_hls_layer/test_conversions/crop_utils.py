@@ -24,7 +24,7 @@ def generate_gaussian_blob(image_size, mean, cov, angle, noise_std=0.01):
 
     return blob
 
-def create_training_data(num_samples, image_size=(48, 128), num_blobs=5, noise_std=0.05, crop_box_size = 20):
+def create_training_data(num_samples, image_size=(48, 128), num_blobs=5, noise_std=0.05, crop_box_rows = 20, crop_box_cols = 20 ):
     """
     Create training data with Gaussian blobs and noise for the YOLO-style model.
     """
@@ -58,10 +58,10 @@ def create_training_data(num_samples, image_size=(48, 128), num_blobs=5, noise_s
             blob_params.append((mean_x, mean_y, cov_x, cov_y, theta))
 
             # Normalized crop box coordinates
-            crop_boxes_norm[i, j, 0] = (y_values[j] - crop_box_size//2)/image_size[0] # top border
-            crop_boxes_norm[i, j, 1] = (x_values[j] - crop_box_size//2)/image_size[1] # leftmost border
-            crop_boxes_norm[i, j, 2] = (y_values[j] + crop_box_size//2)/image_size[0] # bottom border
-            crop_boxes_norm[i, j, 3] = (x_values[j] + crop_box_size//2)/image_size[1] # rightmost border
+            crop_boxes_norm[i, j, 0] = (y_values[j] - crop_box_rows//2)/image_size[0] # top border
+            crop_boxes_norm[i, j, 1] = (x_values[j] - crop_box_cols//2)/image_size[1] # leftmost border
+            crop_boxes_norm[i, j, 2] = (y_values[j] + crop_box_rows//2)/image_size[0] # bottom border
+            crop_boxes_norm[i, j, 3] = (x_values[j] + crop_box_cols//2)/image_size[1] # rightmost border
             
 
         # Convert parameters to labels
