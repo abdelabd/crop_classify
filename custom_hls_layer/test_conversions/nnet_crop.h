@@ -52,6 +52,11 @@ void crop(
     }
 
     hls::stream<res_T> cropped_images_stream[CONFIG_T::n_crop_boxes];
+    // set buffer sizes
+    for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+        // #pragma set_directive_stream -depth CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan -type fifo crop/cropped_images_stream[box_idx];
+        #pragma HLS STREAM variable=cropped_images_stream[box_idx] depth=CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan
+    }
 
 
     row_loop:
