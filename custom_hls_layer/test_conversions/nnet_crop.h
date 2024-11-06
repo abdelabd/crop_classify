@@ -69,6 +69,7 @@ void crop(
 
                 crop_box_loop:
                 for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+                    #pragma HLS UNROLL
 
                     index_T y1 = crop_coordinates_local[box_idx][0];
                     index_T x1 = crop_coordinates_local[box_idx][1];
