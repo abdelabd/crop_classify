@@ -4,20 +4,17 @@ vlib work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
-vlog "./UPC_item_name.sv"
-vlog "./stolen.sv"
-vlog "./discounted.sv"
-vlog "./DE1_SoC.sv"
+vlog "./hls_module.v"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work DE1_SoC_testbench
+vsim -voptargs="+acc" -t 1ps -lib work hls_module_testbench
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do DE1_SoC_wave.do
+do hls_module_wave.do
 
 # Set the window types
 view wave
