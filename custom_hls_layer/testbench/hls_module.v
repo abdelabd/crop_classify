@@ -124,8 +124,8 @@ module hls_module_testbench();
 			  input_data = image_data[i];  // Load each pixel
 			  
 			  // Wait for computation to complete
-//			  wait (ap_done);
-			  #100; // Adjust the delay as needed
+			  wait (ap_done);
+			  #10; // Give ModelSim some time before writing
 			  $fwrite(output_file, "%b\n", output_data);
 
 		 end
