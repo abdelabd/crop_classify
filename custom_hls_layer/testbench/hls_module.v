@@ -88,7 +88,6 @@ module hls_module_testbench();
 
 	// File handling
 	integer output_file;
-	integer input_copy_file;
 
 	initial begin
 		 // Initialize signals
@@ -129,14 +128,6 @@ module hls_module_testbench();
 			  $fwrite(output_file, "%b\n", output_data);
 
 		 end
-
-
-		 
-		 
-		 // Write the output data to file if available
-//		if (ap_ready) begin
-//			$fwrite(output_file, "%b\n", output_data); // Write binary output
-//		end
 		
 		 // Close the output file
 		 $fclose(output_file);
