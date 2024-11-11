@@ -3,12 +3,26 @@
 
 #include "ap_fixed.h"
 #include "nnet_common.h"
+#include "hls_stream.h"
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
+#include <string>
 
 namespace nnet {
+
+template<typename T>
+void log_variable(const std::string& name, const T& value) {
+    std::ofstream outfile("variables.txt", std::ios::app); // Open file in append mode
+    if (outfile.is_open()) {
+        outfile << name << " = " << value << std::endl;
+        outfile.close();
+    } else {
+        // Handle error: unable to open file
+    }
+}
+
 
 struct crop_config {
     // IO size
@@ -23,50 +37,68 @@ struct crop_config {
 // Let's do everything in rolled-up form for now
 template <class data1_T, class data2_T, class index_T, class res_T, typename CONFIG_T>
 void crop(
-    data1_T image[CONFIG_T::in_height*CONFIG_T::in_width*CONFIG_T::n_chan],
-    data2_T crop_coordinates_normed[CONFIG_T::n_crop_boxes*4], //_normed as in normalized to the image size
-    res_T cropped_images[CONFIG_T::n_crop_boxes*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan]) {
-    // #pragma HLS INLINE region Let's avoid pragmas for now
+    hls::stream<data1_T> &image,      // [CONFIG_T::in_height*CONFIG_T::in_width*CONFIG_T::n_chan],
+    hls::stream<data2_T> &crop_coordinates_normed,      // [CONFIG_T::n_crop_boxes*4],     
+    hls::stream<res_T> &cropped_images)      // TODO: See if you can unstream cropped_images, or wrapper function e.g. crop_box_filter(box_idx) 
+    {
 
+    index_T crop_coordinates_local[CONFIG_T::n_crop_boxes][4];
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
-        #pragma HLS UNROLL
+        data2_T crop_coords_normed_box_idx = crop_coordinates_normed.read();
+        crop_coordinates_local[box_idx][0] =  crop_coords_normed_box_idx[0] * CONFIG_T::in_height; //y1
+        crop_coordinates_local[box_idx][1] =  crop_coords_normed_box_idx[1] * CONFIG_T::in_width; //x1
+        crop_coordinates_local[box_idx][2] =  crop_coords_normed_box_idx[2] * CONFIG_T::in_height; //y2
+        crop_coordinates_local[box_idx][3] =  crop_coords_normed_box_idx[3] * CONFIG_T::in_width; //x2
+    }
 
-        data2_T y1_normed = crop_coordinates_normed[box_idx*4+0];
-        data2_T x1_normed = crop_coordinates_normed[box_idx*4+1];
-        data2_T y2_normed = crop_coordinates_normed[box_idx*4+2];
-        data2_T x2_normed = crop_coordinates_normed[box_idx*4+3];
-        index_T y1 = y1_normed * CONFIG_T::in_height; // TODO: softcode index type/width, can base it on image size (should do this on frontend)
-        index_T x1 = x1_normed * CONFIG_T::in_width;
-        index_T y2 = y2_normed * CONFIG_T::in_height;
-        index_T x2 = x2_normed * CONFIG_T::in_width;
+    hls::stream<res_T> cropped_images_stream[CONFIG_T::n_crop_boxes];
+    // set buffer sizes
+    for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+        // #pragma set_directive_stream -depth CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan -type fifo crop/cropped_images_stream[box_idx];
+        #pragma HLS STREAM variable=cropped_images_stream[box_idx] depth=CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan
+    }
 
-        index_T src_row = y1;
-        for (index_T dest_row = 0; dest_row < CONFIG_T::crop_rows; dest_row++) {
-            // #pragma HLS UNROLL // TODO: Change to pipeline. If no pragma, then automatically pipelines
 
-            index_T src_col = x1;
-            for (index_T dest_col=0; dest_col < CONFIG_T::crop_cols; dest_col++ ){
-                #pragma HLS UNROLL // TODO: Change to pipeline
+    row_loop:
+    for (index_T src_row = 0; src_row < CONFIG_T::in_height; src_row++) {
+        col_loop:
+        for (index_T src_col=0; src_col < CONFIG_T::in_width; src_col++ ){
+            chan_loop:
+            for (index_T src_chan = 0; src_chan < CONFIG_T::n_chan; src_chan++) {
+                res_T in_data = image.read(); //TODO: res_T and input1_T must be the same type, change to image_T
 
-                index_T src_chan = 0;
-                for (index_T dest_chan = 0; dest_chan < CONFIG_T::n_chan; dest_chan++) {
-                    // #pragma HLS UNROLL // TODO: Try to remove this
-                
-                    index_T src_idx = src_row*CONFIG_T::in_width*CONFIG_T::n_chan + src_col*CONFIG_T::n_chan + src_chan;
-                    index_T dest_idx = box_idx*CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_row*CONFIG_T::crop_cols*CONFIG_T::n_chan + dest_col*CONFIG_T::n_chan + dest_chan;
-                    cropped_images[dest_idx] = image[src_idx];
-                    src_chan += 1;
+                crop_box_loop:
+                for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+                    #pragma HLS UNROLL
+
+                    index_T y1 = crop_coordinates_local[box_idx][0];
+                    index_T x1 = crop_coordinates_local[box_idx][1];
+                    index_T y2 = crop_coordinates_local[box_idx][2];
+                    index_T x2 = crop_coordinates_local[box_idx][3];
+
+                    if((src_row >= y1) && (src_row < y2) && (src_col >= x1) && (src_col < x2)){
+                        cropped_images_stream[box_idx].write(in_data);
+
+                    }
+
                 }
-                src_col += 1;
             }
-            src_row += 1;
         }
+    }
+
+    for(unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
+        for (unsigned i = 0; i < CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan; i++) {
+            cropped_images.write(cropped_images_stream[box_idx].read());
+        }
+    }
+
+
+
 
     
 
     }
 
-}
 
 
 } // namespace nnet
