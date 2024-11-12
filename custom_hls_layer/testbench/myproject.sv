@@ -161,11 +161,11 @@ module myproject_testbench();
 	wire ap_ready;
 
 	// Image data input to the HLS module
-	logic  [15:0] input_1_V_data_0_V_TDATA;
-	logic  [15:0] input_2_V_data_0_V_TDATA;
-	logic  [15:0] input_2_V_data_1_V_TDATA;
-	logic  [15:0] input_2_V_data_2_V_TDATA;
-	logic  [15:0] input_2_V_data_3_V_TDATA;
+	logic [15:0] input_1_V_data_0_V_TDATA;
+	logic [15:0] input_2_V_data_0_V_TDATA;
+	logic [15:0] input_2_V_data_1_V_TDATA;
+	logic [15:0] input_2_V_data_2_V_TDATA;
+	logic [15:0] input_2_V_data_3_V_TDATA;
 	logic input_1_V_data_0_V_TVALID;
    logic input_1_V_data_0_V_TREADY;
    logic input_2_V_data_0_V_TVALID;

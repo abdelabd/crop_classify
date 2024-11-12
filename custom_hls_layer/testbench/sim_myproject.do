@@ -4,7 +4,7 @@ vlib work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
-vlog "./myproject.v"
+vlog "./myproject.sv"
 vlog "./crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_s.v"
 vlog "./crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_s_crop_coordbkb.v"
 vlog "./fifo_w10_d400_A.v"
