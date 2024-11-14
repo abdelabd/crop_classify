@@ -35,21 +35,12 @@ struct crop_config {
 };
 
 // Let's do everything in rolled-up form for now
-template <class data1_T, class data2_T, class index_T, class res_T, typename CONFIG_T>
+template <class data1_T, class index_T, class res_T, typename CONFIG_T>
 void crop(
-    hls::stream<data1_T> &image,      // [CONFIG_T::in_height*CONFIG_T::in_width*CONFIG_T::n_chan],
-    hls::stream<data2_T> &crop_coordinates_normed,      // [CONFIG_T::n_crop_boxes*4],     
+    hls::stream<data1_T> &image,      // [CONFIG_T::in_height*CONFIG_T::in_width*CONFIG_T::n_chan], 
     hls::stream<res_T> &cropped_images)      // TODO: See if you can unstream cropped_images, or wrapper function e.g. crop_box_filter(box_idx) 
     {
 
-    index_T crop_coordinates_dummy[CONFIG_T::n_crop_boxes][4];
-    for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
-        data2_T crop_coords_normed_box_idx = crop_coordinates_normed.read();
-        crop_coordinates_dummy[box_idx][0] =  crop_coords_normed_box_idx[0] * CONFIG_T::in_height; //y1
-        crop_coordinates_dummy[box_idx][1] =  crop_coords_normed_box_idx[1] * CONFIG_T::in_width; //x1
-        crop_coordinates_dummy[box_idx][2] =  crop_coords_normed_box_idx[2] * CONFIG_T::in_height; //y2
-        crop_coordinates_dummy[box_idx][3] =  crop_coords_normed_box_idx[3] * CONFIG_T::in_width; //x2
-    }
 
     index_T crop_coordinates_local[CONFIG_T::n_crop_boxes][4];
     crop_coordinates_local[0][0] = 0.3536409 * CONFIG_T::in_height;
