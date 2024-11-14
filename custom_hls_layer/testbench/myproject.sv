@@ -42,7 +42,7 @@ input  [15:0] input_2_V_data_0_V_TDATA;
 input  [15:0] input_2_V_data_1_V_TDATA;
 input  [15:0] input_2_V_data_2_V_TDATA;
 input  [15:0] input_2_V_data_3_V_TDATA;
-output  [15:0] layer3_out_V_data_0_V_TDATA;
+output [15:0] layer3_out_V_data_0_V_TDATA;
 input   ap_clk;
 input   ap_rst_n;
 input   input_1_V_data_0_V_TVALID;
@@ -73,7 +73,7 @@ wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop
 wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY;
 wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY;
 wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY;
-wire   [15:0] crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
+wire    [15:0] crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
 wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID;
 wire    ap_sync_continue;
 wire    ap_sync_done;
@@ -177,7 +177,7 @@ module myproject_testbench();
    logic input_2_V_data_3_V_TVALID;
    logic input_2_V_data_3_V_TREADY;
 		  
-	wire [15:0] layer3_out_V_data_0_V_TDATA;
+	logic [15:0] layer3_out_V_data_0_V_TDATA;
 	wire layer3_out_V_data_0_V_TVALID;
    wire layer3_out_V_data_0_V_TREADY;
 	
@@ -220,52 +220,113 @@ module myproject_testbench();
 		 forever #5 ap_clk = ~ap_clk; // 100MHz clock
 	end
 	
-	initial begin
-		assign input_1_V_data_0_V_TREADY = 1;
-      assign input_2_V_data_0_V_TREADY = 1;
-		assign input_2_V_data_1_V_TREADY = 1;
-		assign input_2_V_data_2_V_TREADY = 1;
-		assign input_2_V_data_3_V_TREADY = 1;
-	end 
+//	initial begin
+//		assign input_1_V_data_0_V_TREADY = 1;
+//    assign input_2_V_data_0_V_TREADY = 1;
+//		assign input_2_V_data_1_V_TREADY = 1;
+//		assign input_2_V_data_2_V_TREADY = 1;
+//		assign input_2_V_data_3_V_TREADY = 1;
+//	end 
 
 	// Image data array
-//	reg [7:0] image_data [0:9]; // [0:9]; // Adjust size based on the number of pixels in the image
-//	integer i;
+	reg [15:0] image_data [50*80-1:0];
+	reg [15:0] crop_coords_data [2*4-1:0];
+	integer row;
+	integer column;
+	integer img_idx;
+	integer i;
 //
 //	// File handling
 //	integer output_file;
 //
-//	initial begin
-//		 // Initialize signals
-//		 ap_rst_n = 0;
-//		 ap_start = 0;
+//	always_ff @(posedge ap_clk) begin
+//		if (~ap_rst_n) begin
+//			assign row = 0;
+//			assign column = 0;
+//		end	
+//		else if (AP_rEADY AND AP_VALID)
+//			ROW++
+//		
+//	end
+
+	integer image_file;
+	integer input_copy_file;
+	integer crop_coords_file;
+	integer cropped_images_file;
+	initial begin
+	
+		 // Initialize signals
+		ap_rst_n = 0;
+		ap_start = 0;
+		
 //		 input_data = 0;
-//
-//		 // Apply reset
-//		 #20;
-//		 ap_rst_n = 1;
-//
-//		 // Load image data from binary file
-//		 $readmemb("data/image_data.bin", image_data); // Load from binary file
-//
-//		 // Open the file to save output data in binary
-//		 output_file = $fopen("data/output_data.bin", "wb");
-//		 if (output_file == 0) begin
-//			  $display("Error: Could not open file for writing.");
-//			  $stop;
-//		 end
-//		 else begin
-//			  $display("Could indeed open file for writing.");
-//		 end
-//
-//		 // Start the HLS module
-//		 #10;
-//		 ap_start = 1;
-//		 #10;
-//		 ap_start = 0;
+		input_1_V_data_0_V_TDATA = 0;
+		input_1_V_data_0_V_TVALID = 1;
+		input_2_V_data_0_V_TDATA = 0;
+		input_2_V_data_0_V_TVALID = 1;
+		input_2_V_data_1_V_TDATA = 0;
+		input_2_V_data_1_V_TVALID = 1;
+		input_2_V_data_2_V_TDATA = 0;
+		input_2_V_data_2_V_TVALID = 1;
+		input_2_V_data_3_V_TDATA = 0;
+		input_2_V_data_3_V_TVALID = 1;
+
+		 // Apply reset
+		 #20;
+		 ap_rst_n = 1;
+
+		 // Load image data from binary file
+		 $readmemb("tb_data/tb_image_50x80_ap_fixed_16_2.bin", image_data); // Load from binary file
+		 $readmemb("tb_data/tb_crop_coords_50x80_ap_fixed_16_2.bin", crop_coords_data);
+		
+		 // Open the file to save output data in binary
+		 input_copy_file = $fopen("tb_data/input_copy_data.bin", "wb");
+		 if (input_copy_file == 0) begin
+			  $display("Error: Could not open file for writing.");
+			  $stop;
+		 end
+		 else begin
+			  $display("Could indeed open file for writing.");
+		 end
+
+		 // Start the HLS module
+		 #10;
+		 ap_start = 1;
+		 #10;
+		 ap_start = 0;
+		 
+		 // Feed the crop-coordinates data sequentially
+		 for (i = 0; i < 2; i = i + 1) begin
+//			if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY)
+//			input_1_V_data_0_V_TDATA = image_data[i];
+			wait(input_2_V_data_0_V_TREADY)
+			input_2_V_data_0_V_TDATA = crop_coords_data[i*4];
+			
+			wait(input_2_V_data_1_V_TREADY)
+			input_2_V_data_1_V_TDATA = crop_coords_data[i*4+1];
+			
+			wait(input_2_V_data_2_V_TREADY)
+			input_2_V_data_2_V_TDATA = crop_coords_data[i*4+2];
+			
+			wait(input_2_V_data_3_V_TREADY)
+			input_2_V_data_3_V_TDATA = crop_coords_data[i*4+3];
+			
+//			wait (ap_done);
+			#100;
+	
+		end
 //
 //		 // Feed the image data sequentially
-//		 for (i = 0; i < 10; i = i + 1) begin
+		for (i = 0; i < 50*80; i = i + 1) begin
+//			if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY)
+			input_1_V_data_0_V_TDATA = image_data[i];
+//			wait (ap_done);
+			#10;
+	
+		end
+		
+//		forever repeat @(posedge ap_clk)
+//		for (i = 0; i < 10; i = i + 1) begin
 //			  input_data = image_data[i];  // Load each pixel
 //			  
 //			  // Wait for computation to complete
@@ -280,8 +341,8 @@ module myproject_testbench();
 //
 //		 // End simulation
 //		 #20;
-//		 $stop;
-//	end
+		 $stop;
+	end
 
 endmodule
 
