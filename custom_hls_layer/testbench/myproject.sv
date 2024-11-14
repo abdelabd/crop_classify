@@ -105,21 +105,21 @@ endmodule //myproject
 module myproject_testbench();
 
 	// Parameters for the HLS module
-	reg ap_clk;
-	reg ap_rst_n;
-	reg ap_start;
-	wire ap_done;
-	wire ap_idle;
-	wire ap_ready;
+	reg ap_clk; //input
+	reg ap_rst_n; //input
+	reg ap_start; //input
+	wire ap_done; //output
+	wire ap_idle; //output
+	wire ap_ready; //output
 
 	// Image data input to the HLS module
-	logic [15:0] input_1_V_data_0_V_TDATA;
-	logic input_1_V_data_0_V_TVALID;
-   logic input_1_V_data_0_V_TREADY;
+	logic [15:0] input_1_V_data_0_V_TDATA; //input
+	logic input_1_V_data_0_V_TVALID; //input; data valid to be sent
+   wire input_1_V_data_0_V_TREADY; //output: myproject ready to receive data
 		  
-	wire [15:0] layer2_out_V_data_0_V_TDATA;
-	wire layer2_out_V_data_0_V_TVALID;
-   wire layer2_out_V_data_0_V_TREADY;
+	wire [15:0] layer2_out_V_data_0_V_TDATA; //output
+	wire layer2_out_V_data_0_V_TVALID; // output: myproject output valid to be sent
+   reg layer2_out_V_data_0_V_TREADY; //input: receiver ready to receive myproject output
 	
 	//Q: What the hell is the difference between input_2_V_data_0 and input_2_V_data_1?
 //	reg [7:0] input_data;  // Assuming each pixel is 8 bits
@@ -155,31 +155,36 @@ module myproject_testbench();
 //
 //	// File handling
 //	integer output_file;
-//
-//	always_ff @(posedge ap_clk) begin
-//		if (~ap_rst_n) begin
-//			img_idx = 0;
-//		end	
-//		else if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY) begin
-//			img_idx ++;
-//			input_1_V_data_0_V_TDATA = image_data[img_idx];
-//		end	
-//		
-//	end
 
+	// Sequentially read in image data
+	always_ff @(posedge ap_clk) begin
+		if (~ap_rst_n) begin
+			img_idx = 0;
+		end	
+		else if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY) begin
+			img_idx ++;
+			input_1_V_data_0_V_TDATA = image_data[img_idx];
+			$fwrite(input_copy_file, "%b\n", input_1_V_data_0_V_TDATA);
+		end	
+	end
+	
+	
+
+	// Run through the signal protocol to read in the data
 	integer image_file;
 	integer input_copy_file;
 	integer cropped_images_file;
 	initial begin
 	
-		 // Initialize signals
-		ap_rst_n = 0;
+		 // Turn on reset, turn off start
+		ap_rst_n = 0; // active low
 		ap_start = 0;
 		
-//		input_1_V_data_0_V_TDATA = 0;
+		// Turn on input-valid, output-ready 
 		input_1_V_data_0_V_TVALID = 1;
+		layer2_out_V_data_0_V_TREADY = 1;
 
-		 // Apply reset
+		 // Turn off reset
 		 #20;
 		 ap_rst_n = 1;
 
@@ -187,7 +192,7 @@ module myproject_testbench();
 		 $readmemb("tb_data/tb_image_50x80_ap_fixed_16_2.bin", image_data); // Load from binary file
 		
 		 // Open the file to save output data in binary
-		 input_copy_file = $fopen("tb_data/input_copy_data.bin", "wb");
+		 input_copy_file = $fopen("tb_data/tb_image_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
 		 if (input_copy_file == 0) begin
 			  $display("Error: Could not open file for writing.");
 			  $stop;
@@ -204,29 +209,22 @@ module myproject_testbench();
 		 
 
 		 // Feed the image data sequentially
-		for (i = 0; i < 50*80; i = i + 1) begin
+//		for (i = 0; i < 50*80; i = i + 1) begin
 //			if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY)
-			input_1_V_data_0_V_TDATA = image_data[i];
-			#1000;
-	
-		end
+//				input_1_V_data_0_V_TDATA = image_data[i];
+//				$fwrite(input_copy_file, "%b\n", input_1_V_data_0_V_TDATA);
+//			#1000;
+//	
+//		end
 		
-//		forever repeat @(posedge ap_clk)
-//		for (i = 0; i < 10; i = i + 1) begin
-//			  input_data = image_data[i];  // Load each pixel
-//			  
-//			  // Wait for computation to complete
-//			  wait (ap_done);
-//			  #10; // Give ModelSim some time before writing
-//			  $fwrite(output_file, "%b\n", output_data);
-//
-//		 end
+
 //		
 //		 // Close the output file
 //		 $fclose(output_file);
 //
 //		 // End simulation
 //		 #20;
+		 #100000;
 		 $stop;
 	end
 
