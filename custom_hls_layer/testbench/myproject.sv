@@ -154,7 +154,9 @@ module myproject_testbench();
 	integer i;
 //
 //	// File handling
-//	integer output_file;
+	integer image_file;
+	integer input_read_file;
+	integer cropped_images_file;
 
 	// Sequentially read in image data
 	always_ff @(posedge ap_clk) begin
@@ -164,16 +166,19 @@ module myproject_testbench();
 		else if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY) begin
 			img_idx ++;
 			input_1_V_data_0_V_TDATA = image_data[img_idx];
-			$fwrite(input_copy_file, "%b\n", input_1_V_data_0_V_TDATA);
+			$fwrite(input_read_file, "%b\n", input_1_V_data_0_V_TDATA);
 		end	
 	end
 	
-	
+	// Sequentially read out cropped-image data
+	always_ff @(posedge ap_clk) begin
+		if (layer2_out_V_data_0_V_TVALID & layer2_out_V_data_0_V_TREADY) begin
+			$fwrite(cropped_images_file, "%b\n", layer2_out_V_data_0_V_TDATA);
+		end	
+	end
 
+	
 	// Run through the signal protocol to read in the data
-	integer image_file;
-	integer input_copy_file;
-	integer cropped_images_file;
 	initial begin
 	
 		 // Turn on reset, turn off start
@@ -191,14 +196,23 @@ module myproject_testbench();
 		 // Load image data from binary file
 		 $readmemb("tb_data/tb_image_50x80_ap_fixed_16_2.bin", image_data); // Load from binary file
 		
-		 // Open the file to save output data in binary
-		 input_copy_file = $fopen("tb_data/tb_image_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
-		 if (input_copy_file == 0) begin
-			  $display("Error: Could not open file for writing.");
+		 // Open the files to which we want to write
+		 input_read_file = $fopen("tb_data/tb_image_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
+		 if (input_read_file == 0) begin
+			  $display("Error: Could not open input-read file for writing.");
 			  $stop;
 		 end
 		 else begin
-			  $display("Could indeed open file for writing.");
+			  $display("Could indeed open input-read file for writing.");
+		 end
+		 
+		 cropped_images_file = $fopen("tb_data/OUTPUT_50x80_ap_fixed_16_2.bin", "wb");
+		 if (cropped_images_file == 0) begin
+			  $display("Error: Could not open output file for writing.");
+			  $stop;
+		 end
+		 else begin
+			  $display("Could indeed open output file for writing.");
 		 end
 
 		 // Start the HLS module
