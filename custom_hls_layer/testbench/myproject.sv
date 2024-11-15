@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="myproject,hls_ip_2019_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xcvu13p-flga2577-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=2.164000,HLS_SYN_LAT=5706,HLS_SYN_TPT=5707,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=211,HLS_SYN_LUT=482,HLS_VERSION=2019_1}" *)
+(* CORE_GENERATION_INFO="myproject,hls_ip_2019_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xcvu13p-flga2577-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=1.561000,HLS_SYN_LAT=4902,HLS_SYN_TPT=4903,HLS_SYN_MEM=1,HLS_SYN_DSP=0,HLS_SYN_FF=159,HLS_SYN_LUT=329,HLS_VERSION=2019_1}" *)
 
 module myproject (
         input_1_V_data_0_V_TDATA,
@@ -102,6 +102,7 @@ assign layer2_out_V_data_0_V_TVALID = crop_array_ap_uint_12_array_ap_fixed_16_2_
 endmodule //myproject
 
 
+
 module myproject_testbench();
 
 	// Parameters for the HLS module
@@ -194,10 +195,10 @@ module myproject_testbench();
 		 ap_rst_n = 1;
 
 		 // Load image data from binary file
-		 $readmemb("tb_data/tb_image_50x80_ap_fixed_16_2.bin", image_data); // Load from binary file
+		 $readmemb("tb_data/tb_image_50x80_1crops_20x20_ap_fixed_16_2.bin", image_data); // Load from binary file
 		
 		 // Open the files to which we want to write
-		 input_read_file = $fopen("tb_data/tb_image_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
+		 input_read_file = $fopen("tb_data/tb_image_READ_IN_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
 		 if (input_read_file == 0) begin
 			  $display("Error: Could not open input-read file for writing.");
 			  $stop;
@@ -206,7 +207,7 @@ module myproject_testbench();
 			  $display("Could indeed open input-read file for writing.");
 		 end
 		 
-		 cropped_images_file = $fopen("tb_data/OUTPUT_50x80_ap_fixed_16_2.bin", "wb");
+		 cropped_images_file = $fopen("tb_data/OUTPUT_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
 		 if (cropped_images_file == 0) begin
 			  $display("Error: Could not open output file for writing.");
 			  $stop;
@@ -222,15 +223,6 @@ module myproject_testbench();
 		 ap_start = 0;
 		 
 
-		 // Feed the image data sequentially
-//		for (i = 0; i < 50*80; i = i + 1) begin
-//			if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY)
-//				input_1_V_data_0_V_TDATA = image_data[i];
-//				$fwrite(input_copy_file, "%b\n", input_1_V_data_0_V_TDATA);
-//			#1000;
-//	
-//		end
-		
 
 //		
 //		 // Close the output file

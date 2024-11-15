@@ -23,12 +23,11 @@ module crop_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config2_s (
         cropped_images_V_data_V_TREADY
 );
 
-parameter    ap_ST_fsm_state1 = 6'd1;
-parameter    ap_ST_fsm_state2 = 6'd2;
-parameter    ap_ST_fsm_state3 = 6'd4;
-parameter    ap_ST_fsm_state4 = 6'd8;
-parameter    ap_ST_fsm_state5 = 6'd16;
-parameter    ap_ST_fsm_state6 = 6'd32;
+parameter    ap_ST_fsm_state1 = 5'd1;
+parameter    ap_ST_fsm_state2 = 5'd2;
+parameter    ap_ST_fsm_state3 = 5'd4;
+parameter    ap_ST_fsm_state4 = 5'd8;
+parameter    ap_ST_fsm_state5 = 5'd16;
 
 input   ap_clk;
 input   ap_rst;
@@ -49,7 +48,7 @@ reg ap_idle;
 reg ap_ready;
 
 reg    ap_done_reg;
-(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg   [15:0] image_V_data_V_0_data_out;
 wire    image_V_data_V_0_vld_in;
@@ -81,75 +80,45 @@ reg   [1:0] cropped_images_V_data_V_1_state;
 wire    cropped_images_V_data_V_1_state_cmp_full;
 reg    image_V_data_V_TDATA_blk_n;
 wire    ap_CS_fsm_state3;
-wire   [0:0] icmp_ln887_1_fu_285_p2;
+wire   [0:0] icmp_ln887_1_fu_191_p2;
 reg    cropped_images_V_data_V_TDATA_blk_n;
+wire    ap_CS_fsm_state4;
+wire   [0:0] icmp_ln93_fu_226_p2;
 wire    ap_CS_fsm_state5;
-wire   [0:0] icmp_ln92_fu_381_p2;
-wire    ap_CS_fsm_state6;
-wire   [5:0] src_row_V_fu_245_p2;
-reg   [5:0] src_row_V_reg_408;
+wire   [5:0] src_row_V_fu_167_p2;
+reg   [5:0] src_row_V_reg_247;
 wire    ap_CS_fsm_state2;
-wire   [0:0] icmp_ln81_fu_251_p2;
-reg   [0:0] icmp_ln81_reg_413;
-wire   [0:0] icmp_ln887_fu_239_p2;
-wire   [0:0] icmp_ln81_1_fu_257_p2;
-reg   [0:0] icmp_ln81_1_reg_418;
-wire   [0:0] icmp_ln81_2_fu_273_p2;
-reg   [0:0] icmp_ln81_2_reg_423;
-wire   [0:0] icmp_ln81_3_fu_279_p2;
-reg   [0:0] icmp_ln81_3_reg_428;
-wire   [6:0] src_col_V_fu_291_p2;
+wire   [0:0] or_ln82_fu_185_p2;
+reg   [0:0] or_ln82_reg_252;
+wire   [0:0] icmp_ln887_fu_161_p2;
+wire   [6:0] src_col_V_fu_197_p2;
 wire    cropped_images_stream_0_V_data_0_V_full_n;
 reg    cropped_images_stream_0_V_data_0_V_write;
-wire   [0:0] and_ln81_fu_325_p2;
-reg    ap_predicate_op46_write_state3;
-wire    cropped_images_stream_1_V_data_0_V_full_n;
-reg    cropped_images_stream_1_V_data_0_V_write;
-wire   [0:0] and_ln81_1_fu_359_p2;
-reg    ap_predicate_op55_write_state3;
+wire   [0:0] or_ln82_2_fu_221_p2;
+reg    ap_predicate_op38_write_state3;
 reg    ap_block_state3;
-wire   [1:0] box_idx_fu_371_p2;
-reg   [1:0] box_idx_reg_450;
-wire    ap_CS_fsm_state4;
-reg    ap_block_state4;
-wire   [0:0] trunc_ln134_fu_377_p1;
-reg   [0:0] trunc_ln134_reg_455;
-wire   [0:0] icmp_ln91_fu_365_p2;
-wire   [8:0] i_fu_387_p2;
-reg   [8:0] i_reg_462;
+wire   [8:0] i_fu_232_p2;
+reg   [8:0] i_reg_271;
 wire   [15:0] cropped_images_stream_0_V_data_0_V_dout;
 wire    cropped_images_stream_0_V_data_0_V_empty_n;
 reg    cropped_images_stream_0_V_data_0_V_read;
-reg    ap_predicate_op75_read_state5;
-wire   [15:0] cropped_images_stream_1_V_data_0_V_dout;
-wire    cropped_images_stream_1_V_data_0_V_empty_n;
-reg    cropped_images_stream_1_V_data_0_V_read;
-reg    ap_predicate_op77_read_state5;
-reg    ap_block_state5;
-reg    ap_block_state5_io;
-reg   [5:0] t_V_reg_181;
+reg    ap_block_state4;
+reg    ap_block_state4_io;
+reg   [5:0] t_V_reg_128;
 reg    ap_block_state1;
-reg   [6:0] t_V_1_reg_192;
-reg   [1:0] box_idx6_0_reg_203;
-reg   [8:0] i_0_reg_214;
-reg   [15:0] ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4;
-wire   [1:0] tmp_2_fu_263_p4;
-wire   [0:0] icmp_ln891_fu_297_p2;
-wire   [0:0] or_ln81_fu_303_p2;
-wire   [0:0] or_ln81_1_fu_308_p2;
-wire   [0:0] icmp_ln887_2_fu_319_p2;
-wire   [0:0] xor_ln81_fu_313_p2;
-wire   [0:0] icmp_ln891_1_fu_331_p2;
-wire   [0:0] or_ln81_2_fu_337_p2;
-wire   [0:0] or_ln81_3_fu_342_p2;
-wire   [0:0] icmp_ln887_3_fu_353_p2;
-wire   [0:0] xor_ln81_1_fu_347_p2;
-reg   [5:0] ap_NS_fsm;
+reg   [6:0] t_V_1_reg_139;
+reg   [8:0] i_0_reg_150;
+wire   [0:0] icmp_ln82_1_fu_179_p2;
+wire   [0:0] icmp_ln82_fu_173_p2;
+wire   [0:0] icmp_ln82_2_fu_203_p2;
+wire   [0:0] icmp_ln82_3_fu_209_p2;
+wire   [0:0] or_ln82_1_fu_215_p2;
+reg   [4:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
 #0 ap_done_reg = 1'b0;
-#0 ap_CS_fsm = 6'd1;
+#0 ap_CS_fsm = 5'd1;
 #0 image_V_data_V_0_sel_rd = 1'b0;
 #0 image_V_data_V_0_sel_wr = 1'b0;
 #0 image_V_data_V_0_state = 2'd0;
@@ -171,19 +140,6 @@ fifo_w16_d400_A cropped_images_stream_0_V_data_0_V_fifo_U(
     .if_read(cropped_images_stream_0_V_data_0_V_read)
 );
 
-fifo_w16_d400_A cropped_images_stream_1_V_data_0_V_fifo_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(image_V_data_V_0_data_out),
-    .if_full_n(cropped_images_stream_1_V_data_0_V_full_n),
-    .if_write(cropped_images_stream_1_V_data_0_V_write),
-    .if_dout(cropped_images_stream_1_V_data_0_V_dout),
-    .if_empty_n(cropped_images_stream_1_V_data_0_V_empty_n),
-    .if_read(cropped_images_stream_1_V_data_0_V_read)
-);
-
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_CS_fsm <= ap_ST_fsm_state1;
@@ -198,7 +154,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        end else if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -277,67 +233,44 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln887_fu_239_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-        box_idx6_0_reg_203 <= 2'd0;
-    end else if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (icmp_ln92_fu_381_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        box_idx6_0_reg_203 <= box_idx_reg_450;
+    if (((icmp_ln887_fu_161_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+        i_0_reg_150 <= 9'd0;
+    end else if (((1'b1 == ap_CS_fsm_state5) & (cropped_images_V_data_V_1_ack_in == 1'b1))) begin
+        i_0_reg_150 <= i_reg_271;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        i_0_reg_214 <= 9'd0;
-    end else if (((1'b1 == ap_CS_fsm_state6) & (cropped_images_V_data_V_1_ack_in == 1'b1))) begin
-        i_0_reg_214 <= i_reg_462;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_285_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        t_V_1_reg_192 <= src_col_V_fu_291_p2;
-    end else if (((icmp_ln887_fu_239_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        t_V_1_reg_192 <= 7'd0;
+    if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_191_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        t_V_1_reg_139 <= src_col_V_fu_197_p2;
+    end else if (((icmp_ln887_fu_161_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        t_V_1_reg_139 <= 7'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        t_V_reg_181 <= 6'd0;
-    end else if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_285_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-        t_V_reg_181 <= src_row_V_reg_408;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (1'b1 == ap_CS_fsm_state4))) begin
-        box_idx_reg_450 <= box_idx_fu_371_p2;
+        t_V_reg_128 <= 6'd0;
+    end else if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_191_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+        t_V_reg_128 <= src_row_V_reg_247;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((cropped_images_V_data_V_1_load_A == 1'b1)) begin
-        cropped_images_V_data_V_1_payload_A <= ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4;
+        cropped_images_V_data_V_1_payload_A <= cropped_images_stream_0_V_data_0_V_dout;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((cropped_images_V_data_V_1_load_B == 1'b1)) begin
-        cropped_images_V_data_V_1_payload_B <= ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4;
+        cropped_images_V_data_V_1_payload_B <= cropped_images_stream_0_V_data_0_V_dout;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (1'b1 == ap_CS_fsm_state5))) begin
-        i_reg_462 <= i_fu_387_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((icmp_ln887_fu_239_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        icmp_ln81_1_reg_418 <= icmp_ln81_1_fu_257_p2;
-        icmp_ln81_2_reg_423 <= icmp_ln81_2_fu_273_p2;
-        icmp_ln81_3_reg_428 <= icmp_ln81_3_fu_279_p2;
-        icmp_ln81_reg_413 <= icmp_ln81_fu_251_p2;
+    if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (1'b1 == ap_CS_fsm_state4))) begin
+        i_reg_271 <= i_fu_232_p2;
     end
 end
 
@@ -354,19 +287,19 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        src_row_V_reg_408 <= src_row_V_fu_245_p2;
+    if (((icmp_ln887_fu_161_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        or_ln82_reg_252 <= or_ln82_fu_185_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        trunc_ln134_reg_455 <= trunc_ln134_fu_377_p1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        src_row_V_reg_247 <= src_row_V_fu_167_p2;
     end
 end
 
 always @ (*) begin
-    if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -382,21 +315,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln92_fu_381_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
-        if ((trunc_ln134_reg_455 == 1'd0)) begin
-            ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4 = cropped_images_stream_0_V_data_0_V_dout;
-        end else if ((trunc_ln134_reg_455 == 1'd1)) begin
-            ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4 = cropped_images_stream_1_V_data_0_V_dout;
-        end else begin
-            ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4 = 'bx;
-        end
-    end else begin
-        ap_phi_mux_tmp_data_0_V_3_phi_fu_229_p4 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+    if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -412,7 +331,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (icmp_ln92_fu_381_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
+    if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         cropped_images_V_data_V_1_vld_in = 1'b1;
     end else begin
         cropped_images_V_data_V_1_vld_in = 1'b0;
@@ -420,7 +339,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state6) | ((icmp_ln92_fu_381_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5)))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | ((icmp_ln93_fu_226_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4)))) begin
         cropped_images_V_data_V_TDATA_blk_n = cropped_images_V_data_V_1_state[1'd1];
     end else begin
         cropped_images_V_data_V_TDATA_blk_n = 1'b1;
@@ -428,7 +347,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (ap_predicate_op75_read_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+    if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         cropped_images_stream_0_V_data_0_V_read = 1'b1;
     end else begin
         cropped_images_stream_0_V_data_0_V_read = 1'b0;
@@ -436,7 +355,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (ap_predicate_op46_write_state3 == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (ap_predicate_op38_write_state3 == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
         cropped_images_stream_0_V_data_0_V_write = 1'b1;
     end else begin
         cropped_images_stream_0_V_data_0_V_write = 1'b0;
@@ -444,23 +363,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (ap_predicate_op77_read_state5 == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
-        cropped_images_stream_1_V_data_0_V_read = 1'b1;
-    end else begin
-        cropped_images_stream_1_V_data_0_V_read = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (ap_predicate_op55_write_state3 == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
-        cropped_images_stream_1_V_data_0_V_write = 1'b1;
-    end else begin
-        cropped_images_stream_1_V_data_0_V_write = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_285_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_191_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         image_V_data_V_0_ack_out = 1'b1;
     end else begin
         image_V_data_V_0_ack_out = 1'b0;
@@ -476,7 +379,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln887_1_fu_285_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((icmp_ln887_1_fu_191_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         image_V_data_V_TDATA_blk_n = image_V_data_V_0_state[1'd0];
     end else begin
         image_V_data_V_TDATA_blk_n = 1'b1;
@@ -493,44 +396,35 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln887_fu_239_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((icmp_ln887_fu_161_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state3 : begin
-            if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_285_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+            if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_191_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
-            end else if ((~(((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_285_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            end else if ((~(((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0))) & (icmp_ln887_1_fu_191_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state4 : begin
-            if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
-            end else if ((~((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln91_fu_365_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+            end else if ((~((cropped_images_V_data_V_1_state == 2'd1) | (1'b1 == ap_block_state4_io) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0))) & (icmp_ln93_fu_226_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state5 : begin
-            if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (icmp_ln92_fu_381_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
+            if (((1'b1 == ap_CS_fsm_state5) & (cropped_images_V_data_V_1_ack_in == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
-            end else if ((~((1'b1 == ap_block_state5_io) | ((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1))) & (icmp_ln92_fu_381_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
-                ap_NS_fsm = ap_ST_fsm_state6;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
-            end
-        end
-        ap_ST_fsm_state6 : begin
-            if (((1'b1 == ap_CS_fsm_state6) & (cropped_images_V_data_V_1_ack_in == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state6;
             end
         end
         default : begin
@@ -538,10 +432,6 @@ always @ (*) begin
         end
     endcase
 end
-
-assign and_ln81_1_fu_359_p2 = (xor_ln81_1_fu_347_p2 & icmp_ln887_3_fu_353_p2);
-
-assign and_ln81_fu_325_p2 = (xor_ln81_fu_313_p2 & icmp_ln887_2_fu_319_p2);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -553,45 +443,25 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
-assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
-
 always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state3 = (((cropped_images_stream_1_V_data_0_V_full_n == 1'b0) & (ap_predicate_op55_write_state3 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op46_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_285_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0)));
+    ap_block_state3 = (((cropped_images_stream_0_V_data_0_V_full_n == 1'b0) & (ap_predicate_op38_write_state3 == 1'b1)) | ((icmp_ln887_1_fu_191_p2 == 1'd0) & (image_V_data_V_0_vld_out == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state4 = ((cropped_images_V_data_V_1_state == 2'd1) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0)));
+    ap_block_state4 = ((cropped_images_V_data_V_1_state == 2'd1) | ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_stream_0_V_data_0_V_empty_n == 1'b0)) | ((cropped_images_V_data_V_1_state == 2'd3) & (cropped_images_V_data_V_TREADY == 1'b0)));
 end
 
 always @ (*) begin
-    ap_block_state5 = (((cropped_images_stream_1_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op77_read_state5 == 1'b1)) | ((cropped_images_stream_0_V_data_0_V_empty_n == 1'b0) & (ap_predicate_op75_read_state5 == 1'b1)));
+    ap_block_state4_io = ((icmp_ln93_fu_226_p2 == 1'd0) & (cropped_images_V_data_V_1_ack_in == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state5_io = ((icmp_ln92_fu_381_p2 == 1'd0) & (cropped_images_V_data_V_1_ack_in == 1'b0));
+    ap_predicate_op38_write_state3 = ((or_ln82_2_fu_221_p2 == 1'd0) & (icmp_ln887_1_fu_191_p2 == 1'd0));
 end
-
-always @ (*) begin
-    ap_predicate_op46_write_state3 = ((1'd1 == and_ln81_fu_325_p2) & (icmp_ln887_1_fu_285_p2 == 1'd0));
-end
-
-always @ (*) begin
-    ap_predicate_op55_write_state3 = ((1'd1 == and_ln81_1_fu_359_p2) & (icmp_ln887_1_fu_285_p2 == 1'd0));
-end
-
-always @ (*) begin
-    ap_predicate_op75_read_state5 = ((trunc_ln134_reg_455 == 1'd0) & (icmp_ln92_fu_381_p2 == 1'd0));
-end
-
-always @ (*) begin
-    ap_predicate_op77_read_state5 = ((trunc_ln134_reg_455 == 1'd1) & (icmp_ln92_fu_381_p2 == 1'd0));
-end
-
-assign box_idx_fu_371_p2 = (box_idx6_0_reg_203 + 2'd1);
 
 assign cropped_images_V_data_V_1_ack_in = cropped_images_V_data_V_1_state[1'd1];
 
@@ -611,31 +481,21 @@ assign cropped_images_V_data_V_TDATA = cropped_images_V_data_V_1_data_out;
 
 assign cropped_images_V_data_V_TVALID = cropped_images_V_data_V_1_state[1'd0];
 
-assign i_fu_387_p2 = (i_0_reg_214 + 9'd1);
+assign i_fu_232_p2 = (i_0_reg_150 + 9'd1);
 
-assign icmp_ln81_1_fu_257_p2 = ((t_V_reg_181 > 6'd36) ? 1'b1 : 1'b0);
+assign icmp_ln82_1_fu_179_p2 = ((t_V_reg_128 > 6'd36) ? 1'b1 : 1'b0);
 
-assign icmp_ln81_2_fu_273_p2 = ((tmp_2_fu_263_p4 == 2'd0) ? 1'b1 : 1'b0);
+assign icmp_ln82_2_fu_203_p2 = ((t_V_1_reg_139 < 7'd31) ? 1'b1 : 1'b0);
 
-assign icmp_ln81_3_fu_279_p2 = ((t_V_reg_181 > 6'd35) ? 1'b1 : 1'b0);
+assign icmp_ln82_3_fu_209_p2 = ((t_V_1_reg_139 > 7'd50) ? 1'b1 : 1'b0);
 
-assign icmp_ln81_fu_251_p2 = ((t_V_reg_181 < 6'd17) ? 1'b1 : 1'b0);
+assign icmp_ln82_fu_173_p2 = ((t_V_reg_128 < 6'd17) ? 1'b1 : 1'b0);
 
-assign icmp_ln887_1_fu_285_p2 = ((t_V_1_reg_192 == 7'd80) ? 1'b1 : 1'b0);
+assign icmp_ln887_1_fu_191_p2 = ((t_V_1_reg_139 == 7'd80) ? 1'b1 : 1'b0);
 
-assign icmp_ln887_2_fu_319_p2 = ((t_V_1_reg_192 < 7'd37) ? 1'b1 : 1'b0);
+assign icmp_ln887_fu_161_p2 = ((t_V_reg_128 == 6'd50) ? 1'b1 : 1'b0);
 
-assign icmp_ln887_3_fu_353_p2 = ((t_V_1_reg_192 < 7'd62) ? 1'b1 : 1'b0);
-
-assign icmp_ln887_fu_239_p2 = ((t_V_reg_181 == 6'd50) ? 1'b1 : 1'b0);
-
-assign icmp_ln891_1_fu_331_p2 = ((t_V_1_reg_192 < 7'd42) ? 1'b1 : 1'b0);
-
-assign icmp_ln891_fu_297_p2 = ((t_V_1_reg_192 < 7'd17) ? 1'b1 : 1'b0);
-
-assign icmp_ln91_fu_365_p2 = ((box_idx6_0_reg_203 == 2'd2) ? 1'b1 : 1'b0);
-
-assign icmp_ln92_fu_381_p2 = ((i_0_reg_214 == 9'd400) ? 1'b1 : 1'b0);
+assign icmp_ln93_fu_226_p2 = ((i_0_reg_150 == 9'd400) ? 1'b1 : 1'b0);
 
 assign image_V_data_V_0_ack_in = image_V_data_V_0_state[1'd1];
 
@@ -653,24 +513,14 @@ assign image_V_data_V_0_vld_out = image_V_data_V_0_state[1'd0];
 
 assign image_V_data_V_TREADY = image_V_data_V_0_state[1'd1];
 
-assign or_ln81_1_fu_308_p2 = (or_ln81_fu_303_p2 | icmp_ln81_1_reg_418);
+assign or_ln82_1_fu_215_p2 = (icmp_ln82_3_fu_209_p2 | icmp_ln82_2_fu_203_p2);
 
-assign or_ln81_2_fu_337_p2 = (icmp_ln891_1_fu_331_p2 | icmp_ln81_2_reg_423);
+assign or_ln82_2_fu_221_p2 = (or_ln82_reg_252 | or_ln82_1_fu_215_p2);
 
-assign or_ln81_3_fu_342_p2 = (or_ln81_2_fu_337_p2 | icmp_ln81_3_reg_428);
+assign or_ln82_fu_185_p2 = (icmp_ln82_fu_173_p2 | icmp_ln82_1_fu_179_p2);
 
-assign or_ln81_fu_303_p2 = (icmp_ln891_fu_297_p2 | icmp_ln81_reg_413);
+assign src_col_V_fu_197_p2 = (t_V_1_reg_139 + 7'd1);
 
-assign src_col_V_fu_291_p2 = (t_V_1_reg_192 + 7'd1);
-
-assign src_row_V_fu_245_p2 = (t_V_reg_181 + 6'd1);
-
-assign tmp_2_fu_263_p4 = {{t_V_reg_181[5:4]}};
-
-assign trunc_ln134_fu_377_p1 = box_idx6_0_reg_203[0:0];
-
-assign xor_ln81_1_fu_347_p2 = (or_ln81_3_fu_342_p2 ^ 1'd1);
-
-assign xor_ln81_fu_313_p2 = (or_ln81_1_fu_308_p2 ^ 1'd1);
+assign src_row_V_fu_167_p2 = (t_V_reg_128 + 6'd1);
 
 endmodule //crop_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config2_s
