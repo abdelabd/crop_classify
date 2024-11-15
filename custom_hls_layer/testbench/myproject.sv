@@ -223,9 +223,9 @@ module myproject_testbench();
 	integer i;
 
 	
-	// File handling
-	integer image_file;
+	// Output files
 	integer image_read_file;
+	integer crop_coords_read_file;
 	integer cropped_images_file;
 	
 	// Sequentially read in image data
@@ -234,9 +234,9 @@ module myproject_testbench();
 			img_idx = 0;
 		end	
 		else if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY) begin
-			img_idx ++;
 			input_1_V_data_0_V_TDATA = image_data[img_idx];
 			$fwrite(image_read_file, "%b\n", input_1_V_data_0_V_TDATA);
+			img_idx ++;
 		end	
 	end
 	
@@ -251,20 +251,24 @@ module myproject_testbench();
 		
 		else begin
 			if (input_2_V_data_0_V_TVALID & input_2_V_data_0_V_TREADY) begin
-				crop_coords_0_idx ++;
 				input_2_V_data_0_V_TDATA = crop_coords_data[crop_coords_0_idx*4];
+				$fwrite(crop_coords_read_file, "%b\n", input_2_V_data_0_V_TDATA);
+				crop_coords_0_idx ++;
 			end
 			if (input_2_V_data_1_V_TVALID & input_2_V_data_1_V_TREADY) begin
+				input_2_V_data_1_V_TDATA = crop_coords_data[crop_coords_1_idx*4+1];
+				$fwrite(crop_coords_read_file, "%b\n", input_2_V_data_1_V_TDATA);
 				crop_coords_1_idx ++;
-				input_2_V_data_1_V_TDATA = crop_coords_data[crop_coords_1_idx*4];
 			end
 			if (input_2_V_data_2_V_TVALID & input_2_V_data_2_V_TREADY) begin
+				input_2_V_data_2_V_TDATA = crop_coords_data[crop_coords_2_idx*4+2];
+				$fwrite(crop_coords_read_file, "%b\n", input_2_V_data_2_V_TDATA);
 				crop_coords_2_idx ++;
-				input_2_V_data_2_V_TDATA = crop_coords_data[crop_coords_2_idx*4];
 			end
 			if (input_2_V_data_3_V_TVALID & input_2_V_data_3_V_TREADY) begin
+				input_2_V_data_3_V_TDATA = crop_coords_data[crop_coords_3_idx*4+3];
+				$fwrite(crop_coords_read_file, "%b\n", input_2_V_data_3_V_TDATA);
 				crop_coords_3_idx ++;
-				input_2_V_data_3_V_TDATA = crop_coords_data[crop_coords_3_idx*4];
 			end
 		end	
 	end
@@ -305,11 +309,20 @@ module myproject_testbench();
     	 // Open the files to which we want to write
 		 image_read_file = $fopen("tb_data/tb_image_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
 		 if (image_read_file == 0) begin
-			  $display("Error: Could not open input-read file for writing.");
+			  $display("Error: Could not open image-read file for writing.");
 			  $stop;
 		 end
 		 else begin
-			  $display("Could indeed open input-read file for writing.");
+			  $display("Could indeed open image-read file for writing.");
+		 end
+		 
+		 crop_coords_read_file = $fopen("tb_data/tb_crop_coords_READ_IN_50x80_ap_fixed_16_2.bin", "wb");
+		 if (image_read_file == 0) begin
+			  $display("Error: Could not open crop-coords-read file for writing.");
+			  $stop;
+		 end
+		 else begin
+			  $display("Could indeed open crop-coords-read file for writing.");
 		 end
 		 
 		 cropped_images_file = $fopen("tb_data/OUTPUT_50x80_ap_fixed_16_2.bin", "wb");
