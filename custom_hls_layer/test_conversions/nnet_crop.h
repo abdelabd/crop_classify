@@ -44,16 +44,17 @@ void crop(
 
     index_T crop_coordinates_local[CONFIG_T::n_crop_boxes][4];
     crop_coordinates_local[0][0] = 0.3536409 * CONFIG_T::in_height;
-    crop_coordinates_local[0][1] = 0.21394373 * CONFIG_T::in_width;
+    crop_coordinates_local[0][1] = 0.38784543 * CONFIG_T::in_width;
     crop_coordinates_local[0][2] = 0.7536409 * CONFIG_T::in_height;
-    crop_coordinates_local[0][3] = 0.46394372 * CONFIG_T::in_width;
-    crop_coordinates_local[1][0] = 0.33071667 * CONFIG_T::in_height;
-    crop_coordinates_local[1][1] = 0.5321235 * CONFIG_T::in_width;
-    crop_coordinates_local[1][2] = 0.73071665 * CONFIG_T::in_height;
-    crop_coordinates_local[1][3] = 0.7821235 * CONFIG_T::in_width;
+    crop_coordinates_local[0][3] = 0.6378454 * CONFIG_T::in_width;
+    // crop_coordinates_local[1][0] = 0.33071667 * CONFIG_T::in_height;
+    // crop_coordinates_local[1][1] = 0.5321235 * CONFIG_T::in_width;
+    // crop_coordinates_local[1][2] = 0.73071665 * CONFIG_T::in_height;
+    // crop_coordinates_local[1][3] = 0.7821235 * CONFIG_T::in_width;
 
 
     hls::stream<res_T> cropped_images_stream[CONFIG_T::n_crop_boxes];
+    std::cout << "CONFIG_T::n_crop_boxes = " << CONFIG_T::n_crop_boxes << std::endl;
     // set buffer sizes
     for (unsigned box_idx = 0; box_idx < CONFIG_T::n_crop_boxes; box_idx++) {
         // #pragma set_directive_stream -depth CONFIG_T::crop_rows*CONFIG_T::crop_cols*CONFIG_T::n_chan -type fifo crop/cropped_images_stream[box_idx];
