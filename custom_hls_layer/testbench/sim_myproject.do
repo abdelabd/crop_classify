@@ -5,9 +5,10 @@ vlib work
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
 vlog "./myproject.sv"
-vlog "./crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_s.v"
-vlog "./crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_s_crop_coordbkb.v"
-vlog "./fifo_w10_d400_A.v"
+vlog "./crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_s.v"
+vlog "./crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_s_crop_coordbkb.v"
+vlog "./myproject_mul_mul_7ns_16s_23_1_1.v"
+vlog "./fifo_w16_d400_A.v"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the

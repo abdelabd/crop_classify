@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="myproject,hls_ip_2019_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xcvu13p-flga2577-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=3.178000,HLS_SYN_LAT=5710,HLS_SYN_TPT=5711,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=507,HLS_SYN_LUT=1090,HLS_VERSION=2019_1}" *)
+(* CORE_GENERATION_INFO="myproject,hls_ip_2019_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=1,HLS_INPUT_PART=xcvu13p-flga2577-2-e,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=3.488250,HLS_SYN_LAT=5712,HLS_SYN_TPT=5713,HLS_SYN_MEM=2,HLS_SYN_DSP=2,HLS_SYN_FF=562,HLS_SYN_LUT=1001,HLS_VERSION=2019_1}" *)
 
 module myproject (
         input_1_V_data_0_V_TDATA,
@@ -63,57 +63,57 @@ output   ap_ready;
 output   ap_idle;
 
  reg    ap_rst_n_inv;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_start;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_done;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_continue;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_idle;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_ready;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY;
-wire   [15:0] crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_start;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_done;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_continue;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_idle;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_ready;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY;
+wire   [15:0] crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID;
 wire    ap_sync_continue;
 wire    ap_sync_done;
 wire    ap_sync_ready;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_start_full_n;
-wire    crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_start_write;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_start_full_n;
+wire    crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_start_write;
 
-crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_s crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0(
+crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_s crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_start),
-    .ap_done(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_done),
-    .ap_continue(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_continue),
-    .ap_idle(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_idle),
-    .ap_ready(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_ready),
+    .ap_start(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_start),
+    .ap_done(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_done),
+    .ap_continue(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_continue),
+    .ap_idle(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_idle),
+    .ap_ready(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_ready),
     .image_V_data_V_TDATA(input_1_V_data_0_V_TDATA),
     .image_V_data_V_TVALID(input_1_V_data_0_V_TVALID),
-    .image_V_data_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY),
+    .image_V_data_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY),
     .crop_coordinates_normed_V_data_0_V_TDATA(input_2_V_data_0_V_TDATA),
     .crop_coordinates_normed_V_data_0_V_TVALID(input_2_V_data_0_V_TVALID),
-    .crop_coordinates_normed_V_data_0_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY),
+    .crop_coordinates_normed_V_data_0_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY),
     .crop_coordinates_normed_V_data_1_V_TDATA(input_2_V_data_1_V_TDATA),
     .crop_coordinates_normed_V_data_1_V_TVALID(input_2_V_data_1_V_TVALID),
-    .crop_coordinates_normed_V_data_1_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY),
+    .crop_coordinates_normed_V_data_1_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY),
     .crop_coordinates_normed_V_data_2_V_TDATA(input_2_V_data_2_V_TDATA),
     .crop_coordinates_normed_V_data_2_V_TVALID(input_2_V_data_2_V_TVALID),
-    .crop_coordinates_normed_V_data_2_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY),
+    .crop_coordinates_normed_V_data_2_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY),
     .crop_coordinates_normed_V_data_3_V_TDATA(input_2_V_data_3_V_TDATA),
     .crop_coordinates_normed_V_data_3_V_TVALID(input_2_V_data_3_V_TVALID),
-    .crop_coordinates_normed_V_data_3_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY),
-    .cropped_images_V_data_V_TDATA(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA),
-    .cropped_images_V_data_V_TVALID(crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID),
+    .crop_coordinates_normed_V_data_3_V_TREADY(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY),
+    .cropped_images_V_data_V_TDATA(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA),
+    .cropped_images_V_data_V_TVALID(crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID),
     .cropped_images_V_data_V_TREADY(layer3_out_V_data_0_V_TREADY)
 );
 
-assign ap_done = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_done;
+assign ap_done = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_done;
 
-assign ap_idle = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_idle;
+assign ap_idle = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_idle;
 
-assign ap_ready = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_ready;
+assign ap_ready = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_ready;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
@@ -121,167 +121,30 @@ end
 
 assign ap_sync_continue = 1'b1;
 
-assign ap_sync_done = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_done;
+assign ap_sync_done = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_done;
 
-assign ap_sync_ready = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_ready;
+assign ap_sync_ready = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_ready;
 
-assign crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_continue = 1'b1;
+assign crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_continue = 1'b1;
 
-assign crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_ap_start = ap_start;
+assign crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_ap_start = ap_start;
 
-assign crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_start_full_n = 1'b1;
+assign crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_start_full_n = 1'b1;
 
-assign crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_start_write = 1'b0;
+assign crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_start_write = 1'b0;
 
-assign input_1_V_data_0_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY;
+assign input_1_V_data_0_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_image_V_data_V_TREADY;
 
-assign input_2_V_data_0_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY;
+assign input_2_V_data_0_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_0_V_TREADY;
 
-assign input_2_V_data_1_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY;
+assign input_2_V_data_1_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_1_V_TREADY;
 
-assign input_2_V_data_2_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY;
+assign input_2_V_data_2_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_2_V_TREADY;
 
-assign input_2_V_data_3_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY;
+assign input_2_V_data_3_V_TREADY = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_crop_coordinates_normed_V_data_3_V_TREADY;
 
-assign layer3_out_V_data_0_V_TDATA = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
+assign layer3_out_V_data_0_V_TDATA = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TDATA;
 
-assign layer3_out_V_data_0_V_TVALID = crop_array_array_ap_uint_12_array_ap_fixed_10_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID;
+assign layer3_out_V_data_0_V_TVALID = crop_array_array_ap_uint_12_array_ap_fixed_16_2_5_3_0_1u_config3_U0_cropped_images_V_data_V_TVALID;
 
 endmodule //myproject
-
-
-module myproject_testbench();
-
-	// Parameters for the HLS module
-	reg ap_clk;
-	reg ap_rst_n;
-	reg ap_start;
-	wire ap_done;
-	wire ap_idle;
-	wire ap_ready;
-
-	// Image data input to the HLS module
-	logic  [15:0] input_1_V_data_0_V_TDATA;
-	logic  [15:0] input_2_V_data_0_V_TDATA;
-	logic  [15:0] input_2_V_data_1_V_TDATA;
-	logic  [15:0] input_2_V_data_2_V_TDATA;
-	logic  [15:0] input_2_V_data_3_V_TDATA;
-	logic input_1_V_data_0_V_TVALID;
-   logic input_1_V_data_0_V_TREADY;
-   logic input_2_V_data_0_V_TVALID;
-   logic input_2_V_data_0_V_TREADY;
-   logic input_2_V_data_1_V_TVALID;
-   logic input_2_V_data_1_V_TREADY;
-   logic input_2_V_data_2_V_TVALID;
-   logic input_2_V_data_2_V_TREADY;
-   logic input_2_V_data_3_V_TVALID;
-   logic input_2_V_data_3_V_TREADY;
-		  
-	wire [15:0] layer3_out_V_data_0_V_TDATA;
-	wire layer3_out_V_data_0_V_TVALID;
-   wire layer3_out_V_data_0_V_TREADY;
-	
-	//Q: What the hell is the difference between input_2_V_data_0 and input_2_V_data_1?
-//	reg [7:0] input_data;  // Assuming each pixel is 8 bits
-//	wire [7:0] output_data; // Adjust according to your HLS module output width
-
-	// Instantiate the HLS module (Replace 'hls_module' with actual module name)
-	myproject dut (
-		  .input_1_V_data_0_V_TDATA(input_1_V_data_0_V_TDATA),
-        .input_2_V_data_0_V_TDATA(input_2_V_data_0_V_TDATA),
-        .input_2_V_data_1_V_TDATA(input_2_V_data_1_V_TDATA),
-        .input_2_V_data_2_V_TDATA(input_2_V_data_2_V_TDATA),
-        .input_2_V_data_3_V_TDATA(input_2_V_data_3_V_TDATA),
-        .layer3_out_V_data_0_V_TDATA(layer3_out_V_data_0_V_TDATA),
-        .ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .input_1_V_data_0_V_TVALID(input_1_V_data_0_V_TVALID),
-        .input_1_V_data_0_V_TREADY(input_1_V_data_0_V_TREADY),
-        .input_2_V_data_0_V_TVALID(input_2_V_data_0_V_TVALID),
-        .input_2_V_data_0_V_TREADY(input_2_V_data_0_V_TREADY),
-        .input_2_V_data_1_V_TVALID(input_2_V_data_1_V_TVALID),
-        .input_2_V_data_1_V_TREADY(input_2_V_data_1_V_TREADY),
-        .input_2_V_data_2_V_TVALID(input_2_V_data_2_V_TVALID),
-        .input_2_V_data_2_V_TREADY(input_2_V_data_2_V_TREADY),
-        .input_2_V_data_3_V_TVALID(input_2_V_data_3_V_TVALID),
-        .input_2_V_data_3_V_TREADY(input_2_V_data_3_V_TREADY),
-        .layer3_out_V_data_0_V_TVALID(layer3_out_V_data_0_V_TVALID),
-        .layer3_out_V_data_0_V_TREADY(layer3_out_V_data_0_V_TREAD),
-        .ap_start(ap_start),
-        .ap_done(ap_done),
-        .ap_ready(ap_ready),
-        .ap_idle(ap_idle)
-	);
-	
-
-	// Clock generation
-	initial begin
-		 ap_clk = 0;
-		 forever #5 ap_clk = ~ap_clk; // 100MHz clock
-	end
-	
-	initial begin
-		assign input_1_V_data_0_V_TREADY = 1;
-      assign input_2_V_data_0_V_TREADY = 1;
-		assign input_2_V_data_1_V_TREADY = 1;
-		assign input_2_V_data_2_V_TREADY = 1;
-		assign input_2_V_data_3_V_TREADY = 1;
-	end 
-
-	// Image data array
-//	reg [7:0] image_data [0:9]; // [0:9]; // Adjust size based on the number of pixels in the image
-//	integer i;
-//
-//	// File handling
-//	integer output_file;
-//
-//	initial begin
-//		 // Initialize signals
-//		 ap_rst_n = 0;
-//		 ap_start = 0;
-//		 input_data = 0;
-//
-//		 // Apply reset
-//		 #20;
-//		 ap_rst_n = 1;
-//
-//		 // Load image data from binary file
-//		 $readmemb("data/image_data.bin", image_data); // Load from binary file
-//
-//		 // Open the file to save output data in binary
-//		 output_file = $fopen("data/output_data.bin", "wb");
-//		 if (output_file == 0) begin
-//			  $display("Error: Could not open file for writing.");
-//			  $stop;
-//		 end
-//		 else begin
-//			  $display("Could indeed open file for writing.");
-//		 end
-//
-//		 // Start the HLS module
-//		 #10;
-//		 ap_start = 1;
-//		 #10;
-//		 ap_start = 0;
-//
-//		 // Feed the image data sequentially
-//		 for (i = 0; i < 10; i = i + 1) begin
-//			  input_data = image_data[i];  // Load each pixel
-//			  
-//			  // Wait for computation to complete
-//			  wait (ap_done);
-//			  #10; // Give ModelSim some time before writing
-//			  $fwrite(output_file, "%b\n", output_data);
-//
-//		 end
-//		
-//		 // Close the output file
-//		 $fclose(output_file);
-//
-//		 // End simulation
-//		 #20;
-//		 $stop;
-//	end
-
-endmodule
-
