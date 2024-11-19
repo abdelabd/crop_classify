@@ -178,10 +178,10 @@ module myproject_testbench();
 		end	
 	end
 	
-	// randomize the input-valid
-//	always_ff @(posedge ap_clk) begin
-//		input_1_V_data_0_V_TVALID = $urandom%1;
-//	end
+	// randomize the input-valid signal
+	always_ff @(posedge ap_clk) begin
+		input_1_V_data_0_V_TVALID <= $urandom%2;
+	end
 
 	
 	// Run through the signal protocol to read in the data
@@ -192,7 +192,7 @@ module myproject_testbench();
 		ap_start = 0;
 		
 		// Turn on input-valid, output-ready 
-		input_1_V_data_0_V_TVALID = 1;
+//		input_1_V_data_0_V_TVALID = 1;
 		layer2_out_V_data_0_V_TREADY = 1;
 
 		 // Turn off reset
@@ -200,10 +200,10 @@ module myproject_testbench();
 		 ap_rst_n = 1;
 
 		 // Load image data from binary file
-		 $readmemb("tb_data/tb_image_50x80_1crops_20x20_ap_fixed_16_2.bin", image_data); // Load from binary file
+		 $readmemb("tb_data/tb_image_INDEX_50x80_1crops_20x20_ap_fixed_16_2.bin", image_data); // Load from binary file
 		
 		 // Open the files to which we want to write
-		 input_read_file = $fopen("tb_data/tb_image_READ_IN_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
+		 input_read_file = $fopen("tb_data/tb_image_INDEX_READ_IN_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
 		 if (input_read_file == 0) begin
 			  $display("Error: Could not open input-read file for writing.");
 			  $stop;
@@ -212,7 +212,7 @@ module myproject_testbench();
 			  $display("Could indeed open input-read file for writing.");
 		 end
 		 
-		 cropped_images_file = $fopen("tb_data/OUTPUT_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
+		 cropped_images_file = $fopen("tb_data/OUTPUT_INDEX_50x80_1crops_20x20_ap_fixed_16_2.bin", "wb");
 		 if (cropped_images_file == 0) begin
 			  $display("Error: Could not open output file for writing.");
 			  $stop;
