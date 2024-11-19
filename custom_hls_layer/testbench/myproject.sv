@@ -162,11 +162,11 @@ module myproject_testbench();
 	// Sequentially read in image data
 	always_ff @(posedge ap_clk) begin
 		if (~ap_rst_n) begin
-			img_idx = 0;
+			img_idx <= 0;
 		end	
 		else if (input_1_V_data_0_V_TVALID & input_1_V_data_0_V_TREADY) begin
-			img_idx ++;
-			input_1_V_data_0_V_TDATA = image_data[img_idx];
+			img_idx <= img_idx + 1;
+			input_1_V_data_0_V_TDATA <= image_data[img_idx];
 			$fwrite(input_read_file, "%b\n", input_1_V_data_0_V_TDATA);
 		end	
 	end
@@ -177,6 +177,11 @@ module myproject_testbench();
 			$fwrite(cropped_images_file, "%b\n", layer2_out_V_data_0_V_TDATA);
 		end	
 	end
+	
+	// randomize the input-valid
+//	always_ff @(posedge ap_clk) begin
+//		input_1_V_data_0_V_TVALID = $urandom%1;
+//	end
 
 	
 	// Run through the signal protocol to read in the data
