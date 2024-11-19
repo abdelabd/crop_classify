@@ -183,6 +183,10 @@ module myproject_testbench();
 		input_1_V_data_0_V_TVALID <= $urandom%2;
 	end
 
+	// randomize the output-ready signal
+	always_ff @(posedge ap_clk) begin
+		layer2_out_V_data_0_V_TREADY <= $urandom%2;
+	end
 	
 	// Run through the signal protocol to read in the data
 	initial begin
@@ -193,7 +197,7 @@ module myproject_testbench();
 		
 		// Turn on input-valid, output-ready 
 //		input_1_V_data_0_V_TVALID = 1;
-		layer2_out_V_data_0_V_TREADY = 1;
+//		layer2_out_V_data_0_V_TREADY = 1;
 
 		 // Turn off reset
 		 #20;
