@@ -43,10 +43,10 @@ void crop(
 
 
     index_T crop_coordinates_local[CONFIG_T::n_crop_boxes][4];
-    crop_coordinates_local[0][0] = 0.3536409 * CONFIG_T::in_height;
-    crop_coordinates_local[0][1] = 0.38784543 * CONFIG_T::in_width;
-    crop_coordinates_local[0][2] = 0.7536409 * CONFIG_T::in_height;
-    crop_coordinates_local[0][3] = 0.6378454 * CONFIG_T::in_width;
+    crop_coordinates_local[0][0] = 0.3136409 * CONFIG_T::in_height;
+    crop_coordinates_local[0][1] = 0.35642272 * CONFIG_T::in_width;
+    crop_coordinates_local[0][2] = 0.7936409 * CONFIG_T::in_height;
+    crop_coordinates_local[0][3] = 0.65642273 * CONFIG_T::in_width;
     // crop_coordinates_local[1][0] = 0.33071667 * CONFIG_T::in_height;
     // crop_coordinates_local[1][1] = 0.5321235 * CONFIG_T::in_width;
     // crop_coordinates_local[1][2] = 0.73071665 * CONFIG_T::in_height;
